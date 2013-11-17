@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Binaries\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Binaries\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -35,6 +35,17 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <!-- ################################# Begin of MultiTarget ############################################## -->
+  <PropertyGroup>
+    <FrameworkNumber>$(TargetFrameworkVersion.Replace("v", "").Replace(".", ""))</FrameworkNumber>
+    <DefineConstants Condition=" !$(DefineConstants.Contains(';NET')) ">$(DefineConstants);$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))</DefineConstants>
+    <Framework Condition=" '$(Framework)' == '' ">$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "_"))</Framework>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt;= 35 ">$(DefineConstants);NET35_OR_ABOVE</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt;= 40 ">$(DefineConstants);NET40_OR_ABOVE</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt;= 45 ">$(DefineConstants);NET45_OR_ABOVE</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt;= 46 ">$(DefineConstants);NET46_OR_ABOVE</DefineConstants>
+  </PropertyGroup>
+  <!-- ################################# End of MultiTarget ############################################## -->
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +59,9 @@
     <Compile Include="..\Shared\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="..\Trustsoft.Conditions.NET35\Class1.cs">
+      <Link>Class1.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
