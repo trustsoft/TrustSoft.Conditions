@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustsoft.Conditions.NET40"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustsoft.Conditions.NET45", "Trustsoft.Conditions.NET45\Trustsoft.Conditions.NET45.csproj", "{24CAAF2A-5E04-4AB0-AEFA-60FF55E8805D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97EAB9A1-B116-4123-BA0F-05D0F623D381}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\CommonAssemblyInfo.cs = Shared\CommonAssemblyInfo.cs
+		Shared\Trustsoft.snk = Shared\Trustsoft.snk
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

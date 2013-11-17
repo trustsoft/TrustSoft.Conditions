@@ -1,18 +1,11 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+﻿//------------------------Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.------------------------
+// <copyright file="AssemblyInfo.cs" company="Trustsoft Ltd.">
+//     Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.
+// </copyright>
+// <date>17.11.2013</date>
+//------------------------Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.------------------------
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("Trustsoft.Conditions.NET35")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Trustsoft.Conditions.NET35")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+using System.Runtime.InteropServices;
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -21,16 +14,3 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("8757492f-97c5-4055-8cad-1010ef96638a")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
