@@ -59,8 +59,68 @@
     <Compile Include="..\Shared\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Class1.cs">
-      <Link>Class1.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\ArgumentFactory.cs">
+      <Link>ArgumentFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Boolean.cs">
+      <Link>Extensions\ValidatorExtensions.Boolean.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.cs">
+      <Link>Extensions\ValidatorExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Guid.cs">
+      <Link>Extensions\ValidatorExtensions.Guid.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Int32.cs">
+      <Link>Extensions\ValidatorExtensions.Int32.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Nullable.cs">
+      <Link>Extensions\ValidatorExtensions.Nullable.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Type.cs">
+      <Link>Extensions\ValidatorExtensions.Type.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringHelpers.cs">
+      <Link>Helpers\StringHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\IArgument.cs">
+      <Link>IArgument.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\IArgumentValidator.cs">
+      <Link>IArgumentValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Argument.cs">
+      <Link>Internals\Argument.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ArgumentExpression.cs">
+      <Link>Internals\ArgumentExpression.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ArgumentValidatorBase.cs">
+      <Link>Internals\ArgumentValidatorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ErrorHandlerBase.cs">
+      <Link>Internals\ErrorHandlerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\IErrorHandler.cs">
+      <Link>Internals\IErrorHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\MessageBuilder.cs">
+      <Link>Internals\MessageBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ThrowOnErrorHandler.cs">
+      <Link>Internals\ThrowOnErrorHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ThrowOnErrorValidator.cs">
+      <Link>Internals\ThrowOnErrorValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Requires.cs">
+      <Link>Requires.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Resources\StringRes.cs">
+      <Link>Resources\StringRes.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\ViolationType.cs">
+      <Link>ViolationType.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,6 +128,11 @@
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Trustsoft.Conditions.NET35\Resources\MessageStrings.resx">
+      <Link>Resources\MessageStrings.resx</Link>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

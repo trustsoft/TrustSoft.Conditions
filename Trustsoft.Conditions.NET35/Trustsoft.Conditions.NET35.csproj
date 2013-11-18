@@ -58,13 +58,36 @@
     <Compile Include="..\Shared\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ArgumentFactory.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Boolean.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Int32.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Nullable.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Type.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
+    <Compile Include="IArgument.cs" />
+    <Compile Include="IArgumentValidator.cs" />
+    <Compile Include="Internals\Argument.cs" />
+    <Compile Include="Internals\ArgumentExpression.cs" />
+    <Compile Include="Internals\ArgumentValidatorBase.cs" />
+    <Compile Include="Internals\ErrorHandlerBase.cs" />
+    <Compile Include="Internals\IErrorHandler.cs" />
+    <Compile Include="Internals\MessageBuilder.cs" />
+    <Compile Include="Internals\ThrowOnErrorHandler.cs" />
+    <Compile Include="Internals\ThrowOnErrorValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requires.cs" />
+    <Compile Include="Resources\StringRes.cs" />
+    <Compile Include="ViolationType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MessageStrings.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
