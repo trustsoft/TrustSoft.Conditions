@@ -5,6 +5,10 @@
       <Name>Trustsoft.Conditions.NET35</Name>
       <Rules xmlns:i="http://www.w3.org/2001/XMLSchema-instance" />
     </d1p1:RootProject>
+    <d1p1:RootProject>
+      <Name>Trustsoft.Conditions.UnitTests.NET35</Name>
+      <Rules xmlns:i="http://www.w3.org/2001/XMLSchema-instance" />
+    </d1p1:RootProject>
   </RootProjects>
   <ProjectMappings xmlns:d1p1="http://schemas.datacontract.org/2004/07/Caitlyn.Models" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <d1p1:ProjectMapping>
@@ -14,6 +18,14 @@
     <d1p1:ProjectMapping>
       <SourceProject>Trustsoft.Conditions.NET35</SourceProject>
       <TargetProject>Trustsoft.Conditions.NET45</TargetProject>
+    </d1p1:ProjectMapping>
+    <d1p1:ProjectMapping>
+      <SourceProject>Trustsoft.Conditions.UnitTests.NET35</SourceProject>
+      <TargetProject>Trustsoft.Conditions.UnitTests.NET40</TargetProject>
+    </d1p1:ProjectMapping>
+    <d1p1:ProjectMapping>
+      <SourceProject>Trustsoft.Conditions.UnitTests.NET35</SourceProject>
+      <TargetProject>Trustsoft.Conditions.UnitTests.NET45</TargetProject>
     </d1p1:ProjectMapping>
   </ProjectMappings>
   <EnableAutoLink>true</EnableAutoLink>
