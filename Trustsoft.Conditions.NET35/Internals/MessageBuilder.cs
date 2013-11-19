@@ -46,7 +46,7 @@ namespace Trustsoft.Conditions.Internals
             }
             // ReSharper restore CompareNonConstrainedGenericWithNull
 
-            return null;
+            return string.Empty;
         }
 
         private static string InjectValues<T>(IArgumentValidator<T> validator, string format, params object[] args)
