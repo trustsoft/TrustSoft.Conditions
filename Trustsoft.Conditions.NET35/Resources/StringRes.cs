@@ -20,18 +20,60 @@ namespace Trustsoft.Conditions
     /// </summary>
     internal static class StringRes
     {
-        internal const string TheActualValueIsX = "TheActualValueIsX";
-
         internal const string GuidShouldBeEmpty = "GuidShouldBeEmpty";
         internal const string GuidShouldNotBeEmpty = "GuidShouldNotBeEmpty";
-
-        internal const string ValueShouldBeOfTypeX = "ValueShouldBeOfTypeX";
-        internal const string ValueShouldNotBeOfTypeX = "ValueShouldNotBeOfTypeX";
-
+        internal const string StringShouldBe1CharacterLong = "StringShouldBe1CharacterLong";
+        internal const string StringShouldBeEmpty = "StringShouldBeEmpty";
+        internal const string StringShouldBeLongerOrEqualTo1Character = "StringShouldBeLongerOrEqualTo1Character";
+        internal const string StringShouldBeLongerOrEqualToXCharacters = "StringShouldBeLongerOrEqualToXCharacters";
+        internal const string StringShouldBeLongerThan1Character = "StringShouldBeLongerThan1Character";
+        internal const string StringShouldBeLongerThanXCharacters = "StringShouldBeLongerThanXCharacters";
+        internal const string StringShouldBeNullOrEmpty = "StringShouldBeNullOrEmpty";
+        internal const string StringShouldBeNullOrWhiteSpace = "StringShouldBeNullOrWhiteSpace";
+        internal const string StringShouldBeShorterOrEqualTo1Character = "StringShouldBeShorterOrEqualTo1Character";
+        internal const string StringShouldBeShorterOrEqualToXCharacters = "StringShouldBeShorterOrEqualToXCharacters";
+        internal const string StringShouldBeShorterThan1Character = "StringShouldBeShorterThan1Character";
+        internal const string StringShouldBeShorterThanXCharacters = "StringShouldBeShorterThanXCharacters";
+        internal const string StringShouldBeXCharactersLong = "StringShouldBeXCharactersLong";
+        internal const string StringShouldContainX = "StringShouldContainX";
+        internal const string StringShouldEndWithX = "StringShouldEndWithX";
+        internal const string StringShouldNotBe1CharacterLong = "StringShouldNotBe1CharacterLong";
+        internal const string StringShouldNotBeEmpty = "StringShouldNotBeEmpty";
+        internal const string StringShouldNotBeNullOrEmpty = "StringShouldNotBeNullOrEmpty";
+        internal const string StringShouldNotBeNullOrWhiteSpace = "StringShouldNotBeNullOrWhiteSpace";
+        internal const string StringShouldNotBeXCharactersLong = "StringShouldNotBeXCharactersLong";
+        internal const string StringShouldNotContainX = "StringShouldNotContainX";
+        internal const string StringShouldNotEndWithX = "StringShouldNotEndWithX";
+        internal const string StringShouldNotStartWithX = "StringShouldNotStartWithX";
+        internal const string StringShouldStartWithX = "StringShouldStartWithX";
+        internal const string TheActualValueIsX = "TheActualValueIsX";
+        internal const string ValueShouldBeANumber = "ValueShouldBeANumber";
+        internal const string ValueShouldBeBetweenXAndY = "ValueShouldBeBetweenXAndY";
+        internal const string ValueShouldBeEqualToX = "ValueShouldBeEqualToX";
+        internal const string ValueShouldBeGreaterThanOrEqualToX = "ValueShouldBeGreaterThanOrEqualToX";
+        internal const string ValueShouldBeGreaterThanX = "ValueShouldBeGreaterThanX";
+        internal const string ValueShouldBeInfinity = "ValueShouldBeInfinity";
+        internal const string ValueShouldBeNegativeInfinity = "ValueShouldBeNegativeInfinity";
         internal const string ValueShouldBeNull = "ValueShouldBeNull";
-        internal const string ValueShouldNotBeNull = "ValueShouldNotBeNull";
-        internal const string ValueShouldBeX = "ValueShouldBeX";
+        internal const string ValueShouldBeOfTypeX = "ValueShouldBeOfTypeX";
+        internal const string ValueShouldBePositiveInfinity = "ValueShouldBePositiveInfinity";
+        internal const string ValueShouldBeSmallerThanOrEqualToX = "ValueShouldBeSmallerThanOrEqualToX";
         internal const string ValueShouldBeSmallerThanX = "ValueShouldBeSmallerThanX";
+        internal const string ValueShouldBeTrue = "ValueShouldBeTrue";
+        internal const string ValueShouldBeUnequalToX = "ValueShouldBeUnequalToX";
+        internal const string ValueShouldBeValid = "ValueShouldBeValid";
+        internal const string ValueShouldBeX = "ValueShouldBeX";
+        internal const string ValueShouldNotBeANumber = "ValueShouldNotBeANumber";
+        internal const string ValueShouldNotBeBetweenXAndY = "ValueShouldNotBeBetweenXAndY";
+        internal const string ValueShouldNotBeGreaterThanOrEqualToX = "ValueShouldNotBeGreaterThanOrEqualToX";
+        internal const string ValueShouldNotBeGreaterThanX = "ValueShouldNotBeGreaterThanX";
+        internal const string ValueShouldNotBeInfinity = "ValueShouldNotBeInfinity";
+        internal const string ValueShouldNotBeNegativeInfinity = "ValueShouldNotBeNegativeInfinity";
+        internal const string ValueShouldNotBeNull = "ValueShouldNotBeNull";
+        internal const string ValueShouldNotBeOfTypeX = "ValueShouldNotBeOfTypeX";
+        internal const string ValueShouldNotBePositiveInfinity = "ValueShouldNotBePositiveInfinity";
+        internal const string ValueShouldNotBeSmallerThanOrEqualToX = "ValueShouldNotBeSmallerThanOrEqualToX";
+        internal const string ValueShouldNotBeSmallerThanX = "ValueShouldNotBeSmallerThanX";
 
         private static readonly ResourceManager resource;
 

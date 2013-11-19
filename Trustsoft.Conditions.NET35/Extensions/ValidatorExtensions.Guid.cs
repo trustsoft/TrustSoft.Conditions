@@ -22,17 +22,7 @@ namespace Trustsoft.Conditions
         {
             if (!Guid.Empty.Equals(validator.Argument.Value))
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    var resource = StringRes.GetString(StringRes.GuidShouldBeEmpty);
-                    msg = MessageBuilder.InjectValues(validator, resource);
-                    //msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription);
-                }
+                string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.GuidShouldBeEmpty, false);
                 validator.Error.Handle(msg);
             }
 
@@ -44,17 +34,10 @@ namespace Trustsoft.Conditions
         {
             if (Guid.Empty.Equals(validator.Argument.Value))
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    var resource = StringRes.GetString(StringRes.GuidShouldNotBeEmpty);
-                    msg = MessageBuilder.InjectValues(validator, resource);
-                    //msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription);
-                }
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.GuidShouldNotBeEmpty,
+                                                    false);
                 validator.Error.Handle(msg);
             }
 

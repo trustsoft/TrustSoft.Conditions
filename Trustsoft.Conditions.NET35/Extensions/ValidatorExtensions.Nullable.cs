@@ -20,16 +20,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != null)
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    var resource = StringRes.GetString(StringRes.ValueShouldBeNull);
-                    msg = MessageBuilder.InjectValues(validator, resource);
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription);
-                }
+                string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.ValueShouldBeNull, false);
                 validator.Error.Handle(msg);
             }
 
@@ -41,16 +32,10 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value == null)
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    var resource = StringRes.GetString(StringRes.ValueShouldNotBeNull);
-                    msg = MessageBuilder.InjectValues(validator, resource);
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription);
-                }
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldNotBeNull,
+                                                    false);
                 validator.Error.Handle(msg);
             }
 

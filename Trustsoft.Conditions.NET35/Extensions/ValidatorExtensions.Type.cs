@@ -23,24 +23,14 @@ namespace Trustsoft.Conditions
         {
             T value = validator.Argument.Value;
 
-            if (value != null)
+            if (value != null && !type.IsInstanceOfType(value))
             {
-                bool valueIsValid = type.IsInstanceOfType(value);
-
-                if (!valueIsValid)
-                {
-                    string msg;
-                    if (string.IsNullOrEmpty(conditionDescription))
-                    {
-                        var resource = StringRes.GetString(StringRes.ValueShouldBeOfTypeX);
-                        msg = MessageBuilder.InjectValues(validator, resource, type);
-                    }
-                    else
-                    {
-                        msg = MessageBuilder.InjectValues(validator, conditionDescription, type);
-                    }
-                    validator.Error.Handle(msg);
-                }
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeOfTypeX,
+                                                    false,
+                                                    type);
+                validator.Error.Handle(msg);
             }
 
             return validator;
@@ -52,24 +42,14 @@ namespace Trustsoft.Conditions
         {
             T value = validator.Argument.Value;
 
-            if (value != null)
+            if (value != null && type.IsInstanceOfType(value))
             {
-                bool valueIsInvalid = type.IsInstanceOfType(value);
-
-                if (valueIsInvalid)
-                {
-                    string msg;
-                    if (string.IsNullOrEmpty(conditionDescription))
-                    {
-                        var resource = StringRes.GetString(StringRes.ValueShouldNotBeOfTypeX);
-                        msg = MessageBuilder.InjectValues(validator, resource, type);
-                    }
-                    else
-                    {
-                        msg = MessageBuilder.InjectValues(validator, conditionDescription, type);
-                    }
-                    validator.Error.Handle(msg);
-                }
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldNotBeOfTypeX,
+                                                    false,
+                                                    type);
+                validator.Error.Handle(msg);
             }
 
             return validator;

@@ -9,8 +9,6 @@ namespace Trustsoft.Conditions
 {
     #region " Using Directives "
 
-    using System;
-
     using Trustsoft.Conditions.Internals;
 
     #endregion
@@ -35,18 +33,12 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != expected)
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    var resource = StringRes.GetString(StringRes.ValueShouldBeX);
-                    msg = MessageBuilder.InjectValues(validator, resource, expected);
-                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription, expected);
-                }
-                validator.Error.Handle(ViolationType.Default, msg);
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeX,
+                                                    false,
+                                                    expected);
+                validator.Error.Handle(msg);
             }
 
             return validator;

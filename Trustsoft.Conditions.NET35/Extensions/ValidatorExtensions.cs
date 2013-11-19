@@ -11,6 +11,8 @@ namespace Trustsoft.Conditions
 
     using System;
 
+    using Trustsoft.Conditions.Internals;
+
     #endregion
 
     /// <summary>
@@ -18,8 +20,6 @@ namespace Trustsoft.Conditions
     /// </summary>
     public partial class ValidatorExtensions
     {
-        #region " IsNull "
-
         /// <summary>
         ///     Checks whether the given value is null. An exception is thrown otherwise.
         /// </summary>
@@ -43,12 +43,11 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != null)
             {
-                //ThrowHelper.ValueShouldBeNull(validator, conditionDescription);
+                string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.ValueShouldBeNull, false);
+                validator.Error.Handle(msg);
             }
 
             return validator;
         }
-
-        #endregion
     }
 }

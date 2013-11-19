@@ -17,16 +17,6 @@ namespace Trustsoft.Conditions
 
     public static partial class ValidatorExtensions
     {
-        //private static string BuildFormatedMsg<T>(IArgumentValidator<T> validator, int maxValue)
-        //{
-        //    var actualValueMessage = validator.GetActualValueMessage();
-        //    var resourceString = MessageBuilder.GetFormatedResourceString(validator,
-        //                                                                  StringRes.ValueShouldBeSmallerThanX,
-        //                                                                  validator.Argument.Name,
-        //                                                                  maxValue);
-        //    return string.Format("{0}{1}{2}", resourceString, Environment.NewLine, actualValueMessage);
-        //}
-
         /// <summary>
         ///     Checks whether the given value is less than the specified <paramref name="maxValue"/>.
         ///     An exception is thrown otherwise.
@@ -48,41 +38,12 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value < maxValue))
             {
-                string msg;
-                if (string.IsNullOrEmpty(conditionDescription))
-                {
-                    //var actualValueMessage = validator.GetActualValueMessage();
-                    //var resourceString = MessageBuilder.GetFormatedResourceString(validator,
-                    //                                                              StringRes.ValueShouldBeSmallerThanX,
-                    //                                                              maxValue);
-                    //msg = string.Format("{0}{1}{2}", resourceString, Environment.NewLine, actualValueMessage);
-                    var resource = StringRes.GetString(StringRes.ValueShouldBeSmallerThanX);
-                    msg = MessageBuilder.InjectValues(validator, resource, maxValue);
-                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
-                }
-                else
-                {
-                    msg = MessageBuilder.InjectValues(validator, conditionDescription, maxValue);
-                    //msg = string.Format(conditionDescription,
-                    //                    validator.Argument.Name,
-                    //                    validator.Argument.Value,
-                    //                    maxValue);
-                }
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeSmallerThanX,
+                                                    true,
+                                                    maxValue);
                 validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
-
-                //var resourceString = StringRes.GetString(StringRes.ValueShouldBeSmallerThanX);
-                //string condition = ErrorMessageBuilder.GetFormatedString(resourceString,
-                //                                                    validator.Argument.Name,
-                //                                                    maxValue.MakeReadableString());
-
-                //string message = conditionDescription == null
-                //    ? condition
-                //    : ErrorMessageBuilder.GetConditionMessage(validator.Argument, conditionDescription);
-
-                //string additionalMessage = validator.Argument.GetActualValueMessage();
-
-                //validator.ErrorHandler.Handle(message, additionalMessage, ViolationType.OutOfRangeViolation);
-                //ThrowHelper.ValueShouldBeSmallerThan(validator, maxValue, conditionDescription);
             }
 
             return validator;

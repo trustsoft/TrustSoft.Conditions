@@ -9,6 +9,7 @@ namespace Trustsoft.Conditions.Internals
 {
     #region " Using Directives "
 
+    using System;
     using System.Collections.Generic;
 
     #endregion
@@ -38,12 +39,11 @@ namespace Trustsoft.Conditions.Internals
         internal static string GetActualValueMessage<T>(this IArgumentValidator<T> validator)
         {
             var value = validator.Argument.Value;
-            var name = validator.Argument.Name;
 
             // ReSharper disable CompareNonConstrainedGenericWithNull
             if (value == null || value.GetType().FullName != value.ToString())
             {
-                return StringRes.GetFormatedString(StringRes.TheActualValueIsX, name, value.MakeReadableString());
+                return StringRes.GetFormatedString(StringRes.TheActualValueIsX, value.MakeReadableString());
             }
             // ReSharper restore CompareNonConstrainedGenericWithNull
 
@@ -59,7 +59,7 @@ namespace Trustsoft.Conditions.Internals
             allArgs.Add(validator.Argument.Name);
             allArgs.Add(validator.Argument.Value);
             allArgs.AddRange(args);
-            return string.Format(resource, allArgs);
+            return String.Format(resource, allArgs);
             //return string.Format(result, args);
             //return StringRes.GetFormatedString(resourceName, args);
         }
@@ -71,12 +71,61 @@ namespace Trustsoft.Conditions.Internals
             int index = 1;
             foreach (var item in args)
             {
-                var paramName = "{param" + index + "}";
+                var paramName = string.Format("{{param{0}}}", index);
                 result = result.Replace(paramName, item.MakeReadableString());
                 index++;
             }
+            if (!result.EndsWith("."))
+            {
+                result += ".";
+            }
 
             return result;
+        }
+
+        internal static string Combine<T>(IArgumentValidator<T> validator,
+                                          string conditionDescription,
+                                          string resourceKey,
+                                          bool includeActualValue,
+                                          params object[] args)
+        {
+            string msg;
+            if (string.IsNullOrEmpty(conditionDescription))
+            {
+                var resource = StringRes.GetString(resourceKey);
+                msg = InjectValues(validator, resource, args);
+                if (includeActualValue)
+                {
+                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
+                }
+            }
+            else
+            {
+                msg = InjectValues(validator, conditionDescription, args);
+            }
+            return msg;
+        }
+
+        public static string ComposeMessage<T>(IArgumentValidator<T> validator,
+                                               string conditionDescription,
+                                               string resourceString,
+                                               bool includeActualValue,
+                                               params object[] args)
+        {
+            string msg;
+            if (string.IsNullOrEmpty(conditionDescription))
+            {
+                msg = InjectValues(validator, resourceString, args);
+                if (includeActualValue)
+                {
+                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
+                }
+            }
+            else
+            {
+                msg = InjectValues(validator, conditionDescription, args);
+            }
+            return msg;
         }
     }
 }
