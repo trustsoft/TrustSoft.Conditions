@@ -54,6 +54,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
+        [TestCategory("Resources")]
         [Description("Validates whether the defined string consts in StringRes class have a value that equals it's name.")]
         public void ValidateStringResourcesMethod1()
         {
@@ -73,6 +74,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
+        [TestCategory("Resources")]
         [Description("Validates whether the defined string consts in StringRes class reference an existing string resource.")]
         public void ValidateStringResourcesMethod2()
         {
