@@ -20,7 +20,7 @@ namespace Trustsoft.Conditions.Internals
         /// </summary>
         /// <param name="value"> The value. </param>
         /// <returns> System.String. </returns>
-        internal static string MakeReadableString(this object value)
+        private static string MakeReadableString(this object value)
         {
             if (value == null)
             {
@@ -35,7 +35,7 @@ namespace Trustsoft.Conditions.Internals
             return value.ToString();
         }
 
-        internal static string GetActualValueMessage<T>(this IArgumentValidator<T> validator)
+        private static string GetActualValueMessage<T>(this IArgumentValidator<T> validator)
         {
             var value = validator.Argument.Value;
 
@@ -49,7 +49,7 @@ namespace Trustsoft.Conditions.Internals
             return null;
         }
 
-        internal static string InjectValues<T>(IArgumentValidator<T> validator, string format, params object[] args)
+        private static string InjectValues<T>(IArgumentValidator<T> validator, string format, params object[] args)
         {
             var result = format.Replace("{name}", validator.Argument.Name);
             result = result.Replace("{value}", validator.Argument.Value.MakeReadableString());
