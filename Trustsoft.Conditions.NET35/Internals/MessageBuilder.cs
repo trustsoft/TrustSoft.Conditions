@@ -10,7 +10,6 @@ namespace Trustsoft.Conditions.Internals
     #region " Using Directives "
 
     using System;
-    using System.Collections.Generic;
 
     #endregion
 
@@ -50,20 +49,6 @@ namespace Trustsoft.Conditions.Internals
             return null;
         }
 
-        internal static string GetFormatedResourceString<T>(IArgumentValidator<T> validator,
-                                                            string resourceName,
-                                                            params object[] args)
-        {
-            var resource = StringRes.GetString(resourceName);
-            List<object> allArgs = new List<object>();
-            allArgs.Add(validator.Argument.Name);
-            allArgs.Add(validator.Argument.Value);
-            allArgs.AddRange(args);
-            return String.Format(resource, allArgs);
-            //return string.Format(result, args);
-            //return StringRes.GetFormatedString(resourceName, args);
-        }
-
         internal static string InjectValues<T>(IArgumentValidator<T> validator, string format, params object[] args)
         {
             var result = format.Replace("{name}", validator.Argument.Name);
@@ -94,28 +79,6 @@ namespace Trustsoft.Conditions.Internals
             {
                 var resource = StringRes.GetString(resourceKey);
                 msg = InjectValues(validator, resource, args);
-                if (includeActualValue)
-                {
-                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
-                }
-            }
-            else
-            {
-                msg = InjectValues(validator, conditionDescription, args);
-            }
-            return msg;
-        }
-
-        public static string ComposeMessage<T>(IArgumentValidator<T> validator,
-                                               string conditionDescription,
-                                               string resourceString,
-                                               bool includeActualValue,
-                                               params object[] args)
-        {
-            string msg;
-            if (string.IsNullOrEmpty(conditionDescription))
-            {
-                msg = InjectValues(validator, resourceString, args);
                 if (includeActualValue)
                 {
                     msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
