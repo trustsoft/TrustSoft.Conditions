@@ -80,6 +80,9 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\NullableUnitTest.cs">
       <Link>ValidatorExtensions\NullableUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\StringUnitTest.cs">
+      <Link>ValidatorExtensions\StringUnitTest.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

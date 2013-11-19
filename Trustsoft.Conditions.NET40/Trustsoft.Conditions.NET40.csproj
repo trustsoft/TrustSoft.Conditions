@@ -77,6 +77,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Nullable.cs">
       <Link>Extensions\ValidatorExtensions.Nullable.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.String.cs">
+      <Link>Extensions\ValidatorExtensions.String.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Type.cs">
       <Link>Extensions\ValidatorExtensions.Type.cs</Link>
     </Compile>

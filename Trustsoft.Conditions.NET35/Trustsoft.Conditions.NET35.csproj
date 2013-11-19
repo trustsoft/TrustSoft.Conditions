@@ -59,6 +59,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ArgumentFactory.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.String.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Boolean.cs" />
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
