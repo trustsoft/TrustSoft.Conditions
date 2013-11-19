@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Trustsoft.Conditions</id>
+    <title>Trustsoft.Conditions</title>
+    <version>0.9.0.0</version>
+    <owners>Trustsoft Ltd.</owners>
+    <authors>Trustsoft Ltd.</authors>
+    <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
+    <summary>
+      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5/4.0/4.5.
+    </summary>
+    <description>
+      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5/4.0/4.5.
+    </description>
+    <language>en-US</language>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>Method Argument Validation Condition</tags>
+    <copyright>Copyright © Trustsoft Ltd. 2012-2013</copyright>
+    <releaseNotes>
+    </releaseNotes>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System"/>
+      <frameworkAssembly assemblyName="System.Core"/>
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="..\Binaries\Release\**" target="lib" />
+    <file src="lib\**\*.*" target="lib"/>
+    <file src="readme.txt" target="" />
+  </files>
+</package>
