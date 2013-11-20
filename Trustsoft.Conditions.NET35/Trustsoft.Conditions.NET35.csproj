@@ -61,12 +61,41 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ArgumentFactory.cs" />
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Byte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Byte.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Double.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Double.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Int16.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int16.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Int32.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int32.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Int64.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int64.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.Single.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Single.tt</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\ValidatorExtensions.Evaluation.cs" />
     <Compile Include="Extensions\ValidatorExtensions.String.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Boolean.cs" />
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
-    <Compile Include="Extensions\ValidatorExtensions.Int32.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Nullable.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Type.cs" />
     <Compile Include="Helpers\StringHelpers.cs" />
@@ -93,11 +122,36 @@
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+    <None Include="Extensions\Generated\ValidatorExtensions.Numbers.ttinclude" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\MessageStrings.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Byte.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Byte.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Double.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Double.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Int16.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int16.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Int32.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int32.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Int64.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int64.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.Single.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Single.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\StringResources.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>StringResources.cs</LastGenOutput>

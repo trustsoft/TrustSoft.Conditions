@@ -64,6 +64,42 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\ArgumentFactory.cs">
       <Link>ArgumentFactory.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Byte.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Byte.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Byte.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Double.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Double.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Double.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int16.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Int16.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int16.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int32.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Int32.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int32.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int64.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Int64.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Int64.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Single.cs">
+      <Link>Extensions\Generated\ValidatorExtensions.Single.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidatorExtensions.Single.tt</DependentUpon>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Boolean.cs">
       <Link>Extensions\ValidatorExtensions.Boolean.cs</Link>
     </Compile>
@@ -75,9 +111,6 @@
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Guid.cs">
       <Link>Extensions\ValidatorExtensions.Guid.cs</Link>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Int32.cs">
-      <Link>Extensions\ValidatorExtensions.Int32.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Nullable.cs">
       <Link>Extensions\ValidatorExtensions.Nullable.cs</Link>
@@ -139,6 +172,9 @@
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Numbers.ttinclude">
+      <Link>Extensions\Generated\ValidatorExtensions.Numbers.ttinclude</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\Trustsoft.Conditions.NET35\Resources\MessageStrings.resx">
@@ -146,6 +182,36 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Byte.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Byte.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Byte.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Double.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Double.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Double.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int16.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Int16.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int16.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int32.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Int32.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int32.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Int64.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Int64.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int64.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Single.tt">
+      <Link>Extensions\Generated\ValidatorExtensions.Single.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Single.cs</LastGenOutput>
+    </Content>
     <Content Include="..\Trustsoft.Conditions.NET35\Resources\StringResources.tt">
       <Link>Resources\StringResources.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
