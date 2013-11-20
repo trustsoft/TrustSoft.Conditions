@@ -64,6 +64,12 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\ArgumentFactory.cs">
       <Link>ArgumentFactory.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\EntryPoint\Requires.cs">
+      <Link>EntryPoint\Requires.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\EntryPoint\Validate.cs">
+      <Link>EntryPoint\Validate.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Byte.cs">
       <Link>Extensions\Generated\ValidatorExtensions.Byte.cs</Link>
       <AutoGen>True</AutoGen>
@@ -157,6 +163,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\IArgumentValidator.cs">
       <Link>IArgumentValidator.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\IErrorHandler.cs">
+      <Link>IErrorHandler.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\IFluentSyntax.cs">
       <Link>IFluentSyntax.cs</Link>
     </Compile>
@@ -166,41 +175,32 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ArgumentExpression.cs">
       <Link>Internals\ArgumentExpression.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ArgumentValidatorBase.cs">
-      <Link>Internals\ArgumentValidatorBase.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Handlers\CollectOnErrorHandler.cs">
+      <Link>Internals\Handlers\CollectOnErrorHandler.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\CollectOnErrorHandler.cs">
-      <Link>Internals\CollectOnErrorHandler.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Handlers\ErrorHandlerBase.cs">
+      <Link>Internals\Handlers\ErrorHandlerBase.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\CollectOnErrorValidator.cs">
-      <Link>Internals\CollectOnErrorValidator.cs</Link>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ErrorHandlerBase.cs">
-      <Link>Internals\ErrorHandlerBase.cs</Link>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\IErrorHandler.cs">
-      <Link>Internals\IErrorHandler.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Handlers\ThrowOnErrorHandler.cs">
+      <Link>Internals\Handlers\ThrowOnErrorHandler.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Internals\MessageBuilder.cs">
       <Link>Internals\MessageBuilder.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ThrowOnErrorHandler.cs">
-      <Link>Internals\ThrowOnErrorHandler.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Validators\ArgumentValidatorBase.cs">
+      <Link>Internals\Validators\ArgumentValidatorBase.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ThrowOnErrorValidator.cs">
-      <Link>Internals\ThrowOnErrorValidator.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Validators\CollectOnErrorValidator.cs">
+      <Link>Internals\Validators\CollectOnErrorValidator.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Requires.cs">
-      <Link>Requires.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Validators\ThrowOnErrorValidator.cs">
+      <Link>Internals\Validators\ThrowOnErrorValidator.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Resources\StringResources.cs">
       <Link>Resources\StringResources.cs</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StringResources.tt</DependentUpon>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Validate.cs">
-      <Link>Validate.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\ViolationType.cs">
       <Link>ViolationType.cs</Link>
@@ -313,6 +313,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

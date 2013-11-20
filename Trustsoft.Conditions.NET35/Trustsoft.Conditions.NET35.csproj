@@ -61,6 +61,8 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ArgumentFactory.cs" />
+    <Compile Include="EntryPoint\Requires.cs" />
+    <Compile Include="EntryPoint\Validate.cs" />
     <Compile Include="Extensions\ValidatorExtensions.IComparable{T}.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Class.cs" />
     <Compile Include="Extensions\Generated\ValidatorExtensions.Byte.cs">
@@ -122,25 +124,23 @@
     <Compile Include="Helpers\StringHelpers.cs" />
     <Compile Include="IArgument.cs" />
     <Compile Include="IArgumentValidator.cs" />
+    <Compile Include="IErrorHandler.cs" />
     <Compile Include="IFluentSyntax.cs" />
     <Compile Include="Internals\Argument.cs" />
     <Compile Include="Internals\ArgumentExpression.cs" />
-    <Compile Include="Internals\ArgumentValidatorBase.cs" />
-    <Compile Include="Internals\CollectOnErrorHandler.cs" />
-    <Compile Include="Internals\CollectOnErrorValidator.cs" />
-    <Compile Include="Internals\ErrorHandlerBase.cs" />
-    <Compile Include="Internals\IErrorHandler.cs" />
+    <Compile Include="Internals\Handlers\CollectOnErrorHandler.cs" />
+    <Compile Include="Internals\Handlers\ErrorHandlerBase.cs" />
+    <Compile Include="Internals\Handlers\ThrowOnErrorHandler.cs" />
     <Compile Include="Internals\MessageBuilder.cs" />
-    <Compile Include="Internals\ThrowOnErrorHandler.cs" />
-    <Compile Include="Internals\ThrowOnErrorValidator.cs" />
+    <Compile Include="Internals\Validators\ArgumentValidatorBase.cs" />
+    <Compile Include="Internals\Validators\CollectOnErrorValidator.cs" />
+    <Compile Include="Internals\Validators\ThrowOnErrorValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requires.cs" />
     <Compile Include="Resources\StringResources.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StringResources.tt</DependentUpon>
     </Compile>
-    <Compile Include="Validate.cs" />
     <Compile Include="ViolationType.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +212,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
