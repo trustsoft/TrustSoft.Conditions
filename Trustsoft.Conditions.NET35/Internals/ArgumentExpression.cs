@@ -17,35 +17,25 @@ namespace Trustsoft.Conditions.Internals
 
     internal class ArgumentExpression<T> : IArgument<T>
     {
-        private readonly Expression<Func<T>> expression;
-
         /// <summary>
         ///     Gets the value of argument.
         /// </summary>
         /// <value> The value of argument. </value>
-        public T Value
-        {
-            get
-            {
-                return GetValue(this.expression);
-            }
-        }
+        public T Value { get; private set; }
 
         /// <summary>
         ///     Gets the name of argument.
         /// </summary>
         /// <value> The name of argument. </value>
-        public string Name
-        {
-            get
-            {
-                return GetName(this.expression);
-            }
-        }
+        public string Name { get; private set; }
 
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="Argument{T}"/> class.
+        /// </summary>
         public ArgumentExpression(Expression<Func<T>> expression)
         {
-            this.expression = expression;
+            this.Name = GetName(expression);
+            this.Value = GetValue(expression);
         }
 
         private static string GetName(Expression<Func<T>> argument)
