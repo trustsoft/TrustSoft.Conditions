@@ -13,7 +13,7 @@ namespace Trustsoft.Conditions.Internals
 
     #endregion
 
-    internal class ErrorHandlerBase<T> : IErrorHandler<T>
+    internal abstract class ErrorHandlerBase<T> : IErrorHandler<T>
     {
         #region Implementation of IErrorHandler
 
