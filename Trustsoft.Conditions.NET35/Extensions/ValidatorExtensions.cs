@@ -7,9 +7,17 @@
 
 namespace Trustsoft.Conditions
 {
+    #region " Using Directives "
+
+    using System.ComponentModel;
+
+    #endregion
+
     /// <summary>
     ///     Contains extension methods for <see cref="IArgumentValidator{T}"/>.
     /// </summary>
+    [Browsable(false)]
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public partial class ValidatorExtensions
     {
     }
