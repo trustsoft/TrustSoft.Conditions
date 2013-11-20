@@ -121,8 +121,11 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Requires.cs">
       <Link>Requires.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Resources\StringRes.cs">
-      <Link>Resources\StringRes.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Resources\StringResources.cs">
+      <Link>Resources\StringResources.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringResources.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\ViolationType.cs">
       <Link>ViolationType.cs</Link>
@@ -138,6 +141,16 @@
     <EmbeddedResource Include="..\Trustsoft.Conditions.NET35\Resources\MessageStrings.resx">
       <Link>Resources\MessageStrings.resx</Link>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Trustsoft.Conditions.NET35\Resources\StringResources.tt">
+      <Link>Resources\StringResources.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StringResources.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
