@@ -1,8 +1,7 @@
 ﻿<#
 //  -------------------------------------------------------------------------------------------------------
-//  Template: Generates C# code for extension methods for IArgumentValidator<int>
+//  Template: Generates C# code for extension methods for IArgumentValidator<byte>
 //  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
-//  Website: www.trustsoft.pro
 //  Links: 
 //          MSDN about developing T4 files: http://msdn.microsoft.com/en-us/library/bb126445.aspx
 //                                          http://msdn.microsoft.com/en-us/library/dd820620.aspx 
@@ -11,4 +10,4 @@
 <#
     this.TargetType = "Byte";
 #>
-<#@ include file="Numbers.UnitTest.ttinclude" #>
+<#@ include file="Numbers.Integer.Unsigned.ttinclude" #>

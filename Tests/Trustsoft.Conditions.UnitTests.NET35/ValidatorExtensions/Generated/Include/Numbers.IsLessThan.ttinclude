@@ -1,0 +1,43 @@
+﻿<#+ 
+  void Numbers_IsLessThan_Render(string targetType)
+  {
+#>
+#region " IsLessThan "
+
+        [TestMethod]
+        [TestCategory("<#= targetType #> - IsLessThan")]
+        [Description("Calling IsLessThan on higher value should pass.")]
+        public void IsLessThan_ShouldPassOnHigherValue()
+        {
+            <#= targetType #> val = 3;
+            <#= targetType #> min = 7;
+            Requires.That(val).IsLessThan(min);
+            Requires.That(val, "val").IsLessThan(min);
+        }
+
+        [TestMethod]
+        [TestCategory("<#= targetType #> - IsLessThan")]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [Description("Calling IsLessThan on lower value should fail.")]
+        public void IsLessThan_ShouldFailOnLowerValue()
+        {
+            <#= targetType #> val = 7;
+            <#= targetType #> min = 3;
+            Requires.That(val).IsLessThan(min);
+        }
+
+        [TestMethod]
+        [TestCategory("<#= targetType #> - IsLessThan")]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [Description("Calling IsLessThan on same value should fail.")]
+        public void IsLessThan_ShouldFailOnSameValue()
+        {
+            <#= targetType #> val = 7;
+            <#= targetType #> min = 7;
+            Requires.That(val).IsLessThan(min);
+        }
+
+        #endregion
+<#+
+  }
+#>

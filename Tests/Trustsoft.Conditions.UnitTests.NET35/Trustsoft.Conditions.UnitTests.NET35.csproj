@@ -131,6 +131,16 @@
     <None Include="..\..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Numbers.Fractional.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Numbers.Integer.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude" />
   </ItemGroup>
   <ItemGroup>
