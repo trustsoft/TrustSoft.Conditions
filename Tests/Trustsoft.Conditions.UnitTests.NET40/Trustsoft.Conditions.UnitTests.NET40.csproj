@@ -83,6 +83,9 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\GuidUnitTest.cs">
       <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Int32UnitTest.cs">
+      <Link>ValidatorExtensions\Int32UnitTest.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\NullableUnitTest.cs">
       <Link>ValidatorExtensions\NullableUnitTest.cs</Link>
     </Compile>

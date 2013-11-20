@@ -72,6 +72,7 @@
     <Compile Include="ValidatorExtensions\ClassUnitTest.cs" />
     <Compile Include="ValidatorExtensions\EvaluateUnitTest.cs" />
     <Compile Include="ValidatorExtensions\GuidUnitTest.cs" />
+    <Compile Include="ValidatorExtensions\Int32UnitTest.cs" />
     <Compile Include="ValidatorExtensions\NullableUnitTest.cs" />
     <Compile Include="ValidatorExtensions\StringUnitTest.cs" />
   </ItemGroup>
