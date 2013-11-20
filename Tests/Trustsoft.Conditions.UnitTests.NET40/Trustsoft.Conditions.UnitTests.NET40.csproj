@@ -191,9 +191,6 @@
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude</Link>
     </None>
-    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude">
-      <Link>ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude</Link>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Trustsoft.Conditions.NET40\Trustsoft.Conditions.NET40.csproj">

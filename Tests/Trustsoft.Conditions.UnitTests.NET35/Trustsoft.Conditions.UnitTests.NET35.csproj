@@ -141,7 +141,6 @@
     <None Include="ValidatorExtensions\Generated\Numbers.Fractional.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.Integer.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Trustsoft.Conditions.NET35\Trustsoft.Conditions.NET35.csproj">
