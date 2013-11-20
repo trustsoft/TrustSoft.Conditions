@@ -1,6 +1,6 @@
 ﻿<#
 //  -------------------------------------------------------------------------------------------------------
-//  Template: Generates C# code for extension methods for IArgumentValidator<double>
+//  Template: Generates C# code for extension methods for IArgumentValidator<decimal>
 //  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
 //  Links: 
 //          MSDN about developing T4 files: http://msdn.microsoft.com/en-us/library/bb126445.aspx
@@ -8,6 +8,6 @@
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#
-    this.TargetType = "Decimal";
+    this.TargetType = "decimal";
 #>
-<#@ include file="ValidatorExtensions.Numbers.ttinclude" #>
+<#@ include file="Numbers.Fractional.ttinclude" #>

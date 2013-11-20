@@ -138,13 +138,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringResources.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validate.cs" />
     <Compile Include="ViolationType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
-    <None Include="Extensions\Generated\ValidatorExtensions.Numbers.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsGreaterThan.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsInRange.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNegative.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsPositive.ttinclude" />
+    <None Include="Extensions\Generated\Numbers.Fractional.ttinclude" />
+    <None Include="Extensions\Generated\Numbers.Integer.ttinclude" />
+    <None Include="Extensions\Generated\Numbers.Integer.Unsigned.ttinclude" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\MessageStrings.resx" />

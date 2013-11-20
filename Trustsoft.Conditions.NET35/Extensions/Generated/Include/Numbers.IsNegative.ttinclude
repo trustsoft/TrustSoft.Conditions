@@ -1,0 +1,42 @@
+﻿<#+ 
+  void Numbers_IsNegative_Render(string targetType)
+  {	
+#>
+#region " IsNegative "
+
+        /// <summary>
+        ///     Checks whether the given value is less than zero.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        ///     Thrown when the value of the specified <paramref name="validator"/> is greater or equal to zero.
+        /// </exception>
+        public static IArgumentValidator<<#= this.TargetType #>> IsNegative(this IArgumentValidator<<#= this.TargetType #>> validator,
+                                                         string conditionDescription = null)
+        {
+            return validator.IsLessThan(0, conditionDescription);
+        }
+
+        /// <summary>
+        ///     Checks whether the given value is not less than zero or equal to zero.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        ///     Thrown when the value of the specified <paramref name="validator"/> is smaller or equal to zero.
+        /// </exception>
+        public static IArgumentValidator<<#= this.TargetType #>> IsNotNegative(this IArgumentValidator<<#= this.TargetType #>> validator,
+                                                            string conditionDescription = null)
+        {
+            return validator.IsNotLessThan(0, conditionDescription);
+        }
+
+        #endregion
+<#+
+  }
+#>

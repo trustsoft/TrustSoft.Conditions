@@ -1,0 +1,70 @@
+﻿<#+ 
+  void Numbers_IsEqualTo_Render(string targetType)
+  {
+#>
+#region " IsEqualTo "
+
+        /// <summary>
+        ///     Checks whether the given value is equal to the specified <paramref name="value"/>.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="value"> The valid value to compare with. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the value of the specified <paramref name="validator"/> is not equal to <paramref name="value"/>.
+        /// </exception>
+        public static IArgumentValidator<<#= this.TargetType #>> IsEqualTo(this IArgumentValidator<<#= this.TargetType #>> validator,
+                                                        <#= this.TargetType #> value,
+                                                        string conditionDescription = null)
+        {
+            // ReSharper disable CompareOfFloatsByEqualityOperator
+            if (validator.Argument.Value != value)
+            // ReSharper restore CompareOfFloatsByEqualityOperator
+            {
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeEqualToX,
+                                                    true,
+                                                    value);
+                validator.ErrorHandler.Post(msg);
+            }
+
+            return validator;
+        }
+
+        /// <summary>
+        ///     Checks whether the given value is unequal to the specified <paramref name="value"/>.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="value"> The invalid value to compare with. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the value of the specified <paramref name="validator"/> is equal to <paramref name="value"/>.
+        /// </exception>
+        public static IArgumentValidator<<#= this.TargetType #>> IsNotEqualTo(this IArgumentValidator<<#= this.TargetType #>> validator,
+                                                           <#= this.TargetType #> value,
+                                                           string conditionDescription = null)
+        {
+            // ReSharper disable CompareOfFloatsByEqualityOperator
+            if (validator.Argument.Value == value)
+            // ReSharper restore CompareOfFloatsByEqualityOperator
+            {
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeUnequalToX,
+                                                    true,
+                                                    value);
+                validator.ErrorHandler.Post(msg);
+            }
+
+            return validator;
+        }
+
+        #endregion
+<#+
+  }
+#>

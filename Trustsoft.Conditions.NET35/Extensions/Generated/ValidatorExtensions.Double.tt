@@ -10,4 +10,4 @@
 <#
     this.TargetType = "double";
 #>
-<#@ include file="ValidatorExtensions.Numbers.ttinclude" #>
+<#@ include file="Numbers.Fractional.ttinclude" #>

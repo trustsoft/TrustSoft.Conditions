@@ -10,4 +10,4 @@
 <#
     this.TargetType = "byte";
 #>
-<#@ include file="ValidatorExtensions.Numbers.ttinclude" #>
+<#@ include file="Numbers.Integer.Unsigned.ttinclude" #>

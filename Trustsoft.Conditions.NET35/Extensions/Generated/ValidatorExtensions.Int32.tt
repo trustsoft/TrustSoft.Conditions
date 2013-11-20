@@ -10,4 +10,4 @@
 <#
     this.TargetType = "int";
 #>
-<#@ include file="ValidatorExtensions.Numbers.ttinclude" #>
+<#@ include file="Numbers.Integer.ttinclude" #>

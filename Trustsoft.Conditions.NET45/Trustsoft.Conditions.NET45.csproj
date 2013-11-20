@@ -193,6 +193,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringResources.tt</DependentUpon>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Validate.cs">
+      <Link>Validate.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\ViolationType.cs">
       <Link>ViolationType.cs</Link>
     </Compile>
@@ -202,8 +205,38 @@
     <None Include="..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
-    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Numbers.ttinclude">
-      <Link>Extensions\Generated\ValidatorExtensions.Numbers.ttinclude</Link>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsGreaterThan.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsGreaterThan.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsInRange.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsInRange.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsLessThan.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsLessThan.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsNegative.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsNegative.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsPositive.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsPositive.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Numbers.Fractional.ttinclude">
+      <Link>Extensions\Generated\Numbers.Fractional.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Numbers.Integer.ttinclude">
+      <Link>Extensions\Generated\Numbers.Integer.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Numbers.Integer.Unsigned.ttinclude">
+      <Link>Extensions\Generated\Numbers.Integer.Unsigned.ttinclude</Link>
     </None>
   </ItemGroup>
   <ItemGroup>
