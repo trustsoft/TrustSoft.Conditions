@@ -139,6 +139,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Guid.cs">
       <Link>Extensions\ValidatorExtensions.Guid.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.IComparable{T}.cs">
+      <Link>Extensions\ValidatorExtensions.IComparable{T}.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Nullable.cs">
       <Link>Extensions\ValidatorExtensions.Nullable.cs</Link>
     </Compile>

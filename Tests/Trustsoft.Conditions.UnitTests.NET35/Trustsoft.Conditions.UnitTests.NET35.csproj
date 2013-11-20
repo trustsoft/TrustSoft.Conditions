@@ -70,6 +70,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ValidatorExtensions\BooleanUnitTest.cs" />
+    <Compile Include="ValidatorExtensions\IComparable{T}.UnitTest.cs" />
     <Compile Include="ValidatorExtensions\ClassUnitTest.cs" />
     <Compile Include="ValidatorExtensions\EvaluateUnitTest.cs" />
     <Compile Include="ValidatorExtensions\Generated\Byte.UnitTest.cs">

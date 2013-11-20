@@ -139,7 +139,7 @@ namespace <#= namespaceName #>
                                                     true,
                                                     minValue,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -172,7 +172,7 @@ namespace <#= namespaceName #>
                                                     true,
                                                     minValue,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -201,7 +201,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeGreaterThanX,
                                                     true,
                                                     minValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -229,7 +229,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldNotBeGreaterThanX,
                                                     true,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -257,7 +257,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeGreaterThanOrEqualToX,
                                                     true,
                                                     minValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -286,7 +286,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldNotBeGreaterThanOrEqualToX,
                                                     true,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -315,7 +315,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeSmallerThanX,
                                                     true,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -343,7 +343,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldNotBeSmallerThanX,
                                                     true,
                                                     minValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -371,7 +371,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeSmallerThanOrEqualToX,
                                                     true,
                                                     maxValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -400,7 +400,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,
                                                     minValue);
-                validator.Error.Handle(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
             }
 
             return validator;
@@ -430,7 +430,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeEqualToX,
                                                     true,
                                                     value);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -460,7 +460,7 @@ namespace <#= namespaceName #>
                                                     StringRes.ValueShouldBeUnequalToX,
                                                     true,
                                                     value);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;

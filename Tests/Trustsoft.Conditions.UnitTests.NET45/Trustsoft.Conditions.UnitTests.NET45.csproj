@@ -143,6 +143,9 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\GuidUnitTest.cs">
       <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\IComparable{T}.UnitTest.cs">
+      <Link>ValidatorExtensions\IComparable{T}.UnitTest.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\NullableUnitTest.cs">
       <Link>ValidatorExtensions\NullableUnitTest.cs</Link>
     </Compile>

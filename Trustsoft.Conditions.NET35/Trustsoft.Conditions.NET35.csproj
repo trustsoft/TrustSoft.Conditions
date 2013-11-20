@@ -61,6 +61,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ArgumentFactory.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.IComparable{T}.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Class.cs" />
     <Compile Include="Extensions\Generated\ValidatorExtensions.Byte.cs">
       <AutoGen>True</AutoGen>
