@@ -154,6 +154,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\IArgumentValidator.cs">
       <Link>IArgumentValidator.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\IFluentSyntax.cs">
+      <Link>IFluentSyntax.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Internals\Argument.cs">
       <Link>Internals\Argument.cs</Link>
     </Compile>

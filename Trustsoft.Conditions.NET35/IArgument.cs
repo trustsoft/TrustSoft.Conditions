@@ -7,7 +7,7 @@
 
 namespace Trustsoft.Conditions
 {
-    public interface IArgument<T>
+    public interface IArgument<T> : IFluentSyntax
     {
         /// <summary>
         ///     Gets the value of argument.

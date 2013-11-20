@@ -13,7 +13,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public interface IArgumentValidator<T>
+    public interface IArgumentValidator<T> : IFluentSyntax
     {
         IArgument<T> Argument { get; }
 
