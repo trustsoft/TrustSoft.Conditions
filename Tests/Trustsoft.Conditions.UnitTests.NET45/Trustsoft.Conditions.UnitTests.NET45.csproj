@@ -83,6 +83,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Byte.UnitTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Decimal.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Decimal.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Decimal.UnitTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Double.UnitTest.cs">
       <Link>ValidatorExtensions\Generated\Double.UnitTest.cs</Link>
       <AutoGen>True</AutoGen>
@@ -113,11 +119,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Single.UnitTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt16.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\UInt16.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UInt16.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt32.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\UInt32.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UInt32.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt64.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\UInt64.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UInt64.UnitTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\GuidUnitTest.cs">
       <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Int32UnitTest.cs">
-      <Link>ValidatorExtensions\Int32UnitTest.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\NullableUnitTest.cs">
       <Link>ValidatorExtensions\NullableUnitTest.cs</Link>
@@ -147,6 +168,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
     </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Decimal.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Decimal.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Decimal.UnitTest.cs</LastGenOutput>
+    </Content>
     <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Double.UnitTest.tt">
       <Link>ValidatorExtensions\Generated\Double.UnitTest.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -171,6 +197,21 @@
       <Link>ValidatorExtensions\Generated\Single.UnitTest.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt16.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\UInt16.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt16.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt32.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\UInt32.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt32.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\UInt64.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\UInt64.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
