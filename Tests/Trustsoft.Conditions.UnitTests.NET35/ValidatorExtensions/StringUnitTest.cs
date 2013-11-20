@@ -17,6 +17,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
+    // ReSharper disable ConditionIsAlwaysTrueOrFalse
 
     [TestClass]
     public class StringUnitTest
@@ -28,15 +29,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on String.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -44,15 +41,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on String.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -60,15 +53,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on ()=>String.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -77,15 +66,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on non-null should fail.")]
         public void IsEmpty_ShouldFail_OnNonNullValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -94,15 +79,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on non-null should fail.")]
         public void IsEmpty_ShouldFail_OnNonNullValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(arg, "arg").IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -111,15 +92,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsEmpty on ()=>non-null should fail.")]
         public void IsEmpty_ShouldFail_OnNonNullValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(() => arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -131,15 +108,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on non-null should pass.")]
         public void IsNotEmpty_ShouldPass_OnStringValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -147,15 +120,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on non-null should pass.")]
         public void IsNotEmpty_ShouldPass_OnStringValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -163,15 +132,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on ()=>non-null should pass.")]
         public void IsNotEmpty_ShouldPass_OnStringValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(() => arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -180,15 +145,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on null should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = "";
 
             // Act/Assert
             Requires.That(arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -197,15 +158,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on null should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -214,15 +171,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotEmpty on ()=>null should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -234,15 +187,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on null should pass.")]
         public void IsNullOrEmpty_ShouldPass_OnNullValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(arg).IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -250,15 +199,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on null should pass.")]
         public void IsNullOrEmpty_ShouldPass_OnNullValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -266,15 +211,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on ()=>null should pass.")]
         public void IsNullOrEmpty_ShouldPass_OnNullValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(() => arg).IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -283,15 +224,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on non-null should fail.")]
         public void IsNullOrEmpty_ShouldFail_OnNonNullValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg).IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -300,15 +237,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on non-null should fail.")]
         public void IsNullOrEmpty_ShouldFail_OnNonNullValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg, "arg").IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -317,15 +250,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrEmpty on ()=>non-null should fail.")]
         public void IsNullOrEmpty_ShouldFail_OnNonNullValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(() => arg).IsNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -337,15 +266,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on non-null should pass.")]
         public void IsNotNullOrEmpty_ShouldPass_OnStringValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg).IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -353,15 +278,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on non-null should pass.")]
         public void IsNotNullOrEmpty_ShouldPass_OnStringValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -369,15 +290,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on ()=>non-null should pass.")]
         public void IsNotNullOrEmpty_ShouldPass_OnStringValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(() => arg).IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -386,15 +303,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on null should fail.")]
         public void IsNotNullOrEmpty_ShouldFail_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(arg).IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -403,15 +316,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on null should fail.")]
         public void IsNotNullOrEmpty_ShouldFail_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -420,15 +329,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrEmpty on ()=>null should fail.")]
         public void IsNotNullOrEmpty_ShouldFail_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = null;
 
             // Act/Assert
             Requires.That(() => arg).IsNotNullOrEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -440,15 +345,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on String.Empty should pass.")]
         public void IsNullOrWhiteSpace_ShouldPass_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = "";
 
             // Act/Assert
             Requires.That(arg).IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -456,15 +357,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on String.Empty should pass.")]
         public void IsNullOrWhiteSpace_ShouldPass_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -472,15 +369,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on ()=>String.Empty should pass.")]
         public void IsNullOrWhiteSpace_ShouldPass_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -489,15 +382,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on non-null should fail.")]
         public void IsNullOrWhiteSpace_ShouldFail_OnNonNullValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(arg).IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -506,15 +395,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on non-null should fail.")]
         public void IsNullOrWhiteSpace_ShouldFail_OnNonNullValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(arg, "arg").IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -523,15 +408,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNullOrWhiteSpace on ()=>non-null should fail.")]
         public void IsNullOrWhiteSpace_ShouldFail_OnNonNullValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 12);
 
             // Act/Assert
             Requires.That(() => arg).IsNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -543,15 +424,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on non-null should pass.")]
         public void IsNotNullOrWhiteSpace_ShouldPass_OnStringValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg).IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -559,15 +436,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on non-null should pass.")]
         public void IsNotNullOrWhiteSpace_ShouldPass_OnStringValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -575,15 +448,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on ()=>non-null should pass.")]
         public void IsNotNullOrWhiteSpace_ShouldPass_OnStringValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = new string('-', 21);
 
             // Act/Assert
             Requires.That(() => arg).IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -592,15 +461,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on null should fail.")]
         public void IsNotNullOrWhiteSpace_ShouldFail_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg).IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -609,15 +474,11 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on null should fail.")]
         public void IsNotNullOrWhiteSpace_ShouldFail_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
@@ -626,20 +487,17 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling IsNotNullOrWhiteSpace on ()=>null should fail.")]
         public void IsNotNullOrWhiteSpace_ShouldFail_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             string arg = string.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsNotNullOrWhiteSpace();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
     }
 
+    // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
 }

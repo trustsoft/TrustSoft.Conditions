@@ -7,7 +7,7 @@
 
 namespace Trustsoft.Conditions.UnitTests.Helpers
 {
-    public class Model : ModelBase
+    internal class Model : ModelBase
     {
 
     }

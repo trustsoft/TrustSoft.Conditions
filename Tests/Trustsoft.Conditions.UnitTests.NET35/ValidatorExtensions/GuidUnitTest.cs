@@ -17,6 +17,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
+    // ReSharper disable ConditionIsAlwaysTrueOrFalse
 
     [TestClass]
     public class GuidUnitTest
@@ -24,102 +25,78 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         #region " IsEmpty "
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [Description("Calling IsEmpty on Guid.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [Description("Calling IsEmpty on Guid.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [Description("Calling IsEmpty on ()=>Guid.Empty should pass.")]
         public void IsEmpty_ShouldPass_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on new Guid() should fail.")]
         public void IsEmpty_ShouldFail_OnGuidValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on new Guid() should fail.")]
         public void IsEmpty_ShouldFail_OnGuidValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(arg, "arg").IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on ()=>new Guid() should fail.")]
         public void IsEmpty_ShouldFail_OnGuidValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(() => arg).IsEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -127,107 +104,84 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         #region " IsNotEmpty "
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [Description("Calling IsNotEmpty on new Guid() should pass.")]
         public void IsNotEmpty_ShouldPass_OnGuidValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [Description("Calling IsNotEmpty on new Guid() should pass.")]
         public void IsNotEmpty_ShouldPass_OnGuidValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [Description("Calling IsNotEmpty on ()=>new Guid() should pass.")]
         public void IsNotEmpty_ShouldPass_OnGuidValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = new Guid("{D061756F-CC3C-4410-A126-C9D90562F804}");
 
             // Act/Assert
             Requires.That(() => arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on Guid.Empty should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on Guid.Empty should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Guid")]
+        [TestCategory("Guid - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on ()=>Guid.Empty should fail.")]
         public void IsNotEmpty_ShouldFail_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             Guid arg = Guid.Empty;
 
             // Act/Assert
             Requires.That(() => arg).IsNotEmpty();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
     }
 
+    // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
 }

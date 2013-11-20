@@ -17,6 +17,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
+    // ReSharper disable ConditionIsAlwaysTrueOrFalse
 
     [TestClass]
     public class BooleanUnitTest
@@ -24,102 +25,78 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         #region " IsTrue "
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [Description("Calling IsTrue on true should pass.")]
         public void IsTrue_ShouldPass_OnTrueValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(arg).IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [Description("Calling IsTrue on true should pass.")]
         public void IsTrue_ShouldPass_OnTrueValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(arg, "arg").IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [Description("Calling IsTrue on ()=>true should pass.")]
         public void IsTrue_ShouldPass_OnTrueValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(() => arg).IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsTrue on false should fail.")]
         public void IsTrue_ShouldFail_OnFalseValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(arg).IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsTrue on false should fail.")]
         public void IsTrue_ShouldFail_OnFalseValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(arg, "arg").IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsTrue")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsTrue on ()=>false should fail.")]
         public void IsTrue_ShouldFail_OnFalseValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(() => arg).IsTrue();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -127,107 +104,84 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         #region " IsFalse "
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [Description("Calling IsFalse on false should pass.")]
         public void IsFalse_ShouldPass_OnFalseValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(arg).IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [Description("Calling IsFalse on false should pass.")]
         public void IsFalse_ShouldPass_OnFalseValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(arg, "arg").IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [Description("Calling IsFalse on ()=>false should pass.")]
         public void IsFalse_ShouldPass_OnFalseValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = false;
 
             // Act/Assert
             Requires.That(() => arg).IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsFalse on true should fail.")]
         public void IsFalse_ShouldFail_OnTrueValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(arg).IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsFalse on true should fail.")]
         public void IsFalse_ShouldFail_OnTrueValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(arg, "arg").IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Boolean")]
+        [TestCategory("Boolean - IsFalse")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsFalse on ()=>true should fail.")]
         public void IsFalse_ShouldFail_OnTrueValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             bool arg = true;
 
             // Act/Assert
             Requires.That(() => arg).IsFalse();
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
     }
 
+    // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
 }

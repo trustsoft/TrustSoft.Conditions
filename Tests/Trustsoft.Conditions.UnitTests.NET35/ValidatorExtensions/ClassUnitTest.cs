@@ -19,109 +19,165 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
+    // ReSharper disable ConditionIsAlwaysTrueOrFalse
 
     [TestClass]
     public class ClassUnitTest
     {
+        #region " IsNull "
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [Description("Calling IsNull on null should pass.")]
+        public void IsNull_ShouldPass_OnNullValue1()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(arg).IsNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [Description("Calling IsNull on null should pass.")]
+        public void IsNull_ShouldPass_OnNullValue2()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [Description("Calling IsNull on ()=>null should pass.")]
+        public void IsNull_ShouldPass_OnNullValue3()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(() => arg).IsNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsNull on non-null should fail.")]
+        public void IsNull_ShouldFail_OnNonNullValue1()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(arg).IsNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsNull on non-null should fail.")]
+        public void IsNull_ShouldFail_OnNonNullValue2()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNull")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsNull on ()=>non-null should fail.")]
+        public void IsNull_ShouldFail_OnNonNullValue3()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(() => arg).IsNull();
+        }
+
+        #endregion
+
         #region " IsOfType "
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [Description("Calling IsOfType on Type.Empty should pass.")]
         public void IsOfType_ShouldPass_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new Model();
 
             // Act/Assert
             Requires.That(arg).IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [Description("Calling IsOfType on Type.Empty should pass.")]
         public void IsOfType_ShouldPass_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new Model();
 
             // Act/Assert
             Requires.That(arg, "arg").IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [Description("Calling IsOfType on ()=>Type.Empty should pass.")]
         public void IsOfType_ShouldPass_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new Model();
 
             // Act/Assert
             Requires.That(() => arg).IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsOfType on new Type() should fail.")]
         public void IsOfType_ShouldFail_OnTypeValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg).IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsOfType on new Type() should fail.")]
         public void IsOfType_ShouldFail_OnTypeValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg, "arg").IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsOfType on ()=>new Type() should fail.")]
         public void IsOfType_ShouldFail_OnTypeValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(() => arg).IsOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
@@ -129,107 +185,84 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         #region " IsNotOfType "
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [Description("Calling IsNotOfType on new Type() should pass.")]
         public void IsNotOfType_ShouldPass_OnTypeValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg).IsNotOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [Description("Calling IsNotOfType on new Type() should pass.")]
         public void IsNotOfType_ShouldPass_OnTypeValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [Description("Calling IsNotOfType on ()=>new Type() should pass.")]
         public void IsNotOfType_ShouldPass_OnTypeValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(() => arg).IsNotOfType(typeof(Model));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotOfType on Type.Empty should fail.")]
         public void IsNotOfType_ShouldFail_OnEmptyValue1()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg).IsNotOfType(typeof(ModelBase));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotOfType on Type.Empty should fail.")]
         public void IsNotOfType_ShouldFail_OnEmptyValue2()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(arg, "arg").IsNotOfType(typeof(ModelBase));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         [TestMethod]
-        [TestCategory("Type")]
+        [TestCategory("Class - IsNotOfType")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotOfType on ()=>Type.Empty should fail.")]
         public void IsNotOfType_ShouldFail_OnEmptyValue3()
         {
-            // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
             // Arrange
             ModelBase arg = new ModelBase();
 
             // Act/Assert
             Requires.That(() => arg).IsNotOfType(typeof(ModelBase));
-
-            // ReSharper restore ConditionIsAlwaysTrueOrFalse
         }
 
         #endregion
     }
 
+    // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
 }
