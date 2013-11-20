@@ -127,6 +127,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Boolean.cs">
       <Link>Extensions\ValidatorExtensions.Boolean.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Class.cs">
+      <Link>Extensions\ValidatorExtensions.Class.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.cs">
       <Link>Extensions\ValidatorExtensions.cs</Link>
     </Compile>
@@ -141,9 +144,6 @@
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.String.cs">
       <Link>Extensions\ValidatorExtensions.String.cs</Link>
-    </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Type.cs">
-      <Link>Extensions\ValidatorExtensions.Type.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringHelpers.cs">
       <Link>Helpers\StringHelpers.cs</Link>
