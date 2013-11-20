@@ -6,7 +6,6 @@
     <version>0.9.0.0</version>
     <owners>Trustsoft Ltd.</owners>
     <authors>Trustsoft Ltd.</authors>
-    <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
     <summary>
       Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5/4.0/4.5.
     </summary>
