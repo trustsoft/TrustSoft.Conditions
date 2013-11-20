@@ -80,6 +80,42 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\EvaluateUnitTest.cs">
       <Link>ValidatorExtensions\EvaluateUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Byte.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Byte.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Double.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Double.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Double.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int16.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Int16.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int16.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int32.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Int32.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int32.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int64.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Int64.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int64.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Single.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\Single.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single.UnitTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\GuidUnitTest.cs">
       <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
     </Compile>
@@ -98,12 +134,50 @@
     <None Include="..\..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Trustsoft.Conditions.NET40\Trustsoft.Conditions.NET40.csproj">
       <Project>{88d4fde9-8595-4092-8bc6-f8a4f83e0858}</Project>
       <Name>Trustsoft.Conditions.NET40</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Byte.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Byte.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Double.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Double.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int16.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Int16.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int32.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Int32.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Int64.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Int64.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Single.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\Single.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

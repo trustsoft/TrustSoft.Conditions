@@ -71,6 +71,36 @@
     <Compile Include="ValidatorExtensions\BooleanUnitTest.cs" />
     <Compile Include="ValidatorExtensions\ClassUnitTest.cs" />
     <Compile Include="ValidatorExtensions\EvaluateUnitTest.cs" />
+    <Compile Include="ValidatorExtensions\Generated\Byte.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Double.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Double.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int16.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int16.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int32.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int32.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int64.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Int64.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Single.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Single.UnitTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="ValidatorExtensions\GuidUnitTest.cs" />
     <Compile Include="ValidatorExtensions\Int32UnitTest.cs" />
     <Compile Include="ValidatorExtensions\NullableUnitTest.cs" />
@@ -80,12 +110,42 @@
     <None Include="..\..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
+    <None Include="ValidatorExtensions\Generated\Numbers.UnitTest.ttinclude" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Trustsoft.Conditions.NET35\Trustsoft.Conditions.NET35.csproj">
       <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
       <Name>Trustsoft.Conditions.NET35</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ValidatorExtensions\Generated\Byte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\Double.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\Int16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\Int32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\Int64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\Single.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
