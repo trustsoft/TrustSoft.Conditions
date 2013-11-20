@@ -15,10 +15,8 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public static class Validate
+    internal static class Validate
     {
-        #region " Static Methods "
-
         /// <summary>
         ///     Creates the validator for specified argument.
         /// </summary>
@@ -29,7 +27,7 @@ namespace Trustsoft.Conditions
         public static IArgumentValidator<T> That<T>(T value, string argumentName)
         {
             var argument = ArgumentFactory.Create(value, argumentName);
-            return new ThrowOnErrorValidator<T>(argument);
+            return new CollectOnErrorValidator<T>(argument);
         }
 
         /// <summary>
@@ -41,9 +39,7 @@ namespace Trustsoft.Conditions
         public static IArgumentValidator<T> That<T>(Expression<Func<T>> expression)
         {
             var argument = ArgumentFactory.Create(expression);
-            return new ThrowOnErrorValidator<T>(argument);
+            return new CollectOnErrorValidator<T>(argument);
         }
-
-        #endregion
     }
 }

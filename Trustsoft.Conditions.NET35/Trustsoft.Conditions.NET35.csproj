@@ -126,6 +126,8 @@
     <Compile Include="Internals\Argument.cs" />
     <Compile Include="Internals\ArgumentExpression.cs" />
     <Compile Include="Internals\ArgumentValidatorBase.cs" />
+    <Compile Include="Internals\CollectOnErrorHandler.cs" />
+    <Compile Include="Internals\CollectOnErrorValidator.cs" />
     <Compile Include="Internals\ErrorHandlerBase.cs" />
     <Compile Include="Internals\IErrorHandler.cs" />
     <Compile Include="Internals\MessageBuilder.cs" />

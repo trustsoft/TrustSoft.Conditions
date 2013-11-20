@@ -169,6 +169,12 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ArgumentValidatorBase.cs">
       <Link>Internals\ArgumentValidatorBase.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\CollectOnErrorHandler.cs">
+      <Link>Internals\CollectOnErrorHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Internals\CollectOnErrorValidator.cs">
+      <Link>Internals\CollectOnErrorValidator.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Internals\ErrorHandlerBase.cs">
       <Link>Internals\ErrorHandlerBase.cs</Link>
     </Compile>
