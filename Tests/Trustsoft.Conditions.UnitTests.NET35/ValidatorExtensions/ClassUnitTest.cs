@@ -103,6 +103,85 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
         #endregion
 
+        #region " IsNotNull "
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [Description("Calling IsNotNull on non-null should pass.")]
+        public void IsNotNull_ShouldPass_OnNullableValue1()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(arg).IsNotNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [Description("Calling IsNotNull on non-null should pass.")]
+        public void IsNotNull_ShouldPass_OnNullableValue2()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsNotNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [Description("Calling IsNotNull on ()=>non-null should pass.")]
+        public void IsNotNull_ShouldPass_OnNullableValue3()
+        {
+            // Arrange
+            Model arg = new Model();
+
+            // Act/Assert
+            Requires.That(() => arg).IsNotNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [ExpectedException(typeof(ArgumentNullException))]
+        [Description("Calling IsNotNull on null should fail.")]
+        public void IsNotNull_ShouldFail_OnEmptyValue1()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(arg).IsNotNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [ExpectedException(typeof(ArgumentNullException))]
+        [Description("Calling IsNotNull on null should fail.")]
+        public void IsNotNull_ShouldFail_OnEmptyValue2()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsNotNull();
+        }
+
+        [TestMethod]
+        [TestCategory("Class - IsNotNull")]
+        [ExpectedException(typeof(ArgumentNullException))]
+        [Description("Calling IsNotNull on ()=>null should fail.")]
+        public void IsNotNull_ShouldFail_OnEmptyValue3()
+        {
+            // Arrange
+            Model arg = null;
+
+            // Act/Assert
+            Requires.That(() => arg).IsNotNull();
+        }
+
+        #endregion
+
         #region " IsOfType "
 
         [TestMethod]

@@ -47,6 +47,21 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
+                                                         string conditionDescription = null) where T : class
+        {
+            if (validator.Argument.Value == null)
+            {
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldNotBeNull,
+                                                    false);
+                validator.ErrorHandler.Post(msg);
+            }
+
+            return validator;
+        }
+
         public static IArgumentValidator<T> IsOfType<T>(this IArgumentValidator<T> validator,
                                                         Type type,
                                                         string conditionDescription = null) where T : class
