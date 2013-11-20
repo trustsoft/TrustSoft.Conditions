@@ -196,6 +196,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Byte.UnitTest.tt">
       <Link>ValidatorExtensions\Generated\Byte.UnitTest.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -246,9 +249,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

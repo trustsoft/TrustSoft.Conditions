@@ -63,58 +63,63 @@
     <Compile Include="ArgumentFactory.cs" />
     <Compile Include="EntryPoint\Requires.cs" />
     <Compile Include="EntryPoint\Validate.cs" />
-    <Compile Include="Extensions\ValidatorExtensions.IComparable{T}.cs" />
-    <Compile Include="Extensions\ValidatorExtensions.Class.cs" />
     <Compile Include="Extensions\Generated\ValidatorExtensions.Byte.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Byte.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Decimal.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Decimal.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Double.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Double.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Int16.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Int16.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Int32.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Int32.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Int64.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Int64.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Extensions\Generated\ValidatorExtensions.SByte.cs">
+      <DependentUpon>ValidatorExtensions.SByte.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.Single.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.Single.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.UInt16.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.UInt16.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.UInt32.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.UInt32.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extensions\Generated\ValidatorExtensions.UInt64.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ValidatorExtensions.UInt64.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="Extensions\ValidatorExtensions.IComparable{T}.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.Class.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Evaluation.cs" />
     <Compile Include="Extensions\ValidatorExtensions.String.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Boolean.cs" />
@@ -148,13 +153,22 @@
       <Link>Trustsoft.snk</Link>
     </None>
     <None Include="Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsEven.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsGreaterThan.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsInRange.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsNegative.ttinclude" />
-    <None Include="Extensions\Generated\Include\Numbers.IsOddEven.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotInRange.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotLessThan.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotNegative.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsNotPositive.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsOdd.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsPositive.ttinclude" />
     <None Include="Extensions\Generated\Numbers.Fractional.ttinclude" />
     <None Include="Extensions\Generated\Numbers.Integer.ttinclude" />
@@ -187,6 +201,10 @@
     <Content Include="Extensions\Generated\ValidatorExtensions.Int64.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ValidatorExtensions.Int64.cs</LastGenOutput>
+    </Content>
+    <Content Include="Extensions\Generated\ValidatorExtensions.SByte.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.SByte.cs</LastGenOutput>
     </Content>
     <Content Include="Extensions\Generated\ValidatorExtensions.Single.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -1,11 +1,11 @@
 ﻿<#+ 
-  void Numbers_IsGreaterThan_Render(string targetType)
+  void Numbers_IsNotLessOrEqual_Render(string targetType)
   {
 #>
-#region " IsGreaterThan "
+#region " IsNotLessOrEqual "
 
         /// <summary>
-        ///     Checks whether the given value is greater than the specified <paramref name="minValue"/>.
+        ///     Checks whether the given value is not smaller or equal to the specified <paramref name="minValue"/>.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
@@ -16,15 +16,15 @@
         ///     Thrown when the value of the specified <paramref name="validator"/> is smaller or equal to
         ///     <paramref name="minValue"/>.
         /// </exception>
-        public static IArgumentValidator<<#= targetType #>> IsGreaterThan(this IArgumentValidator<<#= targetType #>> validator,
-                                                            <#= targetType #> minValue,
-                                                            string conditionDescription = null)
+        public static IArgumentValidator<<#= targetType #>> IsNotLessOrEqual(this IArgumentValidator<<#= targetType #>> validator,
+                                                               <#= targetType #> minValue,
+                                                               string conditionDescription = null)
         {
-            if (!(validator.Argument.Value > minValue))
+            if (validator.Argument.Value <= minValue)
             {
                 string msg = MessageBuilder.Combine(validator,
                                                     conditionDescription,
-                                                    StringRes.ValueShouldBeGreaterThanX,
+                                                    StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,
                                                     minValue);
                 validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);

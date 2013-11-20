@@ -1,30 +1,29 @@
 ﻿<#+ 
-  void Numbers_IsGreaterThan_Render(string targetType)
+  void Numbers_IsNotLessThan_Render(string targetType)
   {
 #>
-#region " IsGreaterThan "
+#region " IsNotLessThan "
 
         /// <summary>
-        ///     Checks whether the given value is greater than the specified <paramref name="minValue"/>.
+        ///     Checks whether the given value is not less than the specified <paramref name="minValue"/>.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
-        /// <param name="minValue"> The highest invalid value. </param>
+        /// <param name="minValue"> The lowest valid value. </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentOutOfRangeException">
-        ///     Thrown when the value of the specified <paramref name="validator"/> is smaller or equal to
-        ///     <paramref name="minValue"/>.
+        ///     Thrown when the value of the specified <paramref name="validator"/> is smaller than <paramref name="minValue"/>.
         /// </exception>
-        public static IArgumentValidator<<#= targetType #>> IsGreaterThan(this IArgumentValidator<<#= targetType #>> validator,
+        public static IArgumentValidator<<#= targetType #>> IsNotLessThan(this IArgumentValidator<<#= targetType #>> validator,
                                                             <#= targetType #> minValue,
                                                             string conditionDescription = null)
         {
-            if (!(validator.Argument.Value > minValue))
+            if (validator.Argument.Value < minValue)
             {
                 string msg = MessageBuilder.Combine(validator,
                                                     conditionDescription,
-                                                    StringRes.ValueShouldBeGreaterThanX,
+                                                    StringRes.ValueShouldNotBeSmallerThanX,
                                                     true,
                                                     minValue);
                 validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);

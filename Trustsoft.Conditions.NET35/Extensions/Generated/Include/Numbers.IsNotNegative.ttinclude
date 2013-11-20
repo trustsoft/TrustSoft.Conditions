@@ -1,11 +1,11 @@
 ﻿<#+ 
-  void Numbers_IsPositive_Render(string targetType)
-  {
+  void Numbers_IsNotNegative_Render(string targetType)
+  {	
 #>
-#region " IsPositive "
+#region " IsNotNegative "
 
         /// <summary>
-        ///     Checks whether the given value is greater than zero.
+        ///     Checks whether the given value is not less than zero or equal to zero.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
@@ -14,10 +14,10 @@
         /// <exception cref="ArgumentOutOfRangeException">
         ///     Thrown when the value of the specified <paramref name="validator"/> is smaller or equal to zero.
         /// </exception>
-        public static IArgumentValidator<<#= targetType #>> IsPositive(this IArgumentValidator<<#= targetType #>> validator,
-                                                         string conditionDescription = null)
+        public static IArgumentValidator<<#= targetType #>> IsNotNegative(this IArgumentValidator<<#= targetType #>> validator,
+                                                            string conditionDescription = null)
         {
-            return validator.IsGreaterThan(0, conditionDescription);
+            return validator.IsNotLessThan(0, conditionDescription);
         }
 
         #endregion

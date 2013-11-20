@@ -21,13 +21,21 @@
 <#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ include file=".\Include\Numbers.IsEqualTo.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotEqualTo.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsGreaterOrEqual.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotGreaterOrEqual.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsGreaterThan.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotGreaterThan.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsInRange.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotInRange.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsLessOrEqual.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotLessOrEqual.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsLessThan.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotLessThan.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsNegative.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotNegative.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsPositive.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsNotPositive.ttinclude" #>
 <#
     var namespaceName = "Trustsoft.Conditions";
     IServiceProvider serviceProvider = (IServiceProvider)this.Host;
@@ -56,21 +64,37 @@ namespace <#= namespaceName #>
 
     public static partial class ValidatorExtensions
     {   
-        <# this.Numbers_IsNegative_Render(this.TargetType); #>
+        <# this.Numbers_IsEqualTo_Render(this.TargetType); #>
 
-        <# this.Numbers_IsPositive_Render(this.TargetType); #>
-
-        <# this.Numbers_IsInRange_Render(this.TargetType); #>
-
-        <# this.Numbers_IsGreaterThan_Render(this.TargetType); #>
+        <# this.Numbers_IsNotEqualTo_Render(this.TargetType); #>
 
         <# this.Numbers_IsGreaterOrEqual_Render(this.TargetType); #>
 
-        <# this.Numbers_IsLessThan_Render(this.TargetType); #>
+        <# this.Numbers_IsNotGreaterOrEqual_Render(this.TargetType); #>
+
+        <# this.Numbers_IsGreaterThan_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNotGreaterThan_Render(this.TargetType); #>
+
+        <# this.Numbers_IsInRange_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNotInRange_Render(this.TargetType); #>
 
         <# this.Numbers_IsLessOrEqual_Render(this.TargetType); #>
 
-        <# this.Numbers_IsEqualTo_Render(this.TargetType); #>
+        <# this.Numbers_IsNotLessOrEqual_Render(this.TargetType); #>
+
+        <# this.Numbers_IsLessThan_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNotLessThan_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNegative_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNotNegative_Render(this.TargetType); #>
+
+        <# this.Numbers_IsPositive_Render(this.TargetType); #>
+
+        <# this.Numbers_IsNotPositive_Render(this.TargetType); #>
     }
 }
 <#+
