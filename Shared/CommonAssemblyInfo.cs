@@ -34,9 +34,9 @@ using System.Reflection;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("0.9.2.0")]
-[assembly: AssemblyFileVersion("0.9.2.0")]
-[assembly: AssemblyInformationalVersion("0.9.2.0")]
+[assembly: AssemblyVersion("0.9.2.5")]
+[assembly: AssemblyFileVersion("0.9.2.5")]
+[assembly: AssemblyInformationalVersion("0.9.2.5")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
