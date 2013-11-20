@@ -70,6 +70,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.cs">
       <Link>Extensions\ValidatorExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Evaluation.cs">
+      <Link>Extensions\ValidatorExtensions.Evaluation.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Guid.cs">
       <Link>Extensions\ValidatorExtensions.Guid.cs</Link>
     </Compile>

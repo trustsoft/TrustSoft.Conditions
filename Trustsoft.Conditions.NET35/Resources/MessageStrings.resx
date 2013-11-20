@@ -123,6 +123,9 @@
   <data name="GuidShouldNotBeEmpty" xml:space="preserve">
     <value>{name} should not be Guid.Empty</value>
   </data>
+  <data name="LambdaXShouldHoldForValue" xml:space="preserve">
+    <value>'{param1}' should hold for {value}</value>
+  </data>
   <data name="StringShouldBe1CharacterLong" xml:space="preserve">
     <value>{name} should be 1 character long</value>
   </data>

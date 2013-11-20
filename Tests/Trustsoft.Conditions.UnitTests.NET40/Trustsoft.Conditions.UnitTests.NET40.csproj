@@ -77,6 +77,9 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\ClassUnitTest.cs">
       <Link>ValidatorExtensions\ClassUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\EvaluateUnitTest.cs">
+      <Link>ValidatorExtensions\EvaluateUnitTest.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\GuidUnitTest.cs">
       <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
     </Compile>
