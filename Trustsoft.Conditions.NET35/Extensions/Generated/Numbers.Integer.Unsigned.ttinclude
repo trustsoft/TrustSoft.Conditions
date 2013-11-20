@@ -28,6 +28,7 @@
 <#@ include file=".\Include\Numbers.IsLessThan.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsNegative.ttinclude" #>
 <#@ include file=".\Include\Numbers.IsPositive.ttinclude" #>
+<#@ include file=".\Include\Numbers.IsOddEven.ttinclude" #>
 <#
     var namespaceName = "Trustsoft.Conditions";
     IServiceProvider serviceProvider = (IServiceProvider)this.Host;
@@ -69,6 +70,8 @@ namespace <#= namespaceName #>
         <# this.Numbers_IsLessOrEqual_Render(this.TargetType); #>
 
         <# this.Numbers_IsEqualTo_Render(this.TargetType); #>
+
+        <# this.Numbers_IsOddEven_Render(this.TargetType); #>
     }
 }
 <#+

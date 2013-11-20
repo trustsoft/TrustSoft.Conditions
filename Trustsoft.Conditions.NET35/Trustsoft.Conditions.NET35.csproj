@@ -154,6 +154,7 @@
     <None Include="Extensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsNegative.ttinclude" />
+    <None Include="Extensions\Generated\Include\Numbers.IsOddEven.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsPositive.ttinclude" />
     <None Include="Extensions\Generated\Numbers.Fractional.ttinclude" />
     <None Include="Extensions\Generated\Numbers.Integer.ttinclude" />

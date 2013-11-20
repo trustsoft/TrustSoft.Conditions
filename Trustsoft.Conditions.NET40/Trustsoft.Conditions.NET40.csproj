@@ -232,6 +232,9 @@
     <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsNegative.ttinclude">
       <Link>Extensions\Generated\Include\Numbers.IsNegative.ttinclude</Link>
     </None>
+    <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsOddEven.ttinclude">
+      <Link>Extensions\Generated\Include\Numbers.IsOddEven.ttinclude</Link>
+    </None>
     <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsPositive.ttinclude">
       <Link>Extensions\Generated\Include\Numbers.IsPositive.ttinclude</Link>
     </None>
