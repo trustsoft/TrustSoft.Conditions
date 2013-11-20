@@ -271,7 +271,7 @@
     <value>{name} should not be null</value>
   </data>
   <data name="ValueShouldNotBeOfTypeX" xml:space="preserve">
-    <value>{name0} should not be of type {param1}</value>
+    <value>{name} should not be of type {param1}</value>
   </data>
   <data name="ValueShouldNotBePositiveInfinity" xml:space="preserve">
     <value>{name} should not be positive infinity</value>
