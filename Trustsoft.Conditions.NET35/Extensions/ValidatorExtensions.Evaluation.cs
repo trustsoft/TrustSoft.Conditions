@@ -56,7 +56,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.LambdaXShouldHoldForValue,
                                                     false,
                                                     expression);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;

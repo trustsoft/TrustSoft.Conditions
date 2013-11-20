@@ -20,14 +20,14 @@ namespace Trustsoft.Conditions.Internals
     {
         #region " Implementation of IErrorHandler "
 
-        public void Handle(ViolationType violationType, string message)
+        public void Post(ViolationType violationType, string message)
         {
             throw this.BuildException(violationType, message);
         }
 
-        public void Handle(string message)
+        public void Post(string message)
         {
-            this.Handle(ViolationType.Default, message);
+            this.Post(ViolationType.Default, message);
         }
 
         public IArgumentValidator<T> Validator { get; set; }

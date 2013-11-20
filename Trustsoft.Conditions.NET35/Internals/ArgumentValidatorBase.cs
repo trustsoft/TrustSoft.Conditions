@@ -13,15 +13,15 @@ namespace Trustsoft.Conditions.Internals
 
         public IArgument<T> Argument { get; private set; }
 
-        public IErrorHandler<T> Error { get; private set; }
+        public IErrorHandler<T> ErrorHandler { get; private set; }
 
         #endregion
 
         protected ArgumentValidatorBase(IArgument<T> argument, IErrorHandler<T> errorHandler)
         {
             this.Argument = argument;
-            this.Error = errorHandler;
-            this.Error.Validator = this;
+            this.ErrorHandler = errorHandler;
+            this.ErrorHandler.Validator = this;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Trustsoft.Conditions
             if (validator.Argument.Value != null)
             {
                 string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.ValueShouldBeNull, false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -36,7 +36,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeNull,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;

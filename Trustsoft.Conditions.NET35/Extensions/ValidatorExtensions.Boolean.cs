@@ -38,7 +38,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldBeX,
                                                     false,
                                                     expected);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;

@@ -9,9 +9,9 @@ namespace Trustsoft.Conditions.Internals
 {
     public interface IErrorHandler<T>
     {
-        void Handle(ViolationType violationType, string message);
+        void Post(ViolationType violationType, string message);
 
-        void Handle(string message);
+        void Post(string message);
 
         IArgumentValidator<T> Validator { get; set; }
     }

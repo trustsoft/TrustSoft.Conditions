@@ -24,7 +24,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldBeEmpty,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -40,7 +40,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeEmpty,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -55,7 +55,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldBeNullOrEmpty,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -70,7 +70,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeNullOrEmpty,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -85,7 +85,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldBeNullOrWhiteSpace,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;
@@ -100,7 +100,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeNullOrWhiteSpace,
                                                     false);
-                validator.Error.Handle(msg);
+                validator.ErrorHandler.Post(msg);
             }
 
             return validator;

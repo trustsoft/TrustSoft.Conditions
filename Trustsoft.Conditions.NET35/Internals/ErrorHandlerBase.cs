@@ -17,14 +17,14 @@ namespace Trustsoft.Conditions.Internals
     {
         #region Implementation of IErrorHandler
 
-        public virtual void Handle(ViolationType violationType, string message)
+        public virtual void Post(ViolationType violationType, string message)
         {
             throw new ArgumentException(message);
         }
 
-        public virtual void Handle(string message)
+        public virtual void Post(string message)
         {
-            this.Handle(ViolationType.Default, message);
+            this.Post(ViolationType.Default, message);
         }
 
         public IArgumentValidator<T> Validator { get; set; }

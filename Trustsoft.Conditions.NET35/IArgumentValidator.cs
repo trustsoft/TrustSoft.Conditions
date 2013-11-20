@@ -17,6 +17,6 @@ namespace Trustsoft.Conditions
     {
         IArgument<T> Argument { get; }
 
-        IErrorHandler<T> Error { get; }
+        IErrorHandler<T> ErrorHandler { get; }
     }
 }
