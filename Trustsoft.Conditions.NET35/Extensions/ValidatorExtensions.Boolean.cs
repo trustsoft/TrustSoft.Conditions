@@ -43,5 +43,34 @@ namespace Trustsoft.Conditions
 
             return validator;
         }
+
+        public static IArgumentValidator<bool?> IsTrue(this IArgumentValidator<bool?> validator,
+                                                       string conditionDescription = null)
+        {
+            return IsValid(validator, true, conditionDescription);
+        }
+
+        public static IArgumentValidator<bool?> IsFalse(this IArgumentValidator<bool?> validator,
+                                                        string conditionDescription = null)
+        {
+            return IsValid(validator, false, conditionDescription);
+        }
+
+        private static IArgumentValidator<bool?> IsValid(IArgumentValidator<bool?> validator,
+                                                         bool? expected,
+                                                         string conditionDescription)
+        {
+            if (validator.Argument.Value != expected)
+            {
+                string msg = MessageBuilder.Combine(validator,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeX,
+                                                    false,
+                                                    expected);
+                validator.ErrorHandler.Post(msg);
+            }
+
+            return validator;
+        }
     }
 }
