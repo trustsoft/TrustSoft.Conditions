@@ -158,15 +158,6 @@
     <None Include="..\..\Shared\Trustsoft.snk">
       <Link>Trustsoft.snk</Link>
     </None>
-    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.Fractional.ttinclude">
-      <Link>ValidatorExtensions\Generated\Include\Numbers.Fractional.ttinclude</Link>
-    </None>
-    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.Integer.ttinclude">
-      <Link>ValidatorExtensions\Generated\Include\Numbers.Integer.ttinclude</Link>
-    </None>
-    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.Integer.Unsigned.ttinclude">
-      <Link>ValidatorExtensions\Generated\Include\Numbers.Integer.Unsigned.ttinclude</Link>
-    </None>
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude</Link>
     </None>
@@ -187,6 +178,15 @@
     </None>
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.Fractional.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Fractional.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.Integer.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Integer.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude</Link>
     </None>
   </ItemGroup>
   <ItemGroup>
