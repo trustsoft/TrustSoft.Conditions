@@ -16,7 +16,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public partial class ValidatorExtensions
+    public static partial class ValidatorExtensions
     {
         /// <summary>
         ///     Checks whether the specified <paramref name="expression"/> evaluates <b> true </b> on the given value.

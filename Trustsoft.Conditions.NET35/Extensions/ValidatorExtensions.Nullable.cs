@@ -13,7 +13,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public partial class ValidatorExtensions
+    public static partial class ValidatorExtensions
     {
         public static IArgumentValidator<T?> IsNull<T>(this IArgumentValidator<T?> validator,
                                                        string conditionDescription = null) where T : struct

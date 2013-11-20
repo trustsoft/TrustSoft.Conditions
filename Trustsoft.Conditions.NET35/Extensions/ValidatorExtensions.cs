@@ -18,7 +18,7 @@ namespace Trustsoft.Conditions
     /// </summary>
     [Browsable(false)]
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public partial class ValidatorExtensions
+    public static partial class ValidatorExtensions
     {
     }
 }

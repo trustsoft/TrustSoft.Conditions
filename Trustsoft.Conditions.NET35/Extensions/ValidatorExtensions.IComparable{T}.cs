@@ -15,7 +15,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public partial class ValidatorExtensions
+    public static partial class ValidatorExtensions
     {
         #region " IsEqualTo "
 

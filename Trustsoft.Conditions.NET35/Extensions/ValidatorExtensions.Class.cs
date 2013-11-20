@@ -15,7 +15,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    public partial class ValidatorExtensions
+    public static partial class ValidatorExtensions
     {
         /// <summary>
         ///     Checks whether the given value is null. An exception is thrown otherwise.
