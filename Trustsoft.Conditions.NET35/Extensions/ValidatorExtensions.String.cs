@@ -9,12 +9,24 @@ namespace Trustsoft.Conditions
 {
     #region " Using Directives "
 
+    using System;
+
     using Trustsoft.Conditions.Internals;
 
     #endregion
 
     public static partial class ValidatorExtensions
     {
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is empty.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is not empty.
+        /// </exception>
         public static IArgumentValidator<string> IsEmpty(this IArgumentValidator<string> validator,
                                                          string conditionDescription = null)
         {
@@ -30,6 +42,16 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is not empty.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is empty.
+        /// </exception>
         public static IArgumentValidator<string> IsNotEmpty(this IArgumentValidator<string> validator,
                                                             string conditionDescription = null)
         {
@@ -46,6 +68,16 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is <c> null </c> or empty.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is not <c> null </c> or empty.
+        /// </exception>
         public static IArgumentValidator<string> IsNullOrEmpty(this IArgumentValidator<string> validator,
                                                                string conditionDescription = null)
         {
@@ -61,6 +93,16 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is not <c> null </c> or empty.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is <c> null </c> or empty.
+        /// </exception>
         public static IArgumentValidator<string> IsNotNullOrEmpty(this IArgumentValidator<string> validator,
                                                                   string conditionDescription = null)
         {
@@ -76,6 +118,17 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is <c> null </c> or contains only whitespaces.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is not <c> null </c> or contains only
+        ///     non-whitespaces.
+        /// </exception>
         public static IArgumentValidator<string> IsNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                     string conditionDescription = null)
         {
@@ -91,6 +144,17 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given <see cref="T:System.String"/> is not <c> null </c> or contains only non-whitespaces.
+        ///     An exception is thrown otherwise.
+        /// </summary>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the given value of the specified <paramref name="validator"/> is <c> null </c> or contains only
+        ///     whitespaces.
+        /// </exception>
         public static IArgumentValidator<string> IsNotNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                        string conditionDescription = null)
         {

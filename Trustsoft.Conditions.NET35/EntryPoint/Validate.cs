@@ -11,14 +11,22 @@ namespace Trustsoft.Conditions
 
     using System;
     using System.Linq.Expressions;
+
     using Trustsoft.Conditions.Internals;
 
     #endregion
 
+    /// <summary>
+    ///     Entry point to methods that returns validator that will collect an exception, when some
+    ///     condition
+    ///     is not met.
+    /// </summary>
     internal static class Validate
     {
         /// <summary>
-        ///     Creates the validator for specified argument.
+        ///     Creates the validator for specified argument that will collect an exception, when some
+        ///     condition
+        ///     is not met.
         /// </summary>
         /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
         /// <param name="value"> The value. </param>
@@ -31,7 +39,9 @@ namespace Trustsoft.Conditions
         }
 
         /// <summary>
-        ///     Creates the validator for specified argument expression.
+        ///     Creates the validator for specified argument that will collect an exception, when some
+        ///     condition
+        ///     is not met.
         /// </summary>
         /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
         /// <param name="expression"> The argument expression. </param>

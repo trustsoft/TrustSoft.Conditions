@@ -21,19 +21,13 @@ namespace Trustsoft.Conditions
         ///     Checks whether the given value is null. An exception is thrown otherwise.
         /// </summary>
         /// <typeparam name="T">
-        ///     The type of the <see cref="IArgumentValidator{T}.Argument"> Value </see> of the specified
-        ///     <paramref name="validator"/>.
+        ///     The type of value of the argument contained in the specified <paramref name="validator"/>.
         /// </typeparam>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
-        /// <param name="conditionDescription">
-        ///     The description of the condition that should hold. The string may hold the placeholder '{0}' for
-        ///     the <see cref="IArgumentValidator{T}.Argument"> argument name </see>.
-        /// </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the <see cref="IArgumentValidator{T}.Argument"> Value </see> of the
-        ///     specified <paramref name="validator"/> is not null, while the specified <paramref name="validator"/> is created
-        ///     using the <see cref="Requires.That{T}(T,string)"> Requires </see> extension method.
+        ///     Thrown when the argument`s value of the specified <paramref name="validator"/> is not null.
         /// </exception>
         public static IArgumentValidator<T> IsNull<T>(this IArgumentValidator<T> validator,
                                                       string conditionDescription = null) where T : class
@@ -47,6 +41,18 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given value is not null. An exception is thrown otherwise.
+        /// </summary>
+        /// <typeparam name="T">
+        ///     The type of value of the argument contained in the specified <paramref name="validator"/>.
+        /// </typeparam>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the argument`s value of the specified <paramref name="validator"/> is null.
+        /// </exception>
         public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
                                                          string conditionDescription = null) where T : class
         {
@@ -62,6 +68,17 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given value is of specified <paramref name="type"/>. An exception is thrown otherwise.
+        /// </summary>
+        /// <typeparam name="T"> The type of value of the argument contained in the specified <paramref name="validator"/>. </typeparam>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="type"> The type. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the argument`s value of the <paramref name="validator"/> is not of specified <paramref name="type"/>.
+        /// </exception>
         public static IArgumentValidator<T> IsOfType<T>(this IArgumentValidator<T> validator,
                                                         Type type,
                                                         string conditionDescription = null) where T : class
@@ -81,6 +98,17 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        /// <summary>
+        ///     Checks whether the given value is not of specified <paramref name="type"/>. An exception is thrown otherwise.
+        /// </summary>
+        /// <typeparam name="T"> The type of value of the argument contained in the specified <paramref name="validator"/>. </typeparam>
+        /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+        /// <param name="type"> The type. </param>
+        /// <param name="conditionDescription"> The description of the condition that should hold. </param>
+        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when the argument`s value of the <paramref name="validator"/> is of specified <paramref name="type"/>.
+        /// </exception>
         public static IArgumentValidator<T> IsNotOfType<T>(this IArgumentValidator<T> validator,
                                                            Type type,
                                                            string conditionDescription = null) where T : class

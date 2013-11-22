@@ -9,6 +9,19 @@ namespace Trustsoft.Conditions.Internals
 {
     internal class Argument<T> : IArgument<T>
     {
+        #region " Constructors / Destructors "
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="Argument{T}"/> class.
+        /// </summary>
+        public Argument(T value, string name)
+        {
+            this.Value = value;
+            this.Name = name;
+        }
+
+        #endregion
+
         #region " Implementation of IArgument<T> "
 
         /// <summary>
@@ -24,14 +37,5 @@ namespace Trustsoft.Conditions.Internals
         public string Name { get; private set; }
 
         #endregion
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="Argument{T}"/> class.
-        /// </summary>
-        public Argument(T value, string name)
-        {
-            this.Value = value;
-            this.Name = name;
-        }
     }
 }

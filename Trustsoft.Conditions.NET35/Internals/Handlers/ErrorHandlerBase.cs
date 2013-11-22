@@ -15,7 +15,7 @@ namespace Trustsoft.Conditions.Internals
 
     internal abstract class ErrorHandlerBase<T> : IErrorHandler<T>
     {
-        #region Implementation of IErrorHandler
+        #region " Implementation of IErrorHandler<T> "
 
         public virtual void Post(ViolationType violationType, string message)
         {

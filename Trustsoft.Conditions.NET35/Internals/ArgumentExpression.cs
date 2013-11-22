@@ -17,26 +17,7 @@ namespace Trustsoft.Conditions.Internals
 
     internal class ArgumentExpression<T> : IArgument<T>
     {
-        /// <summary>
-        ///     Gets the value of argument.
-        /// </summary>
-        /// <value> The value of argument. </value>
-        public T Value { get; private set; }
-
-        /// <summary>
-        ///     Gets the name of argument.
-        /// </summary>
-        /// <value> The name of argument. </value>
-        public string Name { get; private set; }
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="Argument{T}"/> class.
-        /// </summary>
-        public ArgumentExpression(Expression<Func<T>> expression)
-        {
-            this.Name = GetName(expression);
-            this.Value = GetValue(expression);
-        }
+        #region " Static Methods "
 
         private static string GetName(Expression<Func<T>> argument)
         {
@@ -70,5 +51,36 @@ namespace Trustsoft.Conditions.Internals
             }
             return (T)value;
         }
+
+        #endregion
+
+        #region " Constructors / Destructors "
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ArgumentExpression{T}"/> class.
+        /// </summary>
+        public ArgumentExpression(Expression<Func<T>> expression)
+        {
+            this.Name = ArgumentExpression<T>.GetName(expression);
+            this.Value = ArgumentExpression<T>.GetValue(expression);
+        }
+
+        #endregion
+
+        #region " Implementation of IArgument<T> "
+
+        /// <summary>
+        ///     Gets the value of argument.
+        /// </summary>
+        /// <value> The value of argument. </value>
+        public T Value { get; private set; }
+
+        /// <summary>
+        ///     Gets the name of argument.
+        /// </summary>
+        /// <value> The name of argument. </value>
+        public string Name { get; private set; }
+
+        #endregion
     }
 }

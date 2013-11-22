@@ -17,12 +17,14 @@ namespace Trustsoft.Conditions
     #endregion
 
     /// <summary>
-    ///     Class Requires.
+    ///     Entry point to methods that returns validator that will throw an exception, when some condition
+    ///     is not met.
     /// </summary>
     public static class Requires
     {
         /// <summary>
-        ///     Creates the validator for specified argument.
+        ///     Creates the validator for specified argument that will throw an exception, when some condition
+        ///     is not met.
         /// </summary>
         /// <typeparam name="T"> The type of argument value. </typeparam>
         /// <param name="value"> The value of the argument. </param>
@@ -35,7 +37,8 @@ namespace Trustsoft.Conditions
         }
 
         /// <summary>
-        ///     Creates the validator for specified argument expression.
+        ///     Creates the validator for specified argument expression that will throw an exception, when some
+        ///     condition is not met.
         /// </summary>
         /// <typeparam name="T"> The type of argument value. </typeparam>
         /// <param name="expression"> The argument expression. </param>
