@@ -9,7 +9,7 @@ namespace Trustsoft.Conditions.Internals
 {
     #region " Using Directives "
 
-    using System.Collections.Generic;
+    
 
     #endregion
 
@@ -19,8 +19,7 @@ namespace Trustsoft.Conditions.Internals
     /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
     internal class CollectOnErrorValidator<T> : ArgumentValidatorBase<T>
     {
-        private readonly IList<KeyValuePair<ViolationType, string>> errors =
-            new List<KeyValuePair<ViolationType, string>>();
+        #region " Constructors / Destructors "
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="CollectOnErrorValidator{T}"/> class.
@@ -31,17 +30,15 @@ namespace Trustsoft.Conditions.Internals
         {
         }
 
-        public override IEnumerable<KeyValuePair<ViolationType, string>> Errors
+        #endregion
+
+        #region " Internal Methods "
+
+        internal CollectOnErrorHandler<T> GetHandler()
         {
-            get
-            {
-                return this.errors;
-            }
+            return this.ErrorHandler as CollectOnErrorHandler<T>;
         }
 
-        internal void CollectError(ViolationType violationType, string message)
-        {
-            this.errors.Add(new KeyValuePair<ViolationType, string>(violationType, message));
-        }
+        #endregion
     }
 }

@@ -9,7 +9,7 @@ namespace Trustsoft.Conditions.Internals
 {
     #region " Using Directives "
 
-    using System;
+    
 
     #endregion
 
@@ -17,12 +17,9 @@ namespace Trustsoft.Conditions.Internals
     {
         #region " Implementation of IErrorHandler<T> "
 
-        public virtual void Post(ViolationType violationType, string message)
-        {
-            throw new ArgumentException(message);
-        }
+        public abstract void Post(ViolationType violationType, string message);
 
-        public virtual void Post(string message)
+        public void Post(string message)
         {
             this.Post(ViolationType.Default, message);
         }

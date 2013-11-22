@@ -7,19 +7,28 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
-    using System.Collections.Generic;
-    using System.Linq;
-
-    #endregion
-
     /// <summary>
     ///     Base class for all <see cref="IArgumentValidator{T}"/> implementations.
     /// </summary>
     /// <typeparam name="T"> </typeparam>
     internal class ArgumentValidatorBase<T> : IArgumentValidator<T>
     {
+        #region " Constructors / Destructors "
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ArgumentValidatorBase{T}"/> class.
+        /// </summary>
+        /// <param name="argument"> The argument. </param>
+        /// <param name="errorHandler"> The error handler. </param>
+        protected ArgumentValidatorBase(IArgument<T> argument, IErrorHandler<T> errorHandler)
+        {
+            this.Argument = argument;
+            this.ErrorHandler = errorHandler;
+            this.ErrorHandler.Validator = this;
+        }
+
+        #endregion
+
         #region " Implementation of IArgumentValidator<T> "
 
         /// <summary>
@@ -33,38 +42,6 @@ namespace Trustsoft.Conditions.Internals
         /// </summary>
         /// <value> The error handler. </value>
         public IErrorHandler<T> ErrorHandler { get; private set; }
-
-        public virtual IEnumerable<KeyValuePair<ViolationType, string>> Errors
-        {
-            get
-            {
-                return Enumerable.Empty<KeyValuePair<ViolationType, string>>();
-            }
-        }
-
-        public bool HasErrors
-        {
-            get
-            {
-                return this.Errors.Any();
-            }
-        }
-
-        #endregion
-
-        #region " Constructor "
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ArgumentValidatorBase{T}"/> class.
-        /// </summary>
-        /// <param name="argument"> The argument. </param>
-        /// <param name="errorHandler"> The error handler. </param>
-        protected ArgumentValidatorBase(IArgument<T> argument, IErrorHandler<T> errorHandler)
-        {
-            this.Argument = argument;
-            this.ErrorHandler = errorHandler;
-            this.ErrorHandler.Validator = this;
-        }
 
         #endregion
     }

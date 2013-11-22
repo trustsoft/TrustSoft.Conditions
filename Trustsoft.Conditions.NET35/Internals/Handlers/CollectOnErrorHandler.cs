@@ -7,10 +7,23 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    using Trustsoft.Conditions;
+    #region " Using Directives "
+
+    using System.Collections.Generic;
+
+    #endregion
 
     internal class CollectOnErrorHandler<T> : ErrorHandlerBase<T>
     {
+        #region " Internal Fields "
+
+        internal readonly IList<KeyValuePair<ViolationType, string>> Errors =
+            new List<KeyValuePair<ViolationType, string>>();
+
+        #endregion
+
+        #region " Public Methods "
+
         /// <summary>
         ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
         /// </summary>
@@ -18,7 +31,18 @@ namespace Trustsoft.Conditions.Internals
         /// <param name="message"> The error message. </param>
         public override void Post(ViolationType violationType, string message)
         {
-            ((CollectOnErrorValidator<T>)this.Validator).CollectError(violationType, message);
+            this.CollectError(violationType, message);
         }
+
+        #endregion
+
+        #region " Private Methods "
+
+        private void CollectError(ViolationType violationType, string message)
+        {
+            this.Errors.Add(new KeyValuePair<ViolationType, string>(violationType, message));
+        }
+
+        #endregion
     }
 }

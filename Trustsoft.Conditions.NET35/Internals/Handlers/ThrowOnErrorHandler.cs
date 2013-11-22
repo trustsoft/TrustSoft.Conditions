@@ -16,24 +16,9 @@ namespace Trustsoft.Conditions.Internals
     /// <summary>
     ///     Error handler that throws on error.
     /// </summary>
-    internal class ThrowOnErrorHandler<T> : IErrorHandler<T>
+    /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
+    internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
     {
-        #region " Implementation of IErrorHandler "
-
-        public void Post(ViolationType violationType, string message)
-        {
-            throw this.BuildException(violationType, message);
-        }
-
-        public void Post(string message)
-        {
-            this.Post(ViolationType.Default, message);
-        }
-
-        public IArgumentValidator<T> Validator { get; set; }
-
-        #endregion
-
         private Exception BuildException(ViolationType violationType, string message)
         {
             switch (violationType)
@@ -50,6 +35,16 @@ namespace Trustsoft.Conditions.Internals
                     // ReSharper restore CompareNonConstrainedGenericWithNull
                     return new ArgumentException(message, this.Validator.Argument.Name);
             }
+        }
+
+        /// <summary>
+        ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
+        /// </summary>
+        /// <param name="violationType"> The type of violation. </param>
+        /// <param name="message"> The error message. </param>
+        public override void Post(ViolationType violationType, string message)
+        {
+            throw this.BuildException(violationType, message);
         }
     }
 }
