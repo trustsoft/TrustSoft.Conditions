@@ -294,4 +294,10 @@
   <data name="ValueShouldNotBeSmallerThanX" xml:space="preserve">
     <value>{name} should not be smaller than {param1}</value>
   </data>
+  <data name="CollectionShouldBeEmpty" xml:space="preserve">
+    <value>{name} should be empty</value>
+  </data>
+  <data name="CollectionShouldNotBeEmpty" xml:space="preserve">
+    <value>{name} should not be empty</value>
+  </data>
 </root>

@@ -63,6 +63,7 @@
     <Compile Include="ArgumentFactory.cs" />
     <Compile Include="EntryPoint\Requires.cs" />
     <Compile Include="EntryPoint\Validate.cs" />
+    <Compile Include="Extensions\ValidatorExtensions.IEnumerable{T}.cs" />
     <Compile Include="Extensions\Generated\ValidatorExtensions.Byte.cs">
       <DependentUpon>ValidatorExtensions.Byte.tt</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -126,6 +127,7 @@
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Nullable.cs" />
+    <Compile Include="Helpers\CollectionHelpers.cs" />
     <Compile Include="Helpers\StringHelpers.cs" />
     <Compile Include="IArgument.cs" />
     <Compile Include="IArgumentValidator.cs" />

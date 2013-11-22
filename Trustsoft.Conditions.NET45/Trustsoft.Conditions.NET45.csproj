@@ -154,11 +154,17 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.IComparable{T}.cs">
       <Link>Extensions\ValidatorExtensions.IComparable{T}.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.IEnumerable{T}.cs">
+      <Link>Extensions\ValidatorExtensions.IEnumerable{T}.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.Nullable.cs">
       <Link>Extensions\ValidatorExtensions.Nullable.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.String.cs">
       <Link>Extensions\ValidatorExtensions.String.cs</Link>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\CollectionHelpers.cs">
+      <Link>Helpers\CollectionHelpers.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringHelpers.cs">
       <Link>Helpers\StringHelpers.cs</Link>
