@@ -1,7 +1,12 @@
 ﻿namespace Trustsoft.Conditions.UnitTests
 {
+    #region " Using Directives "
+
     using System;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    #endregion
 
     [TestClass]
     public class ValidatorExtensionsUnitTest

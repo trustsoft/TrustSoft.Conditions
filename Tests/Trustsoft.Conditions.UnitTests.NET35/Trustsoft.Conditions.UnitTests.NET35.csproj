@@ -66,6 +66,7 @@
     <Compile Include="StringResourcesUnitTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ValidateUnitTest.cs" />
     <Compile Include="ValidatorExtensionsUnitTest.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -100,6 +101,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="ValidatorExtensions\Generated\SByte.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SByte.UnitTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="ValidatorExtensions\Generated\Single.UnitTest.cs">
       <DependentUpon>Single.UnitTest.tt</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -132,12 +138,24 @@
       <Link>Trustsoft.snk</Link>
     </None>
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterThan.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsInRange.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.Fractional.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.Integer.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude" />
@@ -176,6 +194,10 @@
     <Content Include="ValidatorExtensions\Generated\Int64.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="ValidatorExtensions\Generated\SByte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
     </Content>
     <Content Include="ValidatorExtensions\Generated\Single.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

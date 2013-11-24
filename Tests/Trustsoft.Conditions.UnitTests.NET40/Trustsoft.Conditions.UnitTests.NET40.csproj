@@ -71,6 +71,9 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\StringResourcesUnitTest.cs">
       <Link>StringResourcesUnitTest.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidateUnitTest.cs">
+      <Link>ValidateUnitTest.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensionsUnitTest.cs">
       <Link>ValidatorExtensionsUnitTest.cs</Link>
     </Compile>
@@ -118,6 +121,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Int64.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\SByte.UnitTest.cs">
+      <Link>ValidatorExtensions\Generated\SByte.UnitTest.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SByte.UnitTest.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Single.UnitTest.cs">
       <Link>ValidatorExtensions\Generated\Single.UnitTest.cs</Link>
@@ -167,6 +176,9 @@
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude</Link>
     </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude</Link>
+    </None>
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude</Link>
     </None>
@@ -182,8 +194,41 @@
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude</Link>
     </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude</Link>
+    </None>
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude">
       <Link>ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude</Link>
+    </None>
+    <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude</Link>
     </None>
     <None Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Numbers.Fractional.ttinclude">
       <Link>ValidatorExtensions\Generated\Numbers.Fractional.ttinclude</Link>
@@ -234,6 +279,11 @@
       <Link>ValidatorExtensions\Generated\Int64.UnitTest.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\SByte.UnitTest.tt">
+      <Link>ValidatorExtensions\Generated\SByte.UnitTest.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
     </Content>
     <Content Include="..\Trustsoft.Conditions.UnitTests.NET35\ValidatorExtensions\Generated\Single.UnitTest.tt">
       <Link>ValidatorExtensions\Generated\Single.UnitTest.tt</Link>

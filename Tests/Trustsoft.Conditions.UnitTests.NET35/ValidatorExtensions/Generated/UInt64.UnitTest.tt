@@ -1,6 +1,6 @@
 ﻿<#
 //  -------------------------------------------------------------------------------------------------------
-//  Template: Generates C# code for extension methods for IArgumentValidator<int>
+//  Template: Generates C# code for extension methods for IArgumentValidator<ulong>
 //  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
 //  Links: 
 //          MSDN about developing T4 files: http://msdn.microsoft.com/en-us/library/bb126445.aspx
