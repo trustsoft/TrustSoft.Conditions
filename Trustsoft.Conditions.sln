@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustsoft.Conditions.NET45"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97EAB9A1-B116-4123-BA0F-05D0F623D381}"
 	ProjectSection(SolutionItems) = preProject
+		.package\.nuspec = .package\.nuspec
 		Shared\CommonAssemblyInfo.cs = Shared\CommonAssemblyInfo.cs
 		Shared\Trustsoft.snk = Shared\Trustsoft.snk
 	EndProjectSection
