@@ -5,7 +5,7 @@
 // <date>18.11.2013</date>
 //------------------------Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions.Internals
+namespace Trustsoft.Conditions
 {
     /// <summary>
     ///     Represents an error handler.
