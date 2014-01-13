@@ -7,12 +7,6 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
-    
-
-    #endregion
-
     internal abstract class ErrorHandlerBase<T> : IErrorHandler<T>
     {
         #region " Implementation of IErrorHandler<T> "

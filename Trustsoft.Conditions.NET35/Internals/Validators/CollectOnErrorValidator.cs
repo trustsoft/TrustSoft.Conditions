@@ -7,12 +7,6 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
-    
-
-    #endregion
-
     /// <summary>
     ///     Argument validator that does not throw just collect errors.
     /// </summary>

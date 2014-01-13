@@ -16,39 +16,7 @@ namespace Trustsoft.Conditions
 
     internal static class CollectionHelpers
     {
-        #region " IsEmpty "
-
-        /// <summary>
-        ///     Determines whether a sequence contains no element.
-        /// </summary>
-        /// <param name="source"> A sequence in which to locate a value. </param>
-        /// <returns>
-        ///     <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
-        /// </returns>
-        public static bool IsEmpty(this IEnumerable source)
-        {
-            return !source.GetEnumerator().MoveNext();
-        }
-
-        /// <summary>
-        ///     Determines whether a sequence contains no element.
-        /// </summary>
-        /// <typeparam name="TSource"> The type of the elements of source. </typeparam>
-        /// <param name="source"> A sequence in which to locate a value. </param>
-        /// <returns>
-        ///     <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
-        /// </returns>
-        public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
-        {
-            using (var itr = source.GetEnumerator())
-            {
-                return !itr.MoveNext();
-            }
-        }
-
-        #endregion
-
-        #region " HasItems Operator "
+        #region " HasItems "
 
         /// <summary>
         ///     Determines whether a sequence contains any item.
@@ -76,6 +44,34 @@ namespace Trustsoft.Conditions
             using (var enumerator = source.GetEnumerator())
             {
                 return enumerator.MoveNext();
+            }
+        }
+
+        #endregion
+
+        #region " IsEmpty "
+
+        /// <summary>
+        ///     Determines whether a sequence contains no element.
+        /// </summary>
+        /// <param name="source"> A sequence in which to locate a value. </param>
+        /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
+        public static bool IsEmpty(this IEnumerable source)
+        {
+            return !source.GetEnumerator().MoveNext();
+        }
+
+        /// <summary>
+        ///     Determines whether a sequence contains no element.
+        /// </summary>
+        /// <typeparam name="TSource"> The type of the elements of source. </typeparam>
+        /// <param name="source"> A sequence in which to locate a value. </param>
+        /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
+        public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
+        {
+            using (var itr = source.GetEnumerator())
+            {
+                return !itr.MoveNext();
             }
         }
 
