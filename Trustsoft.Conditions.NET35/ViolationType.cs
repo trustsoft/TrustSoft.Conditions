@@ -12,8 +12,14 @@ namespace Trustsoft.Conditions
     /// </summary>
     public enum ViolationType
     {
+        /// <summary>
+        ///     Validator should throw the default exception.
+        /// </summary>
         Default = 0,
 
+        /// <summary>
+        ///     Validator should throw an exception type appropriate for values that are out of range.
+        /// </summary>
         OutOfRangeViolation = 1
     }
 }

@@ -13,6 +13,9 @@ namespace Trustsoft.Conditions.Internals
 
     #endregion
 
+    /// <summary>
+    ///     Used to build messages for exceptions.
+    /// </summary>
     internal static class MessageBuilder
     {
         /// <summary>
