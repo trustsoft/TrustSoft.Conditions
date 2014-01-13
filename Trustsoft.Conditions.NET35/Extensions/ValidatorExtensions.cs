@@ -41,7 +41,7 @@ namespace Trustsoft.Conditions
             var val = validator as CollectOnErrorValidator<T>;
             if (val != null)
             {
-                return val.GetHandler().Errors;
+                return val.ErrorHandler.Errors;
             }
 
             return Enumerable.Empty<KeyValuePair<ViolationType, string>>();
@@ -67,7 +67,7 @@ namespace Trustsoft.Conditions
             var val = validator as CollectOnErrorValidator<T>;
             if (val != null)
             {
-                return !val.GetHandler().Errors.Any();
+                return !val.ErrorHandler.Errors.Any();
             }
 
             return false;

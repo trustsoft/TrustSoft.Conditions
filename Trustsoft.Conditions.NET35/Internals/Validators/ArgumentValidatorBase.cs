@@ -11,25 +11,11 @@ namespace Trustsoft.Conditions.Internals
     ///     Base class for all <see cref="IArgumentValidator{T}"/> implementations.
     /// </summary>
     /// <typeparam name="T"> </typeparam>
-    internal class ArgumentValidatorBase<T> : IArgumentValidator<T>
+    /// <typeparam name="TErrorHandler"> </typeparam>
+    internal class ArgumentValidatorBase<T, TErrorHandler> : IArgumentValidator<T>
+        where TErrorHandler : IErrorHandler<T>
     {
-        #region " Constructors / Destructors "
-
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="ArgumentValidatorBase{T}"/> class.
-        /// </summary>
-        /// <param name="argument"> The argument. </param>
-        /// <param name="errorHandler"> The error handler. </param>
-        protected ArgumentValidatorBase(IArgument<T> argument, IErrorHandler<T> errorHandler)
-        {
-            this.Argument = argument;
-            this.ErrorHandler = errorHandler;
-            this.ErrorHandler.Validator = this;
-        }
-
-        #endregion
-
-        #region " Implementation of IArgumentValidator<T> "
+        #region " Public Properties "
 
         /// <summary>
         ///     Gets the argument.
@@ -41,7 +27,51 @@ namespace Trustsoft.Conditions.Internals
         ///     Gets the error handler.
         /// </summary>
         /// <value> The error handler. </value>
-        public IErrorHandler<T> ErrorHandler { get; private set; }
+        public TErrorHandler ErrorHandler { get; private set; }
+
+        #endregion
+
+        #region " Constructors / Destructors "
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="ArgumentValidatorBase{T,TErrorHandler}"/> class.
+        /// </summary>
+        /// <param name="argument"> The argument. </param>
+        /// <param name="errorHandler"> The error handler. </param>
+        protected ArgumentValidatorBase(IArgument<T> argument, TErrorHandler errorHandler)
+        {
+            this.Argument = argument;
+            this.ErrorHandler = errorHandler;
+            this.ErrorHandler.Validator = this;
+        }
+
+        #endregion
+
+        #region " Implementation of IArgumentValidator<T> "
+
+        /// <summary>
+        ///     Gets the argument associated wth the current <see cref="IArgumentValidator{T}"/> object.
+        /// </summary>
+        /// <value> The argument. </value>
+        IArgument<T> IArgumentValidator<T>.Argument
+        {
+            get
+            {
+                return this.Argument;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the error handle associated wth the current <see cref="IArgumentValidator{T}"/> object.
+        /// </summary>
+        /// <value> The error handler. </value>
+        IErrorHandler<T> IArgumentValidator<T>.ErrorHandler
+        {
+            get
+            {
+                return this.ErrorHandler;
+            }
+        }
 
         #endregion
     }

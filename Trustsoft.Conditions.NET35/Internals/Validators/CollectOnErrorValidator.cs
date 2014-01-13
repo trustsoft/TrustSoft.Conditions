@@ -11,7 +11,7 @@ namespace Trustsoft.Conditions.Internals
     ///     Argument validator that does not throw just collect errors.
     /// </summary>
     /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
-    internal class CollectOnErrorValidator<T> : ArgumentValidatorBase<T>
+    internal class CollectOnErrorValidator<T> : ArgumentValidatorBase<T, CollectOnErrorHandler<T>>
     {
         #region " Constructors / Destructors "
 
@@ -22,15 +22,6 @@ namespace Trustsoft.Conditions.Internals
         public CollectOnErrorValidator(IArgument<T> argument)
             : base(argument, new CollectOnErrorHandler<T>())
         {
-        }
-
-        #endregion
-
-        #region " Internal Methods "
-
-        internal CollectOnErrorHandler<T> GetHandler()
-        {
-            return this.ErrorHandler as CollectOnErrorHandler<T>;
         }
 
         #endregion
