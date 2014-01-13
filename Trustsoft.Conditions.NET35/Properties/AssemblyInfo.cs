@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.------------------------
+﻿//------------------------Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.------------------------
 // <copyright file="AssemblyInfo.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.
+//     Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>17.11.2013</date>
-//------------------------Copyright © 2012-2013 Trustsoft Ltd. All rights reserved.------------------------
+//------------------------Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.------------------------
 
 #region " Using Directives "
 
