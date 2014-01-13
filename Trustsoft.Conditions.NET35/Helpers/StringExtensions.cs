@@ -13,7 +13,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    internal static class StringHelpers
+    internal static class StringExtensions
     {
 #if NET35
         public static bool IsNullOrWhiteSpace(this string value)

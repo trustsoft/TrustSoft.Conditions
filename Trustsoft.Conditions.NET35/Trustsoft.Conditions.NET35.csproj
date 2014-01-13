@@ -127,8 +127,8 @@
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Nullable.cs" />
-    <Compile Include="Helpers\CollectionHelpers.cs" />
-    <Compile Include="Helpers\StringHelpers.cs" />
+    <Compile Include="Helpers\CollectionExtensions.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="IArgument.cs" />
     <Compile Include="IArgumentValidator.cs" />
     <Compile Include="IErrorHandler.cs" />

@@ -68,8 +68,8 @@
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\Helpers\ModelBase.cs">
       <Link>Helpers\ModelBase.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\StringHelpersUnitTest.cs">
-      <Link>StringHelpersUnitTest.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\StringExtensionsUnitTest.cs">
+      <Link>StringExtensionsUnitTest.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\StringResourcesUnitTest.cs">
       <Link>StringResourcesUnitTest.cs</Link>

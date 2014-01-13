@@ -62,7 +62,7 @@
     <Compile Include="Helpers\Model.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringHelpersUnitTest.cs" />
+    <Compile Include="StringExtensionsUnitTest.cs" />
     <Compile Include="StringResourcesUnitTest.cs">
       <SubType>Code</SubType>
     </Compile>

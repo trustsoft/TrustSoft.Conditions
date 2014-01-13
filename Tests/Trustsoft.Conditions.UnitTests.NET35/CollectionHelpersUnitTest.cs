@@ -19,7 +19,7 @@ namespace Trustsoft.Conditions.UnitTests
     public class CollectionHelpersUnitTest
     {
         [TestMethod]
-        [TestCategory("CollectionHelpers - IsEmpty")]
+        [TestCategory("CollectionExtensions - IsEmpty")]
         [Description("Calling IsEmpty on empty sequence should return true.")]
         public void IsEmpty_ShouldReturnTrue_OnEmptySequence()
         {
@@ -33,7 +33,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
-        [TestCategory("CollectionHelpers - IsEmpty")]
+        [TestCategory("CollectionExtensions - IsEmpty")]
         [Description("Calling IsEmpty on non-empty sequence should return false.")]
         public void IsEmpty_ShouldReturnFalse_OnNonEmptySequence()
         {
@@ -47,7 +47,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
-        [TestCategory("CollectionHelpers - HasItems")]
+        [TestCategory("CollectionExtensions - HasItems")]
         [Description("Calling HasItems on non-empty sequence should return true.")]
         public void HasItems_ShouldReturnTrue_OnNonEmptySequence()
         {
@@ -61,7 +61,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
-        [TestCategory("CollectionHelpers - HasItems")]
+        [TestCategory("CollectionExtensions - HasItems")]
         [Description("Calling HasItems on empty sequence should return false.")]
         public void HasItems_ShouldReturnFalse_OnEmptySequence()
         {

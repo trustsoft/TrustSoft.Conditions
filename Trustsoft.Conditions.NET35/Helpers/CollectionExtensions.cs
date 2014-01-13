@@ -14,7 +14,7 @@ namespace Trustsoft.Conditions
 
     #endregion
 
-    internal static class CollectionHelpers
+    internal static class CollectionExtensions
     {
         #region " HasItems "
 

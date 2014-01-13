@@ -163,11 +163,11 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Extensions\ValidatorExtensions.String.cs">
       <Link>Extensions\ValidatorExtensions.String.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\CollectionHelpers.cs">
-      <Link>Helpers\CollectionHelpers.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\CollectionExtensions.cs">
+      <Link>Helpers\CollectionExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringHelpers.cs">
-      <Link>Helpers\StringHelpers.cs</Link>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringExtensions.cs">
+      <Link>Helpers\StringExtensions.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\IArgument.cs">
       <Link>IArgument.cs</Link>

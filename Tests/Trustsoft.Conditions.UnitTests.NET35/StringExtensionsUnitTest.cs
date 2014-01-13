@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="UnitTest1.cs" company="Trustsoft Ltd.">
+// <copyright file="StringExtensionsUnitTest.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>20.11.2013</date>
@@ -16,10 +16,10 @@ namespace Trustsoft.Conditions.UnitTests
     // ReSharper disable InconsistentNaming
 
     [TestClass]
-    public class StringHelpersUnitTest
+    public class StringExtensionsUnitTest
     {
         [TestMethod]
-        [TestCategory("StringHelpers - IsNullOrWhiteSpace")]
+        [TestCategory("StringExtensions - IsNullOrWhiteSpace")]
         [Description("Calling IsNullOrWhiteSpace on null value should return true.")]
         public void IsNullOrWhiteSpace_ShouldReturnTrue_OnNullValue()
         {
@@ -31,7 +31,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
-        [TestCategory("StringHelpers - IsNullOrWhiteSpace")]
+        [TestCategory("StringExtensions - IsNullOrWhiteSpace")]
         [Description("Calling IsNullOrWhiteSpace on space value should return true.")]
         public void IsNullOrWhiteSpace_ShouldReturnTrue_OnSpaceValue()
         {
@@ -43,7 +43,7 @@ namespace Trustsoft.Conditions.UnitTests
         }
 
         [TestMethod]
-        [TestCategory("StringHelpers - IsNullOrWhiteSpace")]
+        [TestCategory("StringExtensions - IsNullOrWhiteSpace")]
         [Description("Calling IsNullOrWhiteSpace on space value should return true.")]
         public void IsNullOrWhiteSpace_ShouldReturnFalse_OnNonEmptyValue()
         {
