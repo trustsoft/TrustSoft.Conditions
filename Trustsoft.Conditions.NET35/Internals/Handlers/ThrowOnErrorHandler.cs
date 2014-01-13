@@ -23,7 +23,7 @@ namespace Trustsoft.Conditions.Internals
         {
             switch (violationType)
             {
-                case ViolationType.OutOfRangeViolation:
+                case ViolationType.OutOfRange:
                     return new ArgumentOutOfRangeException(this.Validator.Argument.Name, message);
 
                 default:

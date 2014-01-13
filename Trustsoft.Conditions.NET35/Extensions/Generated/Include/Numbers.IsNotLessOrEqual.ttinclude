@@ -27,7 +27,7 @@
                                                     StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,
                                                     minValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;

@@ -20,6 +20,6 @@ namespace Trustsoft.Conditions
         /// <summary>
         ///     Validator should throw an exception type appropriate for values that are out of range.
         /// </summary>
-        OutOfRangeViolation = 1
+        OutOfRange = 1
     }
 }

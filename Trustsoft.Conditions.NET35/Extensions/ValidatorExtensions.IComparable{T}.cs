@@ -74,7 +74,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldBeGreaterThanOrEqualToX,
                                                     true,
                                                     minValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -108,7 +108,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldBeGreaterThanX,
                                                     true,
                                                     minValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -145,7 +145,7 @@ namespace Trustsoft.Conditions
                                                     true,
                                                     minValue,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -178,7 +178,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldBeSmallerThanOrEqualToX,
                                                     true,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -211,7 +211,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldBeSmallerThanX,
                                                     true,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -277,7 +277,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldNotBeGreaterThanOrEqualToX,
                                                     true,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -310,7 +310,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldNotBeGreaterThanX,
                                                     true,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -347,7 +347,7 @@ namespace Trustsoft.Conditions
                                                     true,
                                                     minValue,
                                                     maxValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -381,7 +381,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,
                                                     minValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
@@ -414,7 +414,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldNotBeSmallerThanX,
                                                     true,
                                                     minValue);
-                validator.ErrorHandler.Post(ViolationType.OutOfRangeViolation, msg);
+                validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
             }
 
             return validator;
