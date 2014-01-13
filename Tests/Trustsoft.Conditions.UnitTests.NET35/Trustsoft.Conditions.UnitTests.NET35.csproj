@@ -66,6 +66,7 @@
     <Compile Include="StringResourcesUnitTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CollectionHelpersUnitTest.cs" />
     <Compile Include="ValidateUnitTest.cs" />
     <Compile Include="ValidatorExtensionsUnitTest.cs">
       <SubType>Code</SubType>

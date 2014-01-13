@@ -59,6 +59,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\CollectionHelpersUnitTest.cs">
+      <Link>CollectionHelpersUnitTest.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.UnitTests.NET35\Helpers\Model.cs">
       <Link>Helpers\Model.cs</Link>
     </Compile>
