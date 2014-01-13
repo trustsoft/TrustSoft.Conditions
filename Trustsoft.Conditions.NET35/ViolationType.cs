@@ -14,8 +14,6 @@ namespace Trustsoft.Conditions
     {
         Default = 0,
 
-        OutOfRangeViolation = 1,
-
-        InvalidEnumViolation = 2
+        OutOfRangeViolation = 1
     }
 }
