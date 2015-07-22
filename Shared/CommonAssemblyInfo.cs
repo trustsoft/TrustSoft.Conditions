@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.------------------------
+﻿//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
 // <copyright file="CommonAssemblyInfo.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.
+//     Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>17.11.2013</date>
-//------------------------Copyright © 2012-2014 Trustsoft Ltd. All rights reserved.------------------------
+//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
 
 #region " Using Directives "
 
@@ -19,7 +19,7 @@ using System.Reflection;
 [assembly: AssemblyDescription("Library that helps to check method arguments by conditions.")]
 [assembly: AssemblyCompany("Trustsoft Ltd.")]
 [assembly: AssemblyProduct("Trustsoft.Conditions")]
-[assembly: AssemblyCopyright("Copyright © Trustsoft Ltd. 2012-2014")]
+[assembly: AssemblyCopyright("Copyright © Trustsoft Ltd. 2012-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
