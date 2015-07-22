@@ -58,7 +58,7 @@ namespace Trustsoft.Conditions
         /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
         public static bool IsEmpty(this IEnumerable source)
         {
-            return !source.GetEnumerator().MoveNext();
+            return !source.HasItems();
         }
 
         /// <summary>
@@ -69,10 +69,7 @@ namespace Trustsoft.Conditions
         /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
         public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
         {
-            using (var itr = source.GetEnumerator())
-            {
-                return !itr.MoveNext();
-            }
+            return !source.HasItems();
         }
 
         #endregion
