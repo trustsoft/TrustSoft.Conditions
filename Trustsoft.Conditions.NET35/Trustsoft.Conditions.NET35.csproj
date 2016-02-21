@@ -128,6 +128,7 @@
     <Compile Include="Extensions\ValidatorExtensions.Guid.cs" />
     <Compile Include="Extensions\ValidatorExtensions.Nullable.cs" />
     <Compile Include="Helpers\CollectionExtensions.cs" />
+    <Compile Include="Helpers\ExpressionExtensions.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="IArgument.cs" />
     <Compile Include="IArgumentValidator.cs" />

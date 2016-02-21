@@ -11,49 +11,11 @@ namespace Trustsoft.Conditions.Internals
 
     using System;
     using System.Linq.Expressions;
-    using System.Reflection;
 
     #endregion
 
     internal class ArgumentExpression<T> : IArgument<T>
     {
-        #region " Static Methods "
-
-        private static string GetName(Expression<Func<T>> argument)
-        {
-            var memberExpression = argument.Body as MemberExpression;
-            if (memberExpression != null)
-            {
-                return memberExpression.Member.Name;
-            }
-            throw new InvalidOperationException("Unable to get name from expression");
-        }
-
-        private static T GetValue(Expression<Func<T>> argument)
-        {
-            var memberExpression = (MemberExpression)argument.Body;
-            object value;
-            if (memberExpression.Expression.NodeType == ExpressionType.Constant)
-            {
-                var constantExpression = (ConstantExpression)memberExpression.Expression;
-                if (memberExpression.Member.MemberType == MemberTypes.Property)
-                {
-                    value = ((PropertyInfo)memberExpression.Member).GetValue(constantExpression.Value, null);
-                }
-                else
-                {
-                    value = ((FieldInfo)memberExpression.Member).GetValue(constantExpression.Value);
-                }
-            }
-            else
-            {
-                value = argument.Compile().DynamicInvoke();
-            }
-            return (T)value;
-        }
-
-        #endregion
-
         #region " Constructors / Destructors "
 
         /// <summary>
@@ -61,8 +23,8 @@ namespace Trustsoft.Conditions.Internals
         /// </summary>
         public ArgumentExpression(Expression<Func<T>> expression)
         {
-            this.Name = ArgumentExpression<T>.GetName(expression);
-            this.Value = ArgumentExpression<T>.GetValue(expression);
+            this.Name = expression.GetName();
+            this.Value = expression.GetValue();
         }
 
         #endregion

@@ -166,6 +166,9 @@
     <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\CollectionExtensions.cs">
       <Link>Helpers\CollectionExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\ExpressionExtensions.cs">
+      <Link>Helpers\ExpressionExtensions.cs</Link>
+    </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\Helpers\StringExtensions.cs">
       <Link>Helpers\StringExtensions.cs</Link>
     </Compile>
