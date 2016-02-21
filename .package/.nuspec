@@ -3,14 +3,14 @@
   <metadata>
     <id>Trustsoft.Conditions</id>
     <title>Trustsoft.Conditions</title>
-    <version>0.9.9.8</version>
+    <version>0.9.9.9</version>
     <owners>Trustsoft Ltd.</owners>
     <authors>Trustsoft Ltd.</authors>
     <summary>
-      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5/4.0/4.5.
+      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5-4.6.
     </summary>
     <description>
-      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5/4.0/4.5.
+      Library that helps to check method arguments by conditions. Fluent methods for validating method arguments by conditions for .NET 3.5-4.6.
     </description>
     <language>en-US</language>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
