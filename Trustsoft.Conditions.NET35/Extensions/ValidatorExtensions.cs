@@ -70,7 +70,7 @@ namespace Trustsoft.Conditions
                 return !val.ErrorHandler.Errors.Any();
             }
 
-            return false;
+            return true;
         }
 
         #endregion
