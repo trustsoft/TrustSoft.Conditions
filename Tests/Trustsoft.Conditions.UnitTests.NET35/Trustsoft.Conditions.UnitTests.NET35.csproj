@@ -59,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ExpressionExtensionsUnitTest.cs" />
     <Compile Include="Helpers\Model.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
