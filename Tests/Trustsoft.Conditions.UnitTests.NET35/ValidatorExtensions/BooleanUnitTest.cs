@@ -99,6 +99,81 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
             Requires.That(() => arg).IsTrue();
         }
 
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [Description("Calling IsTrue on true should pass.")]
+        public void IsTrue_ShouldPass_OnNullableTrueValue1()
+        {
+            // Arrange
+            bool? arg = true;
+
+            // Act/Assert
+            Requires.That(arg).IsTrue();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [Description("Calling IsTrue on true should pass.")]
+        public void IsTrue_ShouldPass_OnNullableTrueValue2()
+        {
+            // Arrange
+            bool? arg = true;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsTrue();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [Description("Calling IsTrue on ()=>true should pass.")]
+        public void IsTrue_ShouldPass_OnNullableTrueValue3()
+        {
+            // Arrange
+            bool? arg = true;
+
+            // Act/Assert
+            Requires.That(() => arg).IsTrue();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsTrue on false should fail.")]
+        public void IsTrue_ShouldFail_OnNullableFalseValue1()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(arg).IsTrue();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsTrue on false should fail.")]
+        public void IsTrue_ShouldFail_OnNullableFalseValue2()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsTrue();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsTrue")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsTrue on ()=>false should fail.")]
+        public void IsTrue_ShouldFail_OnNullableFalseValue3()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(() => arg).IsTrue();
+        }
+
         #endregion
 
         #region " IsFalse "
@@ -173,6 +248,81 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         {
             // Arrange
             bool arg = true;
+
+            // Act/Assert
+            Requires.That(() => arg).IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [Description("Calling IsFalse on false should pass.")]
+        public void IsFalse_ShouldPass_OnNullableFalseValue1()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(arg).IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [Description("Calling IsFalse on false should pass.")]
+        public void IsFalse_ShouldPass_OnNullableFalseValue2()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [Description("Calling IsFalse on ()=>false should pass.")]
+        public void IsFalse_ShouldPass_OnNullableFalseValue3()
+        {
+            // Arrange
+            bool? arg = false;
+
+            // Act/Assert
+            Requires.That(() => arg).IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsFalse on true should fail.")]
+        public void IsFalse_ShouldFail_OnNullableTrueValue1()
+        {
+            // Arrange
+            bool? arg = true;
+
+            // Act/Assert
+            Requires.That(arg).IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsFalse on true should fail.")]
+        public void IsFalse_ShouldFail_OnNullableTrueValue2()
+        {
+            // Arrange
+            bool? arg = true;
+
+            // Act/Assert
+            Requires.That(arg, "arg").IsFalse();
+        }
+
+        [TestMethod]
+        [TestCategory("Boolean? - IsFalse")]
+        [ExpectedException(typeof(ArgumentException))]
+        [Description("Calling IsFalse on ()=>true should fail.")]
+        public void IsFalse_ShouldFail_OnNullableTrueValue3()
+        {
+            // Arrange
+            bool? arg = true;
 
             // Act/Assert
             Requires.That(() => arg).IsFalse();
