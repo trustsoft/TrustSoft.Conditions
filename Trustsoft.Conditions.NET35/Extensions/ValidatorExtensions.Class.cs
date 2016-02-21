@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
+﻿//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
 // <copyright file="ValidatorExtensions.Class.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.
+//     Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>20.11.2013</date>
-//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
+//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
 
 namespace Trustsoft.Conditions
 {

@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
+﻿//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
 // <copyright file="CollectionHelpersUnitTest.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.
+//     Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>14.01.2014</date>
-//------------------------Copyright © 2012-2015 Trustsoft Ltd. All rights reserved.------------------------
+//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
 
 namespace Trustsoft.Conditions.UnitTests
 {
