@@ -28,7 +28,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IEnumerable - IsEmpty")]
         [Description("Calling IsEmpty on empty sequence should pass.")]
-        public void IsEmpty_ShouldPassOnEmptySequence()
+        public void IsEmpty_ShouldPass_OnEmptySequence()
         {
             IEnumerable seq = new int[0];
 
@@ -40,7 +40,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IEnumerable<T> - IsEmpty")]
         [Description("Calling IsEmpty on empty sequence should pass.")]
-        public void IsEmpty_ShouldPassOnEmptySequenceOf()
+        public void IsEmpty_ShouldPass_OnEmptySequenceOf()
         {
             IEnumerable<int> seq = new int[0];
 
@@ -52,7 +52,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("ICollection - IsEmpty")]
         [Description("Calling IsEmpty on empty collection should pass.")]
-        public void IsEmpty_ShouldPassOnEmptyCollection()
+        public void IsEmpty_ShouldPass_OnEmptyCollection()
         {
             ICollection collection = new int[0];
 
@@ -64,7 +64,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("ICollection<T> - IsEmpty")]
         [Description("Calling IsEmpty on empty collection should pass.")]
-        public void IsEmpty_ShouldPassOnEmptyCollectionOf()
+        public void IsEmpty_ShouldPass_OnEmptyCollectionOf()
         {
             ICollection<int> collection = new int[0];
 
@@ -76,7 +76,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IList - IsEmpty")]
         [Description("Calling IsEmpty on empty list should pass.")]
-        public void IsEmpty_ShouldPassOnEmptyList()
+        public void IsEmpty_ShouldPass_OnEmptyList()
         {
             IList list = new int[0];
 
@@ -88,7 +88,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IList<T> - IsEmpty")]
         [Description("Calling IsEmpty on empty list should pass.")]
-        public void IsEmpty_ShouldPassOnEmptyListOf()
+        public void IsEmpty_ShouldPass_OnEmptyListOf()
         {
             IList<int> list = new int[0];
 
@@ -101,7 +101,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IEnumerable - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty sequence should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptySequence()
+        public void IsEmpty_ShouldFail_OnNonEmptySequence()
         {
             IEnumerable seq = new[] { 8, 9, 0 };
 
@@ -112,7 +112,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IEnumerable<T> - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty sequence should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptySequenceOf()
+        public void IsEmpty_ShouldFail_OnNonEmptySequenceOf()
         {
             IEnumerable<int> seq = new[] { 8, 9, 0 };
 
@@ -123,7 +123,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("ICollection - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty collection should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptyCollection()
+        public void IsEmpty_ShouldFail_OnNonEmptyCollection()
         {
             ICollection collection = new[] { 8, 9, 0 };
 
@@ -134,7 +134,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("ICollection<T> - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty collection should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptyCollectionOf()
+        public void IsEmpty_ShouldFail_OnNonEmptyCollectionOf()
         {
             ICollection<int> collection = new[] { 8, 9, 0 };
 
@@ -145,7 +145,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IList - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty list should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptyList()
+        public void IsEmpty_ShouldFail_OnNonEmptyList()
         {
             IList list = new[] { 8, 9, 0 };
 
@@ -156,7 +156,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IList<T> - IsEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEmpty on non-empty list should fail.")]
-        public void IsEmpty_ShouldFailOnNonEmptyListOf()
+        public void IsEmpty_ShouldFail_OnNonEmptyListOf()
         {
             IList<int> list = new[] { 8, 9, 0 };
 
@@ -170,7 +170,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IEnumerable - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty sequence should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptySequence()
+        public void IsNotEmpty_ShouldPass_OnEmptySequence()
         {
             IEnumerable seq = new[] { 8, 9, 10 };
 
@@ -182,7 +182,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IEnumerable<T> - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty sequence should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptySequenceOf()
+        public void IsNotEmpty_ShouldPass_OnEmptySequenceOf()
         {
             IEnumerable<int> seq = new[] { 8, 9, 10 };
 
@@ -194,7 +194,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("ICollection - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty collection should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptyCollection()
+        public void IsNotEmpty_ShouldPass_OnEmptyCollection()
         {
             ICollection collection = new[] { 8, 9, 10 };
 
@@ -206,7 +206,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("ICollection<T> - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty collection should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptyCollectionOf()
+        public void IsNotEmpty_ShouldPass_OnEmptyCollectionOf()
         {
             ICollection<int> collection = new[] { 8, 9, 10 };
 
@@ -218,7 +218,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IList - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty list should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptyList()
+        public void IsNotEmpty_ShouldPass_OnEmptyList()
         {
             IList list = new[] { 8, 9, 10 };
 
@@ -230,7 +230,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IList<T> - IsNotEmpty")]
         [Description("Calling IsNotEmpty on non-empty list should pass.")]
-        public void IsNotEmpty_ShouldPassOnEmptyListOf()
+        public void IsNotEmpty_ShouldPass_OnEmptyListOf()
         {
             IList<int> list = new[] { 8, 9, 10 };
 
@@ -243,7 +243,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IEnumerable - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty sequence should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptySequence()
+        public void IsNotEmpty_ShouldFail_OnNonEmptySequence()
         {
             IEnumerable seq = new int[0];
 
@@ -254,7 +254,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IEnumerable<T> - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty sequence should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptySequenceOf()
+        public void IsNotEmpty_ShouldFail_OnNonEmptySequenceOf()
         {
             IEnumerable<int> seq = new int[0];
 
@@ -265,7 +265,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("ICollection - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty collection should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptyCollection()
+        public void IsNotEmpty_ShouldFail_OnNonEmptyCollection()
         {
             ICollection collection = new int[0];
 
@@ -276,7 +276,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("ICollection<T> - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty collection should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptyCollectionOf()
+        public void IsNotEmpty_ShouldFail_OnNonEmptyCollectionOf()
         {
             ICollection<int> collection = new int[0];
 
@@ -287,7 +287,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IList - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty list should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptyList()
+        public void IsNotEmpty_ShouldFail_OnNonEmptyList()
         {
             IList list = new int[0];
 
@@ -298,7 +298,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IList<T> - IsNotEmpty")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEmpty on empty list should fail.")]
-        public void IsNotEmpty_ShouldFailOnNonEmptyListOf()
+        public void IsNotEmpty_ShouldFail_OnNonEmptyListOf()
         {
             IList<int> list = new int[0];
 

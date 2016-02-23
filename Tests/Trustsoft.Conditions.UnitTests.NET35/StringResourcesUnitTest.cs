@@ -56,7 +56,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("Resources")]
         [Description("Validates whether the defined string consts in StringRes class have a value that equals it's name.")]
-        public void ValidateStringResourcesMethod1()
+        public void Validate_StringResources_Method1()
         {
             Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
 
@@ -76,7 +76,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("Resources")]
         [Description("Validates whether the defined string consts in StringRes class reference an existing string resource.")]
-        public void ValidateStringResourcesMethod2()
+        public void Validate_StringResources_Method2()
         {
             foreach (var field in GetStringFields())
             {

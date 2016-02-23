@@ -28,7 +28,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsInRange")]
         [Description("Calling IsInRange on value in range should pass.")]
-        public void IsInRange_ShouldPassOnValueInRange1()
+        public void IsInRange_ShouldPass_OnValueInRange1()
         {
             Model val = new Model(3);
             Model min = new Model(1);
@@ -41,7 +41,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsInRange")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsInRange on value out of range should fail.")]
-        public void IsInRange_ShouldFailOnValueOutOfRange1()
+        public void IsInRange_ShouldFail_OnValueOutOfRange1()
         {
             Model val = new Model(7);
             Model min = new Model(1);
@@ -56,7 +56,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotInRange")]
         [Description("Calling IsNotInRange on value out of range should pass.")]
-        public void IsNotInRange_ShouldPassOnValueOtOfRange1()
+        public void IsNotInRange_ShouldPass_OnValueOtOfRange1()
         {
             Model val = new Model(7);
             Model min = new Model(1);
@@ -69,7 +69,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotInRange")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotInRange on value in range should fail.")]
-        public void IsNotInRange_ShouldFailOnValueInRange1()
+        public void IsNotInRange_ShouldFail_OnValueInRange1()
         {
             Model val = new Model(3);
             Model min = new Model(1);
@@ -84,7 +84,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsGreaterThan")]
         [Description("Calling IsGreaterThan on lower value should pass.")]
-        public void IsGreaterThan_ShouldPassOnLowerValue1()
+        public void IsGreaterThan_ShouldPass_OnLowerValue1()
         {
             Model val = new Model(3);
             Model min = new Model(1);
@@ -96,7 +96,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsGreaterThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsGreaterThan on higher value should fail.")]
-        public void IsGreaterThan_ShouldFailOnHigherValue1()
+        public void IsGreaterThan_ShouldFail_OnHigherValue1()
         {
             Model val = new Model(7);
             Model min = new Model(10);
@@ -107,7 +107,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsGreaterThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsGreaterThan on same value should fail.")]
-        public void IsGreaterThan_ShouldFailOnSameValue1()
+        public void IsGreaterThan_ShouldFail_OnSameValue1()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -121,7 +121,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotGreaterThan")]
         [Description("Calling IsNotGreaterThan on higher value should pass.")]
-        public void IsNotGreaterThan_ShouldPassOnHigherValue()
+        public void IsNotGreaterThan_ShouldPass_OnHigherValue()
         {
             Model val = new Model(3);
             Model max = new Model(10);
@@ -133,7 +133,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotGreaterThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotGreaterThan on higher value should fail.")]
-        public void IsNotGreaterThan_ShouldFailOnValueInRange()
+        public void IsNotGreaterThan_ShouldFail_OnValueInRange()
         {
             Model val = new Model(7);
             Model max = new Model(3);
@@ -147,7 +147,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsGreaterOrEqual")]
         [Description("Calling IsGreaterOrEqual on lower value should pass.")]
-        public void IsGreaterOrEqual_ShouldPassOnLowerValue()
+        public void IsGreaterOrEqual_ShouldPass_OnLowerValue()
         {
             Model val = new Model(3);
             Model min = new Model(1);
@@ -158,7 +158,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsGreaterOrEqual")]
         [Description("Calling IsGreaterOrEqual on same value should pass.")]
-        public void IsGreaterOrEqual_ShouldPassOnSameValue()
+        public void IsGreaterOrEqual_ShouldPass_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -170,7 +170,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsGreaterOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsGreaterOrEqual on higher value should fail.")]
-        public void IsGreaterOrEqual_ShouldFailOnHigherValue()
+        public void IsGreaterOrEqual_ShouldFail_OnHigherValue()
         {
             Model val = new Model(7);
             Model min = new Model(10);
@@ -184,7 +184,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotGreaterOrEqual")]
         [Description("Calling IsNotGreaterOrEqual on lower value should pass.")]
-        public void IsNotGreaterOrEqual_ShouldPassOnLowerValue()
+        public void IsNotGreaterOrEqual_ShouldPass_OnLowerValue()
         {
             Model val = new Model(3);
             Model max = new Model(10);
@@ -196,7 +196,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotGreaterOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotGreaterOrEqual on same value should fail.")]
-        public void IsNotGreaterOrEqual_ShouldFailOnSameValue()
+        public void IsNotGreaterOrEqual_ShouldFail_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -207,7 +207,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotGreaterOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotGreaterOrEqual on lower value should fail.")]
-        public void IsNotGreaterOrEqual_ShouldFailOnHigherValue()
+        public void IsNotGreaterOrEqual_ShouldFail_OnHigherValue()
         {
             Model val = new Model(10);
             Model min = new Model(7);
@@ -221,7 +221,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsLessThan")]
         [Description("Calling IsLessThan on higher value should pass.")]
-        public void IsLessThan_ShouldPassOnHigherValue()
+        public void IsLessThan_ShouldPass_OnHigherValue()
         {
             Model val = new Model(3);
             Model min = new Model(7);
@@ -233,7 +233,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsLessThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsLessThan on lower value should fail.")]
-        public void IsLessThan_ShouldFailOnLowerValue()
+        public void IsLessThan_ShouldFail_OnLowerValue()
         {
             Model val = new Model(7);
             Model min = new Model(3);
@@ -244,7 +244,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsLessThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsLessThan on same value should fail.")]
-        public void IsLessThan_ShouldFailOnSameValue()
+        public void IsLessThan_ShouldFail_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -258,7 +258,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotLessThan")]
         [Description("Calling IsNotLessThan on lower value should pass.")]
-        public void IsNotLessThan_ShouldPassOnLowerValue()
+        public void IsNotLessThan_ShouldPass_OnLowerValue()
         {
             Model val = new Model(7);
             Model min = new Model(5);
@@ -269,7 +269,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotLessThan")]
         [Description("Calling IsNotLessThan on same value should pass.")]
-        public void IsNotLessThan_ShouldPassOnSameValue()
+        public void IsNotLessThan_ShouldPass_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -281,7 +281,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotLessThan")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotLessThan on higher value should fail.")]
-        public void IsNotLessThan_ShouldFailOnHigherValue()
+        public void IsNotLessThan_ShouldFail_OnHigherValue()
         {
             Model val = new Model(4);
             Model min = new Model(8);
@@ -295,7 +295,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsLessOrEqual")]
         [Description("Calling IsLessOrEqual on higher value should pass.")]
-        public void IsLessOrEqual_ShouldPassOnHigherValue()
+        public void IsLessOrEqual_ShouldPass_OnHigherValue()
         {
             Model val = new Model(3);
             Model min = new Model(10);
@@ -306,7 +306,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsLessOrEqual")]
         [Description("Calling IsLessOrEqual on same value should pass.")]
-        public void IsLessOrEqual_ShouldPassOnSameValue()
+        public void IsLessOrEqual_ShouldPass_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -318,7 +318,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsLessOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsLessOrEqual on lower value should fail.")]
-        public void IsLessOrEqual_ShouldFailOnLowerValue()
+        public void IsLessOrEqual_ShouldFail_OnLowerValue()
         {
             Model val = new Model(7);
             Model min = new Model(1);
@@ -332,7 +332,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotLessOrEqual")]
         [Description("Calling IsNotLessOrEqual on lower value should pass.")]
-        public void IsNotLessOrEqual_ShouldPassOnLowerValue()
+        public void IsNotLessOrEqual_ShouldPass_OnLowerValue()
         {
             Model val = new Model(3);
             Model min = new Model(1);
@@ -344,7 +344,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotLessOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotLessOrEqual on same value should fail.")]
-        public void IsNotLessOrEqual_ShouldFailOnSameValue()
+        public void IsNotLessOrEqual_ShouldFail_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);
@@ -355,7 +355,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotLessOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotLessOrEqual on higher value should fail.")]
-        public void IsNotLessOrEqual_ShouldFailOnHigherValue()
+        public void IsNotLessOrEqual_ShouldFail_OnHigherValue()
         {
             Model val = new Model(5);
             Model min = new Model(7);
@@ -369,7 +369,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsEqualTo")]
         [Description("Calling IsEqualTo on same value should pass.")]
-        public void IsEqualTo_ShouldPassOnSameValue()
+        public void IsEqualTo_ShouldPass_OnSameValue()
         {
             Model val1 = new Model(7);
             Model val2 = new Model(7);
@@ -381,7 +381,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsEqualTo")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsEqualTo on different value should fail.")]
-        public void IsEqualTo_ShouldFailOnDifferentValue()
+        public void IsEqualTo_ShouldFail_OnDifferentValue()
         {
             Model val1 = new Model(7);
             Model val2 = new Model(10);
@@ -395,7 +395,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestMethod]
         [TestCategory("IComparable<T> - IsNotEqualTo")]
         [Description("Calling IsNotEqualTo on different value should pass.")]
-        public void IsNotEqualTo_ShouldPassOnDifferentValue()
+        public void IsNotEqualTo_ShouldPass_OnDifferentValue()
         {
             Model val = new Model(3);
             Model max = new Model(10);
@@ -407,7 +407,7 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [TestCategory("IComparable<T> - IsNotEqualTo")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEqualTo on same value should fail.")]
-        public void IsNotEqualTo_ShouldFailOnSameValue()
+        public void IsNotEqualTo_ShouldFail_OnSameValue()
         {
             Model val = new Model(7);
             Model min = new Model(7);

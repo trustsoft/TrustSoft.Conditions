@@ -7,7 +7,7 @@
         [TestMethod]
         [TestCategory("<#= targetType #> - IsNotEqualTo")]
         [Description("Calling IsNotEqualTo on different value should pass.")]
-        public void IsNotEqualTo_ShouldPassOnDifferentValue()
+        public void IsNotEqualTo_ShouldPass_OnDifferentValue()
         {
             <#= targetType #> val = 3;
             <#= targetType #> max = 10;
@@ -19,7 +19,7 @@
         [TestCategory("<#= targetType #> - IsNotEqualTo")]
         [ExpectedException(typeof(ArgumentException))]
         [Description("Calling IsNotEqualTo on same value should fail.")]
-        public void IsNotEqualTo_ShouldFailOnSameValue()
+        public void IsNotEqualTo_ShouldFail_OnSameValue()
         {
             <#= targetType #> val = 7;
             <#= targetType #> min = 7;

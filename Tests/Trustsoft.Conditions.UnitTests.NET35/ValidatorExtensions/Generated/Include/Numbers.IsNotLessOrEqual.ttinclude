@@ -7,7 +7,7 @@
         [TestMethod]
         [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
         [Description("Calling IsNotLessOrEqual on lower value should pass.")]
-        public void IsNotLessOrEqual_ShouldPassOnLowerValue()
+        public void IsNotLessOrEqual_ShouldPass_OnLowerValue()
         {
             <#= targetType #> val = 3;
             <#= targetType #> min = 1;
@@ -19,7 +19,7 @@
         [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotLessOrEqual on same value should fail.")]
-        public void IsNotLessOrEqual_ShouldFailOnSameValue()
+        public void IsNotLessOrEqual_ShouldFail_OnSameValue()
         {
             <#= targetType #> val = 7;
             <#= targetType #> min = 7;
@@ -30,7 +30,7 @@
         [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [Description("Calling IsNotLessOrEqual on higher value should fail.")]
-        public void IsNotLessOrEqual_ShouldFailOnHigherValue()
+        public void IsNotLessOrEqual_ShouldFail_OnHigherValue()
         {
             <#= targetType #> val = 5;
             <#= targetType #> min = 7;

@@ -17,7 +17,7 @@
         [TestMethod]
         [TestCategory("ErrorMessage")]
         [Description("Error message should be composed correctly.")]
-        public void ErrorMessageShouldBeComposedCorrectly1()
+        public void ErrorMessage_ShouldBeComposed_Correctly1()
         {
             int value = 123;
 
@@ -34,7 +34,7 @@
         [TestMethod]
         [TestCategory("ErrorMessage")]
         [Description("Error message should be composed correctly.")]
-        public void ErrorMessageShouldBeComposedCorrectly2()
+        public void ErrorMessage_ShouldBeComposed_Correctly2()
         {
             // Arrange
             bool arg = false;
@@ -53,7 +53,7 @@
         [TestMethod]
         [TestCategory("ErrorMessage")]
         [Description("Error message should be composed correctly.")]
-        public void ErrorMessageShouldBeComposedCorrectly3()
+        public void ErrorMessage_ShouldBeComposed_Correctly3()
         {
             // Arrange
             bool arg = false;
@@ -72,7 +72,7 @@
         [TestMethod]
         [TestCategory("ErrorMessage")]
         [Description("Error message should be composed correctly.")]
-        public void ErrorMessageShouldBeComposedCorrectly4()
+        public void ErrorMessage_ShouldBeComposed_Correctly4()
         {
             // Arrange
             bool arg = false;

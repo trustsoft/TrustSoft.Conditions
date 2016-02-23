@@ -21,7 +21,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("Validate.That")]
         [Description("Validate.That should behaves correctly.")]
-        public void ValidateThatShouldBehavesCorrectly1()
+        public void ValidateThat_ShouldBehaves_Correctly1()
         {
             // Arrange
             int value = 23;
@@ -35,7 +35,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("Validate.That")]
         [Description("Validate.That should behaves correctly.")]
-        public void ValidateThatShouldBehavesCorrectly2()
+        public void ValidateThat_ShouldBehaves_Correctly2()
         {
             // Arrange
             int value = 123;

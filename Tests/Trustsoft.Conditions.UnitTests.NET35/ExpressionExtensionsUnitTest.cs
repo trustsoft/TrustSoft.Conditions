@@ -25,7 +25,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestCategory("ExpressionExtensions")]
         [ExpectedException(typeof(InvalidCastException))]
         [Description("ExpressionExtensions.GetValue should behaves correctly.")]
-        public void GetValueShouldBehavesCorrectly1()
+        public void GetValue_ShouldBehaves_Correctly1()
         {
             // Arrange
             Expression<Func<int>> expression = () => 5;
@@ -37,7 +37,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("ExpressionExtensions")]
         [Description("ExpressionExtensions.GetValue should behaves correctly.")]
-        public void GetValueShouldBehavesCorrectly2()
+        public void GetValue_ShouldBehaves_Correctly2()
         {
             // Arrange
             var model = new Model(45);
@@ -50,7 +50,7 @@ namespace Trustsoft.Conditions.UnitTests
         [TestMethod]
         [TestCategory("ExpressionExtensions")]
         [Description("ExpressionExtensions.GetValue should behaves correctly.")]
-        public void GetValueShouldBehavesCorrectly3()
+        public void GetValue_ShouldBehaves_Correctly3()
         {
             // Arrange
             var model = new Model(45);
