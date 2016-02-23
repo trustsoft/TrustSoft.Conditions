@@ -32,7 +32,7 @@ namespace Trustsoft.Conditions.Internals
 
             if (value is string || value is char)
             {
-                return string.Format("'{0}'", value);
+                return $"'{value}'";
             }
 
             return value.ToString();
@@ -59,7 +59,7 @@ namespace Trustsoft.Conditions.Internals
             int index = 1;
             foreach (var item in args)
             {
-                var paramName = string.Format("{{param{0}}}", index);
+                var paramName = $"{{param{index}}}";
                 result = result.Replace(paramName, item.MakeReadableString());
                 index++;
             }
@@ -84,7 +84,7 @@ namespace Trustsoft.Conditions.Internals
                 msg = InjectValues(validator, resource, args);
                 if (includeActualValue)
                 {
-                    msg = string.Format("{0}{1}{2}", msg, Environment.NewLine, validator.GetActualValueMessage());
+                    msg = $"{msg}{Environment.NewLine}{validator.GetActualValueMessage()}";
                 }
             }
             else

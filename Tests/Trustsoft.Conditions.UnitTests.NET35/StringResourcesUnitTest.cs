@@ -58,16 +58,12 @@ namespace Trustsoft.Conditions.UnitTests
         [Description("Validates whether the defined string consts in StringRes class have a value that equals it's name.")]
         public void Validate_StringResources_Method1()
         {
-            Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
-
             foreach (var field in GetStringFields())
             {
                 string resourceKey = (string)field.GetValue(null);
 
                 // The value should be equal to it's name.
-                string message = string.Format(CultureInfo.InvariantCulture,
-                                               "Name of StringRes.{0} should match it's value",
-                                               field.Name);
+                string message = $"Name of StringRes.{field.Name} should match it's value";
 
                 Assert.AreEqual(field.Name, resourceKey, message);
             }
@@ -83,9 +79,7 @@ namespace Trustsoft.Conditions.UnitTests
                 string resourceKey = (string)field.GetValue(null);
                 string resourceValue = StringRes.GetString(resourceKey);
 
-                string assertExplanation = string.Format(CultureInfo.InvariantCulture,
-                                                         "The resource with key '{0}' could not be found.",
-                                                         resourceKey);
+                string assertExplanation = $"The resource with key '{resourceKey}' could not be found.";
 
                 Assert.IsTrue(!string.IsNullOrEmpty(resourceValue), assertExplanation);
             }

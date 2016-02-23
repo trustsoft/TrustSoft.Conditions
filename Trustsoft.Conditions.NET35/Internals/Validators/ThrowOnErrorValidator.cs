@@ -13,9 +13,13 @@ namespace Trustsoft.Conditions.Internals
     /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
     internal class ThrowOnErrorValidator<T> : ArgumentValidatorBase<T, ThrowOnErrorHandler<T>>
     {
+        #region " Constructors / Destructors "
+
         public ThrowOnErrorValidator(IArgument<T> argument)
             : base(argument, new ThrowOnErrorHandler<T>())
         {
         }
+
+        #endregion
     }
 }

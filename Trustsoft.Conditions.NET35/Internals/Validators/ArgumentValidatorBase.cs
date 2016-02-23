@@ -21,13 +21,13 @@ namespace Trustsoft.Conditions.Internals
         ///     Gets the argument.
         /// </summary>
         /// <value> The argument. </value>
-        public IArgument<T> Argument { get; private set; }
+        public IArgument<T> Argument { get; }
 
         /// <summary>
         ///     Gets the error handler.
         /// </summary>
         /// <value> The error handler. </value>
-        public TErrorHandler ErrorHandler { get; private set; }
+        public TErrorHandler ErrorHandler { get; }
 
         #endregion
 
@@ -53,25 +53,13 @@ namespace Trustsoft.Conditions.Internals
         ///     Gets the argument associated wth the current <see cref="IArgumentValidator{T}"/> object.
         /// </summary>
         /// <value> The argument. </value>
-        IArgument<T> IArgumentValidator<T>.Argument
-        {
-            get
-            {
-                return this.Argument;
-            }
-        }
+        IArgument<T> IArgumentValidator<T>.Argument => this.Argument;
 
         /// <summary>
         ///     Gets the error handle associated wth the current <see cref="IArgumentValidator{T}"/> object.
         /// </summary>
         /// <value> The error handler. </value>
-        IErrorHandler<T> IArgumentValidator<T>.ErrorHandler
-        {
-            get
-            {
-                return this.ErrorHandler;
-            }
-        }
+        IErrorHandler<T> IArgumentValidator<T>.ErrorHandler => this.ErrorHandler;
 
         #endregion
     }
