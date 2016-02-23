@@ -18,6 +18,8 @@ namespace Trustsoft.Conditions.UnitTests
     [TestClass]
     public class ValidateUnitTest
     {
+        #region " Validate.That "
+
         [TestMethod]
         [TestCategory("Validate.That")]
         [Description("Validate.That should behaves correctly.")]
@@ -45,5 +47,7 @@ namespace Trustsoft.Conditions.UnitTests
             Assert.IsFalse(validator.IsValid());
             Assert.AreEqual(1, validator.GetErrors().Count());
         }
+
+        #endregion
     }
 }

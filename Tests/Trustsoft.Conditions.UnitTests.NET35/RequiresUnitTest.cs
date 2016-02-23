@@ -20,6 +20,8 @@ namespace Trustsoft.Conditions.UnitTests
     [TestClass]
     public class RequiresUnitTest
     {
+        #region " Requires.That "
+
         [TestMethod]
         [TestCategory("Requires.That")]
         [Description("Requires.That should behaves correctly.")]
@@ -60,6 +62,8 @@ namespace Trustsoft.Conditions.UnitTests
             Assert.IsTrue(validator.IsValid());
             Assert.AreEqual(0, validator.GetErrors().Count());
         }
+
+        #endregion
     }
 
     // ReSharper restore InconsistentNaming

@@ -28,9 +28,9 @@ namespace Trustsoft.Conditions.UnitTests
         {
             Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
 
-            const BindingFlags FieldFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+            const BindingFlags fieldFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
 
-            var resourceFields = from field in srType.GetFields(FieldFlags)
+            var resourceFields = from field in srType.GetFields(fieldFlags)
                                  where field.FieldType == typeof(string)
                                  select field;
 

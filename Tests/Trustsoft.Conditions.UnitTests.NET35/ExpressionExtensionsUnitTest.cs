@@ -18,9 +18,13 @@ namespace Trustsoft.Conditions.UnitTests
 
     #endregion
 
+    // ReSharper disable InconsistentNaming
+
     [TestClass]
     public class ExpressionExtensionsUnitTest
     {
+        #region " GetValue "
+
         [TestMethod]
         [TestCategory("ExpressionExtensions")]
         [ExpectedException(typeof(InvalidCastException))]
@@ -47,10 +51,14 @@ namespace Trustsoft.Conditions.UnitTests
             Assert.AreEqual(model.Number, expression.GetValue());
         }
 
+        #endregion
+
+        #region " GetName "
+
         [TestMethod]
         [TestCategory("ExpressionExtensions")]
-        [Description("ExpressionExtensions.GetValue should behaves correctly.")]
-        public void GetValue_ShouldBehaves_Correctly3()
+        [Description("ExpressionExtensions.GetName should behaves correctly.")]
+        public void GetName_ShouldBehaves_Correctly1()
         {
             // Arrange
             var model = new Model(45);
@@ -58,7 +66,23 @@ namespace Trustsoft.Conditions.UnitTests
 
             // Act/Assert
             Assert.AreEqual("Number", expression.GetName());
-            Assert.AreEqual(model.Number, expression.GetValue());
         }
+
+        [TestMethod]
+        [TestCategory("ExpressionExtensions")]
+        [ExpectedException(typeof(InvalidOperationException))]
+        [Description("ExpressionExtensions.GetName should behaves correctly.")]
+        public void GetName_ShouldBehaves_Correctly2()
+        {
+            // Arrange
+            Expression<Func<int>> expression = () => 5;
+
+            // Act/Assert
+            Assert.AreEqual(5, expression.GetName());
+        }
+
+        #endregion
     }
+
+    // ReSharper restore InconsistentNaming
 }

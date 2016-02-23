@@ -38,14 +38,14 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
         [Description("Calling Evaluate on 33 with expression '(x) => (x == 444)' should fail.")]
         public void Evaluate_ShouldFail_OnExpressionValue()
         {
-            int a = 3;
-            Requires.That(a).Evaluate(x => x == 4);
+            int a = 33;
+            Requires.That(a).Evaluate(x => x == 444);
         }
 
         [TestMethod]
         [TestCategory("Evaluate")]
         [Description("Calling Evaluate on object x with expression 'x => true' should pass.")]
-        public void Evaluate_ShouldPass_OnObjectWithExpression1()
+        public void Evaluate_ShouldPass_OnObjectWithExpression()
         {
             object a = new object();
             Requires.That(a).Evaluate(x => true);

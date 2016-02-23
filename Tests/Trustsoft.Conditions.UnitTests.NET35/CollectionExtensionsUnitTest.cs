@@ -18,13 +18,15 @@ namespace Trustsoft.Conditions.UnitTests
     [TestClass]
     public class CollectionExtensionsUnitTest
     {
+        #region " IsEmpty "
+
         [TestMethod]
         [TestCategory("CollectionExtensions - IsEmpty")]
         [Description("Calling IsEmpty on empty sequence should return true.")]
         public void IsEmpty_ShouldReturnTrue_OnEmptySequence()
         {
             // Arrange
-            string[] arg1 = { };
+            string[] arg1 = {};
             IEnumerable arg2 = arg1;
 
             // Act/Assert
@@ -59,6 +61,10 @@ namespace Trustsoft.Conditions.UnitTests
             Assert.IsFalse(arg1.IsEmpty());
             Assert.IsFalse(arg2.IsEmpty());
         }
+
+        #endregion
+
+        #region " HasItems "
 
         [TestMethod]
         [TestCategory("CollectionExtensions - HasItems")]
@@ -101,5 +107,7 @@ namespace Trustsoft.Conditions.UnitTests
             Assert.IsFalse(arg1.HasItems());
             Assert.IsFalse(arg2.HasItems());
         }
+
+        #endregion
     }
 }

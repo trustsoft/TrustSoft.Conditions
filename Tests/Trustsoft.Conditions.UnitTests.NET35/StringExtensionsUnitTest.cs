@@ -18,6 +18,8 @@ namespace Trustsoft.Conditions.UnitTests
     [TestClass]
     public class StringExtensionsUnitTest
     {
+        #region " IsNullOrWhiteSpace "
+
         [TestMethod]
         [TestCategory("StringExtensions - IsNullOrWhiteSpace")]
         [Description("Calling IsNullOrWhiteSpace on null value should return true.")]
@@ -53,6 +55,8 @@ namespace Trustsoft.Conditions.UnitTests
             // Act/Assert
             Assert.IsFalse(arg.IsNullOrWhiteSpace());
         }
+
+        #endregion
     }
 
     // ReSharper restore InconsistentNaming
