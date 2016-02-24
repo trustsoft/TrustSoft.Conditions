@@ -63,6 +63,8 @@ namespace <#= namespaceName #>
     using Trustsoft.Conditions.Internals;
 
     #endregion
+	
+    // ReSharper disable UnusedMethodReturnValue
 
     public static partial class ValidatorExtensions
     {   
@@ -102,6 +104,8 @@ namespace <#= namespaceName #>
 
         <# this.Numbers_IsPositive_Render(this.TargetType); #>
     }
+    
+	// ReSharper restore UnusedMethodReturnValue
 }
 <#+
   string TargetType = "double";

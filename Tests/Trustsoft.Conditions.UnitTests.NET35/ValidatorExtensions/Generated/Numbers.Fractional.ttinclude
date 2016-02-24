@@ -62,6 +62,7 @@ namespace <#= namespaceName #>
 
     #endregion
 
+    // ReSharper disable BuiltInTypeReferenceStyle
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
     // ReSharper disable ConditionIsAlwaysTrueOrFalse
@@ -107,6 +108,7 @@ namespace <#= namespaceName #>
     // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
+    // ReSharper restore BuiltInTypeReferenceStyle
 }
 <#+
   string TargetType = "Int32";

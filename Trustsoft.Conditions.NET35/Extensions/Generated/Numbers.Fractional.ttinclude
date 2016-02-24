@@ -62,6 +62,8 @@ namespace <#= namespaceName #>
 
     #endregion
 
+	// ReSharper disable UnusedMethodReturnValue
+    
     public static partial class ValidatorExtensions
     {   
         <# this.Numbers_IsEqualTo_Render(this.TargetType); #>
@@ -96,6 +98,8 @@ namespace <#= namespaceName #>
 
         <# this.Numbers_IsNotPositive_Render(this.TargetType); #>
     }
+    
+	// ReSharper restore UnusedMethodReturnValue
 }
 <#+
   string TargetType = "double";
