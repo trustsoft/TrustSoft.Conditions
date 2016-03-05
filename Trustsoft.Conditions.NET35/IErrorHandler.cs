@@ -10,7 +10,7 @@ namespace Trustsoft.Conditions
     /// <summary>
     ///     Represents an error handler.
     /// </summary>
-    /// <typeparam name="T"> The type of argument`s value. </typeparam>
+    /// <typeparam name="T"> The type of argument's value. </typeparam>
     public interface IErrorHandler<T>
     {
         /// <summary>

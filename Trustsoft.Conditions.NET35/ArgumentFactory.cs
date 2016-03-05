@@ -24,7 +24,7 @@ namespace Trustsoft.Conditions
         /// <summary>
         ///     Creates <see cref="IArgument{T}"/> object from specified value and name.
         /// </summary>
-        /// <typeparam name="T"> The type of argument`s value. </typeparam>
+        /// <typeparam name="T"> The type of argument's value. </typeparam>
         /// <param name="argumentValue"> The value of the argument. </param>
         /// <param name="argumentName"> The name of the argument. </param>
         /// <returns> IArgument{T} object. </returns>
@@ -36,7 +36,7 @@ namespace Trustsoft.Conditions
         /// <summary>
         ///     Creates <see cref="IArgument{T}"/> object from the specified expression.
         /// </summary>
-        /// <typeparam name="T"> The type of argument`s value. </typeparam>
+        /// <typeparam name="T"> The type of argument's value. </typeparam>
         /// <param name="expression"> The argument expression. </param>
         /// <returns> IArgument{T} object. </returns>
         public static IArgument<T> Create<T>(Expression<Func<T>> expression)

@@ -16,7 +16,7 @@ namespace Trustsoft.Conditions
     /// <summary>
     ///     Represents an argument validator.
     /// </summary>
-    /// <typeparam name="T"> The type of argument`s value. </typeparam>
+    /// <typeparam name="T"> The type of argument's value. </typeparam>
     public interface IArgumentValidator<T> : IFluentSyntax
     {
         /// <summary>

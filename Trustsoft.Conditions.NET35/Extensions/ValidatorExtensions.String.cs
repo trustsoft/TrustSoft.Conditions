@@ -253,7 +253,7 @@ namespace Trustsoft.Conditions
         #region " IsNullOrWhiteSpace "
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.String"/> is <c> null </c> or contains only whitespaces.
+        ///     Checks whether the given <see cref="T:System.String"/> is <c> null </c> or contains only whitespace characters.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
@@ -261,7 +261,7 @@ namespace Trustsoft.Conditions
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
         ///     Thrown when the given value of the specified <paramref name="validator"/> is not <c> null </c> or contains only
-        ///     non-whitespaces.
+        ///     non-whitespace characters.
         /// </exception>
         public static IArgumentValidator<string> IsNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                     string conditionDescription = null)
@@ -279,7 +279,7 @@ namespace Trustsoft.Conditions
         }
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.String"/> is not <c> null </c> or contains only non-whitespaces.
+        ///     Checks whether the given <see cref="T:System.String"/> is not <c> null </c> or contains only non-whitespace characters.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
@@ -287,7 +287,7 @@ namespace Trustsoft.Conditions
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
         ///     Thrown when the given value of the specified <paramref name="validator"/> is <c> null </c> or contains only
-        ///     whitespaces.
+        ///     whitespace characters.
         /// </exception>
         public static IArgumentValidator<string> IsNotNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                        string conditionDescription = null)
