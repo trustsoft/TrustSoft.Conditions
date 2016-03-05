@@ -8,10 +8,10 @@
 namespace Trustsoft.Conditions.Internals
 {
     /// <summary>
-    ///     Base class for all <see cref="IArgumentValidator{T}"/> implementations.
+    ///     Provides the base class for all <see cref="IArgumentValidator{T}"/> implementations.
     /// </summary>
-    /// <typeparam name="T"> </typeparam>
-    /// <typeparam name="TErrorHandler"> </typeparam>
+    /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
+    /// <typeparam name="TErrorHandler"> The type of error handler to use on validate. </typeparam>
     internal class ArgumentValidatorBase<T, TErrorHandler> : IArgumentValidator<T>
         where TErrorHandler : IErrorHandler<T>
     {
