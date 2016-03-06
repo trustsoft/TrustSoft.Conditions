@@ -38,9 +38,9 @@ namespace Trustsoft.Conditions.Internals
             return value.ToString();
         }
 
-        private static string GetActualValueMessage<T>(this IArgumentValidator<T> validator)
+        private static string GetActualValueMessage<T>(this IArgument<T> argument)
         {
-            var value = validator.Argument.Value;
+            var value = argument.Value;
 
             // ReSharper disable CompareNonConstrainedGenericWithNull
             if (value == null || value.GetType().FullName != value.ToString())
@@ -52,10 +52,10 @@ namespace Trustsoft.Conditions.Internals
             return string.Empty;
         }
 
-        private static string InjectValues<T>(IArgumentValidator<T> validator, string format, params object[] args)
+        private static string InjectValues<T>(IArgument<T> argument, string format, params object[] args)
         {
-            var result = format.Replace("{name}", validator.Argument.Name);
-            result = result.Replace("{value}", validator.Argument.Value.MakeReadableString());
+            var result = format.Replace("{name}", argument.Name);
+            result = result.Replace("{value}", argument.Value.MakeReadableString());
             int index = 1;
             foreach (var item in args)
             {
@@ -77,21 +77,17 @@ namespace Trustsoft.Conditions.Internals
                                           bool includeActualValue,
                                           params object[] args)
         {
-            string msg;
             if (string.IsNullOrEmpty(conditionDescription))
             {
                 var resource = StringRes.GetString(resourceKey);
-                msg = InjectValues(validator, resource, args);
+                var msg = InjectValues(validator.Argument, resource, args);
                 if (includeActualValue)
                 {
-                    msg = $"{msg}{Environment.NewLine}{validator.GetActualValueMessage()}";
+                    msg = $"{msg}{Environment.NewLine}{validator.Argument.GetActualValueMessage()}";
                 }
+                return msg;
             }
-            else
-            {
-                msg = InjectValues(validator, conditionDescription, args);
-            }
-            return msg;
+            return InjectValues(validator.Argument, conditionDescription, args);
         }
     }
 }
