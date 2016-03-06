@@ -23,7 +23,7 @@
             if (validator.Argument.Value == value)
             // ReSharper restore CompareOfFloatsByEqualityOperator
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeUnequalToX,
                                                     true,

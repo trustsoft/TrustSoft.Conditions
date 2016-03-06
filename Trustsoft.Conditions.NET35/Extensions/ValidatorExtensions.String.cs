@@ -37,7 +37,7 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.Contains(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldContainX,
                                                     false,
@@ -69,7 +69,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.Contains(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotContainX,
                                                     false,
@@ -101,7 +101,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.EndsWith(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotEndWithX,
                                                     true,
@@ -133,7 +133,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.Length == length)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeXCharactersLong,
                                                     false,
@@ -165,7 +165,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.StartsWith(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotStartWithX,
                                                     true,
@@ -197,7 +197,7 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.EndsWith(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldEndWithX,
                                                     true,
@@ -230,7 +230,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.Length != length)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeXCharactersLong,
                                                     false,
@@ -261,7 +261,7 @@ namespace Trustsoft.Conditions
             var value = validator.Argument.Value;
             if (!(value != null && value.Length == 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeEmpty,
                                                     false);
@@ -293,7 +293,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.Length < minLength)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeLongerOrEqualToXCharacters,
                                                     false,
@@ -326,7 +326,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.Length > minLength))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeLongerThanXCharacters,
                                                     false,
@@ -359,7 +359,7 @@ namespace Trustsoft.Conditions
             var regex = new Regex(pattern);
             if (!regex.IsMatch(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldMatchPattern,
                                                     true,
@@ -390,7 +390,7 @@ namespace Trustsoft.Conditions
             var value = validator.Argument.Value;
             if (value != null && value.Length == 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeEmpty,
                                                     false);
@@ -422,7 +422,7 @@ namespace Trustsoft.Conditions
             var regex = new Regex(pattern);
             if (regex.IsMatch(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotMatchPattern,
                                                     true,
@@ -452,7 +452,7 @@ namespace Trustsoft.Conditions
         {
             if (string.IsNullOrEmpty(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeNullOrEmpty,
                                                     false);
@@ -483,7 +483,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.IsNullOrWhiteSpace())
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldNotBeNullOrWhiteSpace,
                                                     false);
@@ -512,7 +512,7 @@ namespace Trustsoft.Conditions
         {
             if (!string.IsNullOrEmpty(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeNullOrEmpty,
                                                     false);
@@ -542,7 +542,7 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.IsNullOrWhiteSpace())
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeNullOrWhiteSpace,
                                                     false);
@@ -574,7 +574,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.Length > maxLength)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeShorterOrEqualToXCharacters,
                                                     false,
@@ -607,7 +607,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.Length < maxLength))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldBeShorterThanXCharacters,
                                                     false,
@@ -640,7 +640,7 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.StartsWith(part))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.StringShouldStartWithX,
                                                     true,

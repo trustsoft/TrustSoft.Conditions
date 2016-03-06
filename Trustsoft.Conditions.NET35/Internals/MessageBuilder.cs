@@ -71,7 +71,7 @@ namespace Trustsoft.Conditions.Internals
             return result;
         }
 
-        internal static string Combine<T>(IArgumentValidator<T> validator,
+        internal static string Combine<T>(IArgument<T> argument,
                                           string conditionDescription,
                                           string resourceKey,
                                           bool includeActualValue,
@@ -80,14 +80,14 @@ namespace Trustsoft.Conditions.Internals
             if (string.IsNullOrEmpty(conditionDescription))
             {
                 var resource = StringRes.GetString(resourceKey);
-                var msg = InjectValues(validator.Argument, resource, args);
+                var msg = InjectValues(argument, resource, args);
                 if (includeActualValue)
                 {
-                    msg = $"{msg}{Environment.NewLine}{validator.Argument.GetActualValueMessage()}";
+                    msg = $"{msg}{Environment.NewLine}{argument.GetActualValueMessage()}";
                 }
                 return msg;
             }
-            return InjectValues(validator.Argument, conditionDescription, args);
+            return InjectValues(argument, conditionDescription, args);
         }
     }
 }

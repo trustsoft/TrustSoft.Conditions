@@ -22,7 +22,7 @@
         {
             if (validator.Argument.Value <= minValue)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,

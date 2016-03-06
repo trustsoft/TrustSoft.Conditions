@@ -18,7 +18,7 @@
         {
             if ((validator.Argument.Value & 1) != 1)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeAnOddNumber,
                                                     true);

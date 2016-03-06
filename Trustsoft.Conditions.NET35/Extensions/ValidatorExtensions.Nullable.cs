@@ -32,7 +32,10 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != null)
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.ValueShouldBeNull, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.ValueShouldBeNull,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -54,7 +57,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value == null)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeNull,
                                                     false);

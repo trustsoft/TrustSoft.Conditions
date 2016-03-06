@@ -36,7 +36,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.CompareTo(value) != 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeEqualToX,
                                                     true,
@@ -69,7 +69,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(minValue) >= 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeGreaterThanOrEqualToX,
                                                     true,
@@ -103,7 +103,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(minValue) > 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeGreaterThanX,
                                                     true,
@@ -139,7 +139,7 @@ namespace Trustsoft.Conditions
 
             if (value.CompareTo(minValue) < 0 || value.CompareTo(maxValue) > 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeBetweenXAndY,
                                                     true,
@@ -173,7 +173,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) <= 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeSmallerThanOrEqualToX,
                                                     true,
@@ -206,7 +206,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeSmallerThanX,
                                                     true,
@@ -238,7 +238,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.CompareTo(value) == 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeUnequalToX,
                                                     true,
@@ -272,7 +272,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeGreaterThanOrEqualToX,
                                                     true,
@@ -305,7 +305,7 @@ namespace Trustsoft.Conditions
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeGreaterThanX,
                                                     true,
@@ -341,7 +341,7 @@ namespace Trustsoft.Conditions
 
             if (!(value.CompareTo(minValue) < 0 || value.CompareTo(maxValue) > 0))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeBetweenXAndY,
                                                     true,
@@ -376,7 +376,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.CompareTo(minValue) <= 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeSmallerThanOrEqualToX,
                                                     true,
@@ -409,7 +409,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value.CompareTo(minValue) < 0)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldNotBeSmallerThanX,
                                                     true,

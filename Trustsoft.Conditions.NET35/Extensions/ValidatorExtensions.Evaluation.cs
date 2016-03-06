@@ -51,7 +51,7 @@ namespace Trustsoft.Conditions
 
             if (!valueIsValid)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.LambdaXShouldHoldForValue,
                                                     false,

@@ -53,7 +53,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != expected)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeX,
                                                     false,
@@ -100,7 +100,7 @@ namespace Trustsoft.Conditions
         {
             if (validator.Argument.Value != expected)
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeX,
                                                     false,

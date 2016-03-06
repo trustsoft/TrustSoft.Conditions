@@ -26,7 +26,7 @@ namespace Trustsoft.Conditions
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator">
-        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to
+        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to 
         ///     be checked.
         /// </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
@@ -39,8 +39,10 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.IsEmpty())
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription,
-                                                    StringRes.CollectionShouldBeEmpty, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.CollectionShouldBeEmpty,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -65,8 +67,10 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.IsEmpty())
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription,
-                                                    StringRes.CollectionShouldBeEmpty, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.CollectionShouldBeEmpty,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -96,8 +100,10 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.HasItems())
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription,
-                                                    StringRes.CollectionShouldNotBeEmpty, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.CollectionShouldNotBeEmpty,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -122,8 +128,10 @@ namespace Trustsoft.Conditions
         {
             if (!validator.Argument.Value.HasItems())
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription,
-                                                    StringRes.CollectionShouldNotBeEmpty, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.CollectionShouldNotBeEmpty,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 

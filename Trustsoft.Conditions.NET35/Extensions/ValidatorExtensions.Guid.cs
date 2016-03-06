@@ -31,7 +31,10 @@ namespace Trustsoft.Conditions
         {
             if (!Guid.Empty.Equals(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator, conditionDescription, StringRes.GuidShouldBeEmpty, false);
+                string msg = MessageBuilder.Combine(validator.Argument,
+                                                    conditionDescription,
+                                                    StringRes.GuidShouldBeEmpty,
+                                                    false);
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -52,7 +55,7 @@ namespace Trustsoft.Conditions
         {
             if (Guid.Empty.Equals(validator.Argument.Value))
             {
-                string msg = MessageBuilder.Combine(validator,
+                string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
                                                     StringRes.GuidShouldNotBeEmpty,
                                                     false);
