@@ -17,6 +17,8 @@ namespace Trustsoft.Conditions
 
     public static partial class ValidatorExtensions
     {
+        #region " IsEmpty "
+
         /// <summary>
         ///     Checks whether the given <see cref="T:System.Guid"/> is empty. An exception is thrown otherwise.
         /// </summary>
@@ -41,6 +43,10 @@ namespace Trustsoft.Conditions
             return validator;
         }
 
+        #endregion
+
+        #region " IsNotEmpty "
+
         /// <summary>
         ///     Checks whether the given <see cref="T:System.Guid"/> is not empty. An exception is thrown otherwise.
         /// </summary>
@@ -64,5 +70,7 @@ namespace Trustsoft.Conditions
 
             return validator;
         }
+
+        #endregion
     }
 }

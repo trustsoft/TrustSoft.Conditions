@@ -19,23 +19,7 @@ namespace Trustsoft.Conditions.Internals
     /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
     internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
     {
-        private Exception BuildException(ViolationType violationType, string message)
-        {
-            switch (violationType)
-            {
-                case ViolationType.OutOfRange:
-                    return new ArgumentOutOfRangeException(this.Validator.Argument.Name, message);
-
-                default:
-                    // ReSharper disable CompareNonConstrainedGenericWithNull
-                    if (this.Validator.Argument.Value == null)
-                    {
-                        return new ArgumentNullException(this.Validator.Argument.Name, message);
-                    }
-                    // ReSharper restore CompareNonConstrainedGenericWithNull
-                    return new ArgumentException(message, this.Validator.Argument.Name);
-            }
-        }
+        #region " Public Methods "
 
         /// <summary>
         ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
@@ -46,5 +30,31 @@ namespace Trustsoft.Conditions.Internals
         {
             throw this.BuildException(violationType, message);
         }
+
+        #endregion
+
+        #region " Private Methods "
+
+        private Exception BuildException(ViolationType violationType, string message)
+        {
+            switch (violationType)
+            {
+                case ViolationType.OutOfRange:
+                    return new ArgumentOutOfRangeException(this.Validator.Argument.Name, message);
+
+                default:
+
+                    // ReSharper disable CompareNonConstrainedGenericWithNull
+                    if (this.Validator.Argument.Value == null)
+                    {
+                        return new ArgumentNullException(this.Validator.Argument.Name, message);
+                    }
+
+                    // ReSharper restore CompareNonConstrainedGenericWithNull
+                    return new ArgumentException(message, this.Validator.Argument.Name);
+            }
+        }
+
+        #endregion
     }
 }

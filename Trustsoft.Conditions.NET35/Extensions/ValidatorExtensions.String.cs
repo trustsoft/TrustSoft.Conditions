@@ -221,8 +221,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> has not length of
-        ///     <paramref name="length"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     has not length of <paramref name="length"/>.
         /// </exception>
         public static IArgumentValidator<string> HasLength(this IArgumentValidator<string> validator,
                                                            int length,
@@ -284,8 +284,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not shorter or equal to
-        ///     <paramref name="minLength"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not shorter or equal to <paramref name="minLength"/>.
         /// </exception>
         public static IArgumentValidator<string> IsLongerOrEqual(this IArgumentValidator<string> validator,
                                                                  int minLength,
@@ -317,8 +317,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not longer than
-        ///     <paramref name="minLength"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not longer than <paramref name="minLength"/>.
         /// </exception>
         public static IArgumentValidator<string> IsLongerThan(this IArgumentValidator<string> validator,
                                                               int minLength,
@@ -475,8 +475,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is <c> null </c> or contains only
-        ///     whitespace characters.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is <c> null </c> or contains only whitespace characters.
         /// </exception>
         public static IArgumentValidator<string> IsNotNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                        string conditionDescription = null)
@@ -534,8 +534,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not <c> null </c> or contains only
-        ///     non-whitespace characters.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not <c> null </c> or contains only non-whitespace characters.
         /// </exception>
         public static IArgumentValidator<string> IsNullOrWhiteSpace(this IArgumentValidator<string> validator,
                                                                     string conditionDescription = null)
@@ -565,8 +565,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not shorter or equal to
-        ///     <paramref name="maxLength"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not shorter or equal to <paramref name="maxLength"/>.
         /// </exception>
         public static IArgumentValidator<string> IsShorterOrEqual(this IArgumentValidator<string> validator,
                                                                   int maxLength,
@@ -598,8 +598,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not shorter than
-        ///     <paramref name="maxLength"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not shorter than <paramref name="maxLength"/>.
         /// </exception>
         public static IArgumentValidator<string> IsShorterThan(this IArgumentValidator<string> validator,
                                                                int maxLength,
@@ -631,8 +631,8 @@ namespace Trustsoft.Conditions
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
         /// <returns> The specified <paramref name="validator"/> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not starts with
-        ///     <paramref name="part"/>.
+        ///     Thrown when the given value of the specified <paramref name="validator"/>
+        ///     is not starts with <paramref name="part"/>.
         /// </exception>
         public static IArgumentValidator<string> StartsWith(this IArgumentValidator<string> validator,
                                                             string part,

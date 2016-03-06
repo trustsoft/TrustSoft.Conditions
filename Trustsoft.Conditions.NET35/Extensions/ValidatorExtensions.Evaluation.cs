@@ -18,6 +18,8 @@ namespace Trustsoft.Conditions
 
     public static partial class ValidatorExtensions
     {
+        #region " Evaluate "
+
         /// <summary>
         ///     Checks whether the specified <paramref name="expression"/> evaluates <b> true </b> on the given value.
         ///     An exception is thrown otherwise.
@@ -61,5 +63,7 @@ namespace Trustsoft.Conditions
 
             return validator;
         }
+
+        #endregion
     }
 }

@@ -21,6 +21,8 @@ namespace Trustsoft.Conditions
     /// </summary>
     internal static class Validate
     {
+        #region " Static Methods "
+
         /// <summary>
         ///     Creates the validator for specified argument that will collect an exception, when some condition is not met.
         /// </summary>
@@ -45,5 +47,7 @@ namespace Trustsoft.Conditions
             var argument = ArgumentFactory.Create(expression);
             return new CollectOnErrorValidator<T>(argument);
         }
+
+        #endregion
     }
 }

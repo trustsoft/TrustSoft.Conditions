@@ -21,6 +21,8 @@ namespace Trustsoft.Conditions
     /// </summary>
     public static class ArgumentFactory
     {
+        #region " Static Methods "
+
         /// <summary>
         ///     Creates <see cref="IArgument{T}"/> object from specified value and name.
         /// </summary>
@@ -43,5 +45,7 @@ namespace Trustsoft.Conditions
         {
             return new ArgumentExpression<T>(expression);
         }
+
+        #endregion
     }
 }

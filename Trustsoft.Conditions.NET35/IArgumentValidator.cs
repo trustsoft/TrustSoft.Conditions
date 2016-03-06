@@ -9,7 +9,7 @@ namespace Trustsoft.Conditions
 {
     #region " Using Directives "
 
-    using Trustsoft.Conditions.Internals;
+    
 
     #endregion
 
@@ -19,6 +19,8 @@ namespace Trustsoft.Conditions
     /// <typeparam name="T"> The type of argument's value. </typeparam>
     public interface IArgumentValidator<T> : IFluentSyntax
     {
+        #region " Properties "
+
         /// <summary>
         ///     Gets the argument associated wth the current <see cref="IArgumentValidator{T}"/> object.
         /// </summary>
@@ -30,5 +32,7 @@ namespace Trustsoft.Conditions
         /// </summary>
         /// <value> The error handler. </value>
         IErrorHandler<T> ErrorHandler { get; }
+
+        #endregion
     }
 }

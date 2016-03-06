@@ -21,6 +21,8 @@ namespace Trustsoft.Conditions
     /// </summary>
     public static class Requires
     {
+        #region " Static Methods "
+
         /// <summary>
         ///     Creates the validator for specified argument that will throw an exception, when some condition is not met.
         /// </summary>
@@ -46,5 +48,7 @@ namespace Trustsoft.Conditions
             var argument = ArgumentFactory.Create(expression);
             return new ThrowOnErrorValidator<T>(argument);
         }
+
+        #endregion
     }
 }

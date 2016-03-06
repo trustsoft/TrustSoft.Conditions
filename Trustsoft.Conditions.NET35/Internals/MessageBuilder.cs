@@ -18,24 +18,25 @@ namespace Trustsoft.Conditions.Internals
     /// </summary>
     internal static class MessageBuilder
     {
-        /// <summary>
-        ///     Makes the string readable.
-        /// </summary>
-        /// <param name="value"> The value. </param>
-        /// <returns> System.String. </returns>
-        private static string MakeReadableString(this object value)
+        #region " Static Methods "
+
+        internal static string Combine<T>(IArgument<T> argument,
+                                          string conditionDescription,
+                                          string resourceKey,
+                                          bool includeActualValue,
+                                          params object[] args)
         {
-            if (value == null)
+            if (string.IsNullOrEmpty(conditionDescription))
             {
-                return "null";
+                var resource = StringRes.GetString(resourceKey);
+                var msg = InjectValues(argument, resource, args);
+                if (includeActualValue)
+                {
+                    msg = $"{msg}{Environment.NewLine}{argument.GetActualValueMessage()}";
+                }
+                return msg;
             }
-
-            if (value is string || value is char)
-            {
-                return $"'{value}'";
-            }
-
-            return value.ToString();
+            return InjectValues(argument, conditionDescription, args);
         }
 
         private static string GetActualValueMessage<T>(this IArgument<T> argument)
@@ -47,6 +48,7 @@ namespace Trustsoft.Conditions.Internals
             {
                 return StringRes.GetFormatedString(StringRes.TheActualValueIsX, value.MakeReadableString());
             }
+
             // ReSharper restore CompareNonConstrainedGenericWithNull
 
             return string.Empty;
@@ -71,23 +73,26 @@ namespace Trustsoft.Conditions.Internals
             return result;
         }
 
-        internal static string Combine<T>(IArgument<T> argument,
-                                          string conditionDescription,
-                                          string resourceKey,
-                                          bool includeActualValue,
-                                          params object[] args)
+        /// <summary>
+        ///     Makes the string readable.
+        /// </summary>
+        /// <param name="value"> The value. </param>
+        /// <returns> System.String. </returns>
+        private static string MakeReadableString(this object value)
         {
-            if (string.IsNullOrEmpty(conditionDescription))
+            if (value == null)
             {
-                var resource = StringRes.GetString(resourceKey);
-                var msg = InjectValues(argument, resource, args);
-                if (includeActualValue)
-                {
-                    msg = $"{msg}{Environment.NewLine}{argument.GetActualValueMessage()}";
-                }
-                return msg;
+                return "null";
             }
-            return InjectValues(argument, conditionDescription, args);
+
+            if (value is string || value is char)
+            {
+                return $"'{value}'";
+            }
+
+            return value.ToString();
         }
+
+        #endregion
     }
 }
