@@ -7,29 +7,32 @@
 
 namespace Trustsoft.Conditions
 {
-    #region " Using Directives "
-
+#if NET35
     using System.Linq;
-
-    #endregion
+#endif
 
     internal static class StringExtensions
     {
-#if NET35
+        /// <summary>
+        ///     Indicates whether a specified string is null, empty, or consists only of white-space characters.
+        /// </summary>
+        /// <param name="value"> The string to test. </param>
+        /// <returns>
+        ///     true if the <paramref name="value"/> parameter is null or <see cref="string.Empty"/>,
+        ///     or if <paramref name="value"/> consists exclusively of white-space characters.
+        /// </returns>
         public static bool IsNullOrWhiteSpace(this string value)
         {
+#if NET35
             if (value == null)
             {
                 return true;
             }
 
             return value.All(char.IsWhiteSpace);
-        }
 #else
-        public static bool IsNullOrWhiteSpace(this string value)
-        {
             return string.IsNullOrWhiteSpace(value);
-        }
 #endif
+        }
     }
 }
