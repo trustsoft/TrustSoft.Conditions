@@ -99,7 +99,7 @@ namespace Trustsoft.Conditions
                                                                 string part,
                                                                 string conditionDescription = null)
         {
-            if (validator.Argument.Value.EndsWith(part))
+            if (validator.Argument.Value.EndsWith(part, StringComparison.Ordinal))
             {
                 string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
@@ -163,7 +163,7 @@ namespace Trustsoft.Conditions
                                                                   string part,
                                                                   string conditionDescription = null)
         {
-            if (validator.Argument.Value.StartsWith(part))
+            if (validator.Argument.Value.StartsWith(part, StringComparison.Ordinal))
             {
                 string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
@@ -195,7 +195,7 @@ namespace Trustsoft.Conditions
                                                           string part,
                                                           string conditionDescription = null)
         {
-            if (!validator.Argument.Value.EndsWith(part))
+            if (!validator.Argument.Value.EndsWith(part, StringComparison.Ordinal))
             {
                 string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,
@@ -638,7 +638,7 @@ namespace Trustsoft.Conditions
                                                             string part,
                                                             string conditionDescription = null)
         {
-            if (!validator.Argument.Value.StartsWith(part))
+            if (!validator.Argument.Value.StartsWith(part, StringComparison.Ordinal))
             {
                 string msg = MessageBuilder.Combine(validator.Argument,
                                                     conditionDescription,

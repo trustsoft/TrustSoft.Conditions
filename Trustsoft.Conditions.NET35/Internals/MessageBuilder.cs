@@ -65,7 +65,7 @@ namespace Trustsoft.Conditions.Internals
                 result = result.Replace(paramName, item.MakeReadableString());
                 index++;
             }
-            if (!result.EndsWith("."))
+            if (!result.EndsWith(".", StringComparison.Ordinal))
             {
                 result += ".";
             }
