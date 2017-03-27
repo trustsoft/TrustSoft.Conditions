@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
+﻿//------------------------Copyright © 2012-2017 Trustsoft Ltd. All rights reserved.------------------------
 // <copyright file="Class.UnitTest.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.
+//     Copyright © 2012-2017 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>18.11.2013</date>
-//------------------------Copyright © 2012-2016 Trustsoft Ltd. All rights reserved.------------------------
+//------------------------Copyright © 2012-2017 Trustsoft Ltd. All rights reserved.------------------------
 
 namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 {
