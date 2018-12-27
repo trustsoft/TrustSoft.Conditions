@@ -1,40 +1,44 @@
 ﻿<#+ 
   void Numbers_IsPositive_Render(string targetType)
   {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
 #>
 #region " IsPositive "
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsPositive")]
-        [Description("Calling IsPositive on positive value should pass.")]
-        public void IsPositive_ShouldPass_OnPositiveValue()
-        {
-            <#= targetType #> val = 7;
-            Requires.That(val).IsPositive();
-            Requires.That(val, "val").IsPositive();
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsPositive")]
+[Description("Calling IsPositive on positive value should pass.")]
+public void IsPositive_ShouldPass_OnPositiveValue()
+{
+    <#= targetType #> val = 7;
+    Requires.That(val).IsPositive();
+    Requires.That(val, "val").IsPositive();
+}
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsPositive")]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        [Description("Calling IsPositive on non-positive value should fail.")]
-        public void IsPositive_ShouldFail_OnNonPositiveValue()
-        {
-            <#= targetType #> val = -5;
-            Requires.That(val).IsPositive();
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsPositive")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsPositive on non-positive value should fail.")]
+public void IsPositive_ShouldFail_OnNonPositiveValue()
+{
+    <#= targetType #> val = -5;
+    Requires.That(val).IsPositive();
+}
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsPositive")]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        [Description("Calling IsPositive on zero value should fail.")]
-        public void IsPositive_ShouldFail_OnZeroValue()
-        {
-            <#= targetType #> val = 0;
-            Requires.That(val).IsPositive();
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsPositive")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsPositive on zero value should fail.")]
+public void IsPositive_ShouldFail_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsPositive();
+}
 
-        #endregion
+#endregion
 <#+
+      this.PopIndent();
+      this.PopIndent();
   }
 #>

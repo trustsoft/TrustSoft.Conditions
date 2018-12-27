@@ -13,17 +13,11 @@ namespace Trustsoft.Conditions
     /// <typeparam name="T"> The type of argument's value. </typeparam>
     public interface IErrorHandler<T>
     {
-        #region " Properties "
-
         /// <summary>
         ///     Gets or sets the validator.
         /// </summary>
         /// <value> The validator. </value>
         IArgumentValidator<T> Validator { get; set; }
-
-        #endregion
-
-        #region " Methods "
 
         /// <summary>
         ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
@@ -37,7 +31,5 @@ namespace Trustsoft.Conditions
         /// </summary>
         /// <param name="message"> The message. </param>
         void Post(string message);
-
-        #endregion
     }
 }

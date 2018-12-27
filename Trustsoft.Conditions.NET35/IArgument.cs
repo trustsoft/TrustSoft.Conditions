@@ -13,20 +13,16 @@ namespace Trustsoft.Conditions
     /// <typeparam name="T"> The type of value of argument. </typeparam>
     public interface IArgument<T> : IFluentSyntax
     {
-        #region " Properties "
-
         /// <summary>
-        ///     Gets the name of the current <see cref="IArgument{T}"/> object.
+        ///     Gets the name of the current <see cref="IArgument{T}" /> object.
         /// </summary>
         /// <value> The name of argument. </value>
         string Name { get; }
 
         /// <summary>
-        ///     Gets the value of the current <see cref="IArgument{T}"/> object.
+        ///     Gets the value of the current <see cref="IArgument{T}" /> object.
         /// </summary>
         /// <value> The value of argument. </value>
         T Value { get; }
-
-        #endregion
     }
 }

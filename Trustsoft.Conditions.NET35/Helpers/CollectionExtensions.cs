@@ -7,12 +7,8 @@
 
 namespace Trustsoft.Conditions
 {
-    #region " Using Directives "
-
     using System.Collections;
     using System.Collections.Generic;
-
-    #endregion
 
     internal static class CollectionExtensions
     {
@@ -31,7 +27,7 @@ namespace Trustsoft.Conditions
         /// <summary>
         ///     Determines whether a sequence contains any item.
         /// </summary>
-        /// <typeparam name="T"> Type of elements in <paramref name="source"/> sequence. </typeparam>
+        /// <typeparam name="T"> Type of elements in <paramref name="source" /> sequence. </typeparam>
         /// <param name="source"> The sequence of elements. </param>
         /// <returns> <c> false </c> if source is null or contains no items. </returns>
         public static bool HasItems<T>(this IEnumerable<T> source)
@@ -55,7 +51,9 @@ namespace Trustsoft.Conditions
         ///     Determines whether a sequence contains no element.
         /// </summary>
         /// <param name="source"> A sequence in which to locate a value. </param>
-        /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
+        /// <returns>
+        ///     <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
+        /// </returns>
         public static bool IsEmpty(this IEnumerable source)
         {
             return !source.HasItems();
@@ -66,7 +64,9 @@ namespace Trustsoft.Conditions
         /// </summary>
         /// <typeparam name="TSource"> The type of the elements of source. </typeparam>
         /// <param name="source"> A sequence in which to locate a value. </param>
-        /// <returns> <c> true </c> if specified sequence contains no element; otherwise <c> false </c>. </returns>
+        /// <returns>
+        ///     <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
+        /// </returns>
         public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
         {
             return !source.HasItems();

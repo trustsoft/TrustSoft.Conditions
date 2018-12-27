@@ -7,15 +7,11 @@
 
 namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 {
-    #region " Using Directives "
-
     using System;
     using System.Collections;
     using System.Collections.Generic;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    #endregion
 
     // ReSharper disable InconsistentNaming
     // ReSharper disable ConvertToConstant.Local

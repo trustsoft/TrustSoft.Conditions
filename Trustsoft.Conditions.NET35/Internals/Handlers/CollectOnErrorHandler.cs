@@ -7,15 +7,11 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
     using System.Collections.Generic;
-
-    #endregion
 
     internal class CollectOnErrorHandler<T> : ErrorHandlerBase<T>
     {
-        #region " Internal Fields "
+        #region " Fields "
 
         internal readonly IList<KeyValuePair<ViolationType, string>> Errors =
             new List<KeyValuePair<ViolationType, string>>();

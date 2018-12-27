@@ -7,19 +7,15 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
     using System;
     using System.Linq.Expressions;
 
-    #endregion
-
     internal class ArgumentExpression<T> : IArgument<T>
     {
-        #region " Constructors / Destructors "
+        #region " Constructors "
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ArgumentExpression{T}"/> class.
+        ///     Initializes a new instance of the <see cref="ArgumentExpression{T}" /> class.
         /// </summary>
         public ArgumentExpression(Expression<Func<T>> expression)
         {
@@ -32,16 +28,16 @@ namespace Trustsoft.Conditions.Internals
         #region " Implementation of IArgument<T> "
 
         /// <summary>
-        ///     Gets the value of argument.
-        /// </summary>
-        /// <value> The value of argument. </value>
-        public T Value { get; private set; }
-
-        /// <summary>
         ///     Gets the name of argument.
         /// </summary>
         /// <value> The name of argument. </value>
-        public string Name { get; private set; }
+        public string Name { get; }
+
+        /// <summary>
+        ///     Gets the value of argument.
+        /// </summary>
+        /// <value> The value of argument. </value>
+        public T Value { get; }
 
         #endregion
     }

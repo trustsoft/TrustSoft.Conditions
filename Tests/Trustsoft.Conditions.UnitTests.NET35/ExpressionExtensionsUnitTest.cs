@@ -7,16 +7,12 @@
 
 namespace Trustsoft.Conditions.UnitTests
 {
-    #region " Using Directives "
-
     using System;
     using System.Linq.Expressions;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Trustsoft.Conditions.UnitTests.Helpers;
-
-    #endregion
 
     // ReSharper disable InconsistentNaming
 

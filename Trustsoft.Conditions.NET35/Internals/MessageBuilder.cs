@@ -7,11 +7,7 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
     using System;
-
-    #endregion
 
     /// <summary>
     ///     Used to build messages for exceptions.
@@ -43,13 +39,11 @@ namespace Trustsoft.Conditions.Internals
         {
             var value = argument.Value;
 
-            // ReSharper disable CompareNonConstrainedGenericWithNull
+            // ReSharper disable once CompareNonConstrainedGenericWithNull
             if (value == null || value.GetType().FullName != value.ToString())
             {
-                return StringRes.GetFormatedString(StringRes.TheActualValueIsX, value.MakeReadableString());
+                return StringRes.GetFormattedString(StringRes.TheActualValueIsX, value.MakeReadableString());
             }
-
-            // ReSharper restore CompareNonConstrainedGenericWithNull
 
             return string.Empty;
         }
@@ -82,7 +76,7 @@ namespace Trustsoft.Conditions.Internals
         {
             if (value == null)
             {
-                return "null";
+                return "<null>";
             }
 
             if (value is string || value is char)

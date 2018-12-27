@@ -11,14 +11,14 @@ namespace Trustsoft.Conditions.Internals
     {
         #region " Implementation of IErrorHandler<T> "
 
+        public IArgumentValidator<T> Validator { get; set; }
+
         public abstract void Post(ViolationType violationType, string message);
 
         public void Post(string message)
         {
             this.Post(ViolationType.Default, message);
         }
-
-        public IArgumentValidator<T> Validator { get; set; }
 
         #endregion
     }

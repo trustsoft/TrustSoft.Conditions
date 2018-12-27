@@ -7,31 +7,29 @@
 
 namespace Trustsoft.Conditions
 {
-    #region " Using Directives "
-
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
 
     using Trustsoft.Conditions.Internals;
 
-    #endregion
-
+    [SuppressMessage("ReSharper", "UnusedMethodReturnValue.Global")]
     public partial class ValidatorExtensions
     {
         #region " IsEmpty "
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable"/> is empty.
+        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable" /> is empty.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator">
-        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked.
+        ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
         /// </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <returns> The specified <paramref name="validator" /> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not empty.
+        ///     Thrown when the given value of the specified <paramref name="validator" /> is not empty.
         /// </exception>
         public static IArgumentValidator<T> IsEmpty<T>(this IArgumentValidator<T> validator,
                                                        string conditionDescription = null) where T : IEnumerable
@@ -49,19 +47,20 @@ namespace Trustsoft.Conditions
         }
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable{T}"/> is empty.
+        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable{T}" /> is empty.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator">
-        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked.
+        ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
         /// </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <returns> The specified <paramref name="validator" /> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is not empty.
+        ///     Thrown when the given value of the specified <paramref name="validator" /> is not empty.
         /// </exception>
-        public static IArgumentValidator<IEnumerable<T>> IsEmpty<T>(this IArgumentValidator<IEnumerable<T>> validator,
-                                                                    string conditionDescription = null)
+        public static IArgumentValidator<IEnumerable<T>> IsEmpty<T>(
+            this IArgumentValidator<IEnumerable<T>> validator,
+            string conditionDescription = null)
         {
             if (!validator.Argument.Value.IsEmpty())
             {
@@ -80,19 +79,20 @@ namespace Trustsoft.Conditions
         #region " IsNotEmpty "
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable"/> is not empty.
+        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable" /> is not empty.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator">
-        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked.
+        ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
         /// </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <returns> The specified <paramref name="validator" /> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is empty.
+        ///     Thrown when the given value of the specified <paramref name="validator" /> is empty.
         /// </exception>
         public static IArgumentValidator<T> IsNotEmpty<T>(this IArgumentValidator<T> validator,
-                                                          string conditionDescription = null) where T : IEnumerable
+                                                          string conditionDescription = null)
+            where T : IEnumerable
         {
             if (!validator.Argument.Value.HasItems())
             {
@@ -107,16 +107,16 @@ namespace Trustsoft.Conditions
         }
 
         /// <summary>
-        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable{T}"/> is not empty.
+        ///     Checks whether the given <see cref="T:System.Collections.IEnumerable{T}" /> is not empty.
         ///     An exception is thrown otherwise.
         /// </summary>
         /// <param name="validator">
-        ///     The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked.
+        ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
         /// </param>
         /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-        /// <returns> The specified <paramref name="validator"/> instance. </returns>
+        /// <returns> The specified <paramref name="validator" /> instance. </returns>
         /// <exception cref="ArgumentException">
-        ///     Thrown when the given value of the specified <paramref name="validator"/> is empty.
+        ///     Thrown when the given value of the specified <paramref name="validator" /> is empty.
         /// </exception>
         public static IArgumentValidator<IEnumerable<T>> IsNotEmpty<T>(
             this IArgumentValidator<IEnumerable<T>> validator,

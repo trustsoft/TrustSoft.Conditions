@@ -1,12 +1,8 @@
 ﻿namespace Trustsoft.Conditions.UnitTests
 {
-    #region " Using Directives "
-
     using System;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    #endregion
 
     // ReSharper disable ConvertToConstant.Local
     // ReSharper disable ConditionIsAlwaysTrueOrFalse

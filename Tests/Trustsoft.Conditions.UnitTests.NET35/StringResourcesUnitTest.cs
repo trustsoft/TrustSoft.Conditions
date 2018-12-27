@@ -7,8 +7,6 @@
 
 namespace Trustsoft.Conditions.UnitTests
 {
-    #region " Using Directives "
-
     using System;
     using System.Collections.Generic;
     using System.Globalization;
@@ -16,8 +14,6 @@ namespace Trustsoft.Conditions.UnitTests
     using System.Reflection;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    #endregion
 
     [TestClass]
     public class StringResourcesUnitTest

@@ -7,11 +7,7 @@
 
 namespace Trustsoft.Conditions.Internals
 {
-    #region " Using Directives "
-
     using System;
-
-    #endregion
 
     /// <summary>
     ///     Error handler that throws on error.

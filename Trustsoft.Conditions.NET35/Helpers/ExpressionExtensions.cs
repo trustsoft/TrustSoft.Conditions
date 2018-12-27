@@ -7,13 +7,9 @@
 
 namespace Trustsoft.Conditions
 {
-    #region " Using Directives "
-
     using System;
     using System.Linq.Expressions;
     using System.Reflection;
-
-    #endregion
 
     internal static class ExpressionExtensions
     {
@@ -21,8 +17,7 @@ namespace Trustsoft.Conditions
 
         public static string GetName<T>(this Expression<Func<T>> expression)
         {
-            var memberExpression = expression.Body as MemberExpression;
-            if (memberExpression != null)
+            if (expression.Body is MemberExpression memberExpression)
             {
                 return memberExpression.Member.Name;
             }
@@ -40,14 +35,9 @@ namespace Trustsoft.Conditions
             if (memberExpression.Expression.NodeType == ExpressionType.Constant)
             {
                 var constantExpression = (ConstantExpression)memberExpression.Expression;
-                if (memberExpression.Member.MemberType == MemberTypes.Property)
-                {
-                    value = ((PropertyInfo)memberExpression.Member).GetValue(constantExpression.Value, null);
-                }
-                else
-                {
-                    value = ((FieldInfo)memberExpression.Member).GetValue(constantExpression.Value);
-                }
+                value = memberExpression.Member.MemberType == MemberTypes.Property
+                            ? ((PropertyInfo)memberExpression.Member).GetValue(constantExpression.Value, null)
+                            : ((FieldInfo)memberExpression.Member).GetValue(constantExpression.Value);
             }
             else
             {

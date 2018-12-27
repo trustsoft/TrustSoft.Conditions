@@ -7,13 +7,9 @@
 
 namespace Trustsoft.Conditions.UnitTests
 {
-    #region " Using Directives "
-
     using System.Linq;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    #endregion
 
     [TestClass]
     public class ValidateUnitTest

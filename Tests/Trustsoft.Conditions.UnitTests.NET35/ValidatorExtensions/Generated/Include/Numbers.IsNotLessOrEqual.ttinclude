@@ -1,43 +1,47 @@
 ﻿<#+ 
   void Numbers_IsNotLessOrEqual_Render(string targetType)
   {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
 #>
 #region " IsNotLessOrEqual "
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
-        [Description("Calling IsNotLessOrEqual on lower value should pass.")]
-        public void IsNotLessOrEqual_ShouldPass_OnLowerValue()
-        {
-            <#= targetType #> val = 3;
-            <#= targetType #> min = 1;
-            Requires.That(val).IsNotLessOrEqual(min);
-            Requires.That(val, "val").IsNotLessOrEqual(min);
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotLessOrEqual")]
+[Description("Calling IsNotLessOrEqual on lower value should pass.")]
+public void IsNotLessOrEqual_ShouldPass_OnLowerValue()
+{
+    <#= targetType #> val = 3;
+    <#= targetType #> min = 1;
+    Requires.That(val).IsNotLessOrEqual(min);
+    Requires.That(val, "val").IsNotLessOrEqual(min);
+}
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        [Description("Calling IsNotLessOrEqual on same value should fail.")]
-        public void IsNotLessOrEqual_ShouldFail_OnSameValue()
-        {
-            <#= targetType #> val = 7;
-            <#= targetType #> min = 7;
-            Requires.That(val, "val").IsNotLessOrEqual(min);
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotLessOrEqual")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNotLessOrEqual on same value should fail.")]
+public void IsNotLessOrEqual_ShouldFail_OnSameValue()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 7;
+    Requires.That(val, "val").IsNotLessOrEqual(min);
+}
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsNotLessOrEqual")]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        [Description("Calling IsNotLessOrEqual on higher value should fail.")]
-        public void IsNotLessOrEqual_ShouldFail_OnHigherValue()
-        {
-            <#= targetType #> val = 5;
-            <#= targetType #> min = 7;
-            Requires.That(val).IsNotLessOrEqual(min);
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotLessOrEqual")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNotLessOrEqual on higher value should fail.")]
+public void IsNotLessOrEqual_ShouldFail_OnHigherValue()
+{
+    <#= targetType #> val = 5;
+    <#= targetType #> min = 7;
+    Requires.That(val).IsNotLessOrEqual(min);
+}
 
-        #endregion
+#endregion
 <#+
+      this.PopIndent();
+      this.PopIndent();
   }
 #>

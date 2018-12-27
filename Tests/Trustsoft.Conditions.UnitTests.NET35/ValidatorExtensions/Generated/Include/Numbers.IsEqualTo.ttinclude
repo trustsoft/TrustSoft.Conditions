@@ -1,32 +1,36 @@
 ﻿<#+ 
   void Numbers_IsEqualTo_Render(string targetType)
   {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
 #>
 #region " IsEqualTo "
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsEqualTo")]
-        [Description("Calling IsEqualTo on same value should pass.")]
-        public void IsEqualTo_ShouldPass_OnSameValue()
-        {
-            <#= targetType #> val1 = 7;
-            <#= targetType #> val2 = 7;
-            Requires.That(val1).IsEqualTo(val2);
-            Requires.That(val1, "val1").IsEqualTo(val2);
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEqualTo")]
+[Description("Calling IsEqualTo on same value should pass.")]
+public void IsEqualTo_ShouldPass_OnSameValue()
+{
+    <#= targetType #> val1 = 7;
+    <#= targetType #> val2 = 7;
+    Requires.That(val1).IsEqualTo(val2);
+    Requires.That(val1, "val1").IsEqualTo(val2);
+}
 
-        [TestMethod]
-        [TestCategory("<#= targetType #> - IsEqualTo")]
-        [ExpectedException(typeof(ArgumentException))]
-        [Description("Calling IsEqualTo on different value should fail.")]
-        public void IsEqualTo_ShouldFail_OnDifferentValue()
-        {
-            <#= targetType #> val1 = 7;
-            <#= targetType #> val2 = 10;
-            Requires.That(val1).IsEqualTo(val2);
-        }
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEqualTo")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsEqualTo on different value should fail.")]
+public void IsEqualTo_ShouldFail_OnDifferentValue()
+{
+    <#= targetType #> val1 = 7;
+    <#= targetType #> val2 = 10;
+    Requires.That(val1).IsEqualTo(val2);
+}
 
-        #endregion
+#endregion
 <#+
+      this.PopIndent();
+      this.PopIndent();
   }
 #>
