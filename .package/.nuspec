@@ -3,7 +3,7 @@
   <metadata>
     <id>Trustsoft.Conditions</id>
     <title>Trustsoft.Conditions</title>
-    <version>1.0.0.3</version>
+    <version>1.0.1.0</version>
     <owners>Trustsoft Ltd.</owners>
     <authors>Trustsoft Ltd.</authors>
     <summary>
@@ -15,7 +15,7 @@
     <language>en-US</language>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>Method Argument Validation Condition</tags>
-    <copyright>Copyright © Trustsoft Ltd. 2012-2017</copyright>
+    <copyright>Copyright © Trustsoft Ltd. 2012-2018</copyright>
     <releaseNotes>
     </releaseNotes>
     <frameworkAssemblies>
