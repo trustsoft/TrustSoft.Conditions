@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{97EAB9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD0CA60C-7F3B-445E-8BE3-72957AC102B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustsoft.Conditions.UnitTests", "..\Tests\Trustsoft.Conditions.UnitTests\Trustsoft.Conditions.UnitTests.csproj", "{919FAF53-B9E0-4265-95F0-B72A9311E124}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustsoft.Conditions.Tests", "..\Tests\Trustsoft.Conditions.Tests\Trustsoft.Conditions.Tests.csproj", "{919FAF53-B9E0-4265-95F0-B72A9311E124}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{CFEDEAD7-1C5E-475F-B65F-3A3E64191835}"
 	ProjectSection(SolutionItems) = preProject
