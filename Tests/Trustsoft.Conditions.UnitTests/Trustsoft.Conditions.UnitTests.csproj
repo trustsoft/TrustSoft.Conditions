@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Trustsoft.Conditions.UnitTests</RootNamespace>
-    <AssemblyName>Trustsoft.Conditions.UnitTests.NET35</AssemblyName>
+    <AssemblyName>Trustsoft.Conditions.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -165,9 +165,9 @@
     <Compile Include="ValidatorExtensions\IEnumerable.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Trustsoft.Conditions.NET35\Trustsoft.Conditions.NET35.csproj">
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj">
       <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
-      <Name>Trustsoft.Conditions.NET35</Name>
+      <Name>Trustsoft.Conditions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
