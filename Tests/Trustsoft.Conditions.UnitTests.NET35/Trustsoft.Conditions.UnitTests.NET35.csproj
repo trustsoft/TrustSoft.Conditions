@@ -165,7 +165,7 @@
     <Compile Include="ValidatorExtensions\IEnumerable.UnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Trustsoft.Conditions.NET35\Trustsoft.Conditions.NET35.csproj">
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions.NET35\Trustsoft.Conditions.NET35.csproj">
       <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
       <Name>Trustsoft.Conditions.NET35</Name>
     </ProjectReference>

@@ -35,7 +35,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- ################################# Begin of MultiTarget ############################################## -->
   <PropertyGroup>
@@ -53,7 +53,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Shared\CommonAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ArgumentFactory.cs" />
@@ -148,9 +148,6 @@
     <Compile Include="ViolationType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Shared\Trustsoft.snk">
-      <Link>Trustsoft.snk</Link>
-    </None>
     <None Include="Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsEven.ttinclude" />
     <None Include="Extensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
@@ -177,6 +174,9 @@
     <EmbeddedResource Include="Resources\MessageStrings.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Shared\Trustsoft.snk">
+      <Link>Trustsoft.snk</Link>
+    </Content>
     <Content Include="Extensions\Generated\ValidatorExtensions.Byte.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ValidatorExtensions.Byte.cs</LastGenOutput>

@@ -35,7 +35,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- ################################# Begin of MultiTarget ############################################## -->
   <PropertyGroup>
@@ -53,7 +53,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Shared\CommonAssemblyInfo.cs">
+    <Compile Include="..\..\Shared\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="..\Trustsoft.Conditions.NET35\ArgumentFactory.cs">
@@ -218,9 +218,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Shared\Trustsoft.snk">
-      <Link>Trustsoft.snk</Link>
-    </None>
     <None Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude">
       <Link>Extensions\Generated\Include\Numbers.IsEqualTo.ttinclude</Link>
     </None>
@@ -286,6 +283,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Shared\Trustsoft.snk">
+      <Link>Trustsoft.snk</Link>
+    </Content>
     <Content Include="..\Trustsoft.Conditions.NET35\Extensions\Generated\ValidatorExtensions.Byte.tt">
       <Link>Extensions\Generated\ValidatorExtensions.Byte.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -247,7 +247,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Trustsoft.Conditions.NET46\Trustsoft.Conditions.NET46.csproj">
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions.NET46\Trustsoft.Conditions.NET46.csproj">
       <Project>{58a3409b-1218-4328-843c-90ede7b9c328}</Project>
       <Name>Trustsoft.Conditions.NET46</Name>
     </ProjectReference>
