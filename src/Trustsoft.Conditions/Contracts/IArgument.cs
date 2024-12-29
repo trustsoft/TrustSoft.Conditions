@@ -5,24 +5,23 @@
 // <date>18.11.2013</date>
 //------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions
+namespace Trustsoft.Conditions;
+
+/// <summary>
+///     Represents an argument.
+/// </summary>
+/// <typeparam name="T"> The type of value of argument. </typeparam>
+public interface IArgument<out T> : IFluentSyntax
 {
     /// <summary>
-    ///     Represents an argument.
+    ///     Gets the name of the current <see cref="IArgument{T}" /> object.
     /// </summary>
-    /// <typeparam name="T"> The type of value of argument. </typeparam>
-    public interface IArgument<out T> : IFluentSyntax
-    {
-        /// <summary>
-        ///     Gets the name of the current <see cref="IArgument{T}" /> object.
-        /// </summary>
-        /// <value> The name of argument. </value>
-        string Name { get; }
+    /// <value> The name of argument. </value>
+    string Name { get; }
 
-        /// <summary>
-        ///     Gets the value of the current <see cref="IArgument{T}" /> object.
-        /// </summary>
-        /// <value> The value of argument. </value>
-        T Value { get; }
-    }
+    /// <summary>
+    ///     Gets the value of the current <see cref="IArgument{T}" /> object.
+    /// </summary>
+    /// <value> The value of argument. </value>
+    T Value { get; }
 }

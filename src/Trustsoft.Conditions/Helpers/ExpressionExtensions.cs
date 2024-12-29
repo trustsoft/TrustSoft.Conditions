@@ -5,18 +5,18 @@
 // <date>20.02.2016</date>
 //------------------------Copyright © 2010-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions
+namespace Trustsoft.Conditions;
+
+using System;
+using System.Linq.Expressions;
+using System.Reflection;
+
+internal static class ExpressionExtensions
 {
-    using System;
-    using System.Linq.Expressions;
-    using System.Reflection;
+    #region " GetName "
 
-    internal static class ExpressionExtensions
+    public static string GetName<T>(this Expression<Func<T>> expression)
     {
-        #region " GetName "
-
-        public static string GetName<T>(this Expression<Func<T>> expression)
-        {
             if (expression.Body is MemberExpression memberExpression)
             {
                 return memberExpression.Member.Name;
@@ -24,12 +24,12 @@ namespace Trustsoft.Conditions
             throw new InvalidOperationException("Unable to get name from expression");
         }
 
-        #endregion
+    #endregion
 
-        #region " GetValue "
+    #region " GetValue "
 
-        public static T GetValue<T>(this Expression<Func<T>> expression)
-        {
+    public static T GetValue<T>(this Expression<Func<T>> expression)
+    {
             var memberExpression = (MemberExpression)expression.Body;
             object value;
             if (memberExpression.Expression.NodeType == ExpressionType.Constant)
@@ -46,6 +46,5 @@ namespace Trustsoft.Conditions
             return (T)value;
         }
 
-        #endregion
-    }
+    #endregion
 }

@@ -5,21 +5,20 @@
 // <date>18.11.2013</date>
 //------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions.Internals
-{
-    /// <summary>
-    ///     Argument validator that throws on error.
-    /// </summary>
-    /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
-    internal class ThrowOnErrorValidator<T> : ArgumentValidatorBase<T, ThrowOnErrorHandler<T>>
-    {
-        #region " Constructors "
+namespace Trustsoft.Conditions.Internals;
 
-        public ThrowOnErrorValidator(IArgument<T> argument)
+/// <summary>
+///     Argument validator that throws on error.
+/// </summary>
+/// <typeparam name="T"> The type of the argument value to validate. </typeparam>
+internal class ThrowOnErrorValidator<T> : ArgumentValidatorBase<T, ThrowOnErrorHandler<T>>
+{
+    #region " Constructors "
+
+    public ThrowOnErrorValidator(IArgument<T> argument)
             : base(argument, new ThrowOnErrorHandler<T>())
-        {
+    {
         }
 
-        #endregion
-    }
+    #endregion
 }

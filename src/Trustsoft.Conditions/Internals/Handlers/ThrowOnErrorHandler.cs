@@ -5,34 +5,34 @@
 // <date>18.11.2013</date>
 //------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions.Internals
+namespace Trustsoft.Conditions.Internals;
+
+using System;
+
+/// <summary>
+///     Error handler that throws on error.
+/// </summary>
+/// <typeparam name="T"> The type of the argument value to validate. </typeparam>
+internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
 {
-    using System;
+    #region " Public Methods "
 
     /// <summary>
-    ///     Error handler that throws on error.
+    ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
     /// </summary>
-    /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
-    internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
+    /// <param name="violationType"> The type of violation. </param>
+    /// <param name="message"> The error message. </param>
+    public override void Post(ViolationType violationType, string message)
     {
-        #region " Public Methods "
-
-        /// <summary>
-        ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
-        /// </summary>
-        /// <param name="violationType"> The type of violation. </param>
-        /// <param name="message"> The error message. </param>
-        public override void Post(ViolationType violationType, string message)
-        {
             throw this.BuildException(violationType, message);
         }
 
-        #endregion
+    #endregion
 
-        #region " Private Methods "
+    #region " Private Methods "
 
-        private Exception BuildException(ViolationType violationType, string message)
-        {
+    private Exception BuildException(ViolationType violationType, string message)
+    {
             switch (violationType)
             {
                 case ViolationType.OutOfRange:
@@ -51,6 +51,5 @@ namespace Trustsoft.Conditions.Internals
             }
         }
 
-        #endregion
-    }
+    #endregion
 }

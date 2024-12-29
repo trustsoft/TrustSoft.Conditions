@@ -5,24 +5,23 @@
 // <date>18.11.2013</date>
 //------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions
+namespace Trustsoft.Conditions;
+
+/// <summary>
+///     Represents an argument validator.
+/// </summary>
+/// <typeparam name="T"> The type of argument's value. </typeparam>
+public interface IArgumentValidator<T> : IFluentSyntax
 {
     /// <summary>
-    ///     Represents an argument validator.
+    ///     Gets the argument associated wth the current <see cref="IArgumentValidator{T}" /> object.
     /// </summary>
-    /// <typeparam name="T"> The type of argument's value. </typeparam>
-    public interface IArgumentValidator<T> : IFluentSyntax
-    {
-        /// <summary>
-        ///     Gets the argument associated wth the current <see cref="IArgumentValidator{T}" /> object.
-        /// </summary>
-        /// <value> The argument. </value>
-        IArgument<T> Argument { get; }
+    /// <value> The argument. </value>
+    IArgument<T> Argument { get; }
 
-        /// <summary>
-        ///     Gets the error handle associated wth the current <see cref="IArgumentValidator{T}" /> object.
-        /// </summary>
-        /// <value> The error handler. </value>
-        IErrorHandler<T> ErrorHandler { get; }
-    }
+    /// <summary>
+    ///     Gets the error handle associated wth the current <see cref="IArgumentValidator{T}" /> object.
+    /// </summary>
+    /// <value> The error handler. </value>
+    IErrorHandler<T> ErrorHandler { get; }
 }
