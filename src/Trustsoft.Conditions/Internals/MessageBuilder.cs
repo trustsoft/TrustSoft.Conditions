@@ -24,7 +24,7 @@ internal static class MessageBuilder
     {
         if (string.IsNullOrEmpty(conditionDescription))
         {
-            var resource = StringRes.GetString(resourceKey);
+            var resource = StringRes.GetResourceByKey(resourceKey);
             var msg = InjectValues(argument, resource, args);
 
             if (includeActualValue)

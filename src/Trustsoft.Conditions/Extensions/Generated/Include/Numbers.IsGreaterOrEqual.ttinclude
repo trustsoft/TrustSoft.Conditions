@@ -1,33 +1,37 @@
-﻿<#+ 
-  void Numbers_IsGreaterOrEqual_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsGreaterOrEqual_Render(string targetType)
+    {
 #>
 #region " IsGreaterOrEqual "
 
 /// <summary>
-///     Checks whether the given value is greater or equal to the specified <paramref name="minValue"/>.
-///     An exception is thrown otherwise.
+///   Checks whether the given value is greater or equal to the specified <paramref name="minValue" />.
 /// </summary>
-/// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+/// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="minValue"> The lowest valid value. </param>
 /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-/// <returns> The specified <paramref name="validator"/> instance. </returns>
+/// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentOutOfRangeException">
-///     Thrown when the value of the specified <paramref name="validator"/> is smaller than <paramref name="minValue"/>.
+///   Throws or collects the error when the value of the specified
+///   <paramref name="validator" /> is smaller than <paramref name="minValue" />.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsGreaterOrEqual(this IArgumentValidator<<#= targetType #>> validator,
-                                                        <#= targetType #> minValue,
-                                                        string conditionDescription = null)
+<#+
+        // align the rest of arguments
+        var left = targetType.Length + 52;
+        var indent = new string(' ', left);
+        this.WriteLine($"{indent}{targetType} minValue,");
+        this.WriteLine($"{indent}string? conditionDescription = null)");
+#>
 {
     if (!(validator.Argument.Value >= minValue))
     {
-        string msg = MessageBuilder.Combine(validator.Argument,
-                                            conditionDescription,
-                                            StringRes.ValueShouldBeGreaterThanOrEqualToX,
-                                            true,
-                                            minValue);
+        var msg = MessageBuilder.Combine(validator.Argument,
+                                         conditionDescription,
+                                         StringRes.ValueShouldBeGreaterThanOrEqualToX,
+                                         true,
+                                         minValue);
+
         validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
     }
 
@@ -36,7 +40,5 @@ public static IArgumentValidator<<#= targetType #>> IsGreaterOrEqual(this IArgum
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

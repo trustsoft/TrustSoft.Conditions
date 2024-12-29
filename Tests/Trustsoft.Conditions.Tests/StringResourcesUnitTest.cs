@@ -74,7 +74,7 @@ namespace Trustsoft.Conditions.UnitTests
             foreach (var field in GetStringFields())
             {
                 string resourceKey = (string)field.GetValue(null);
-                string resourceValue = StringRes.GetString(resourceKey);
+                string resourceValue = StringRes.GetResourceByKey(resourceKey);
 
                 string assertExplanation = $"The resource with key '{resourceKey}' could not be found.";
 

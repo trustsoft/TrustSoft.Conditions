@@ -8,6 +8,6 @@
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#
-    this.TargetType = "float";
+    this.targetType = "float";
 #>
-<#@ include file="Numbers.Fractional.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Fractional.ttinclude" #>

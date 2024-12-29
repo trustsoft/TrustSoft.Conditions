@@ -43,6 +43,7 @@ public static partial class ValidatorExtensions
     {
         bool valueIsValid = false;
 
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
         // Don't throw an ArgumentException when the expression is null, just consider it to be invalid.
         if (expression != null)
         {

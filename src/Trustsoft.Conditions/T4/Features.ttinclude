@@ -1,0 +1,28 @@
+﻿<#
+// --------------------------------------------------------------------------------------------------------
+//  Template: Defines a few helper methods for T4 templating
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+// --------------------------------------------------------------------------------------------------------
+#>
+<#+
+    static string LeftJustify (string value, int width)
+    {
+        value ??= string.Empty;
+        return value + new string(' ', Math.Max(0, width - value.Length));
+    }
+
+    static string RightJustify (string value, int width)
+    {
+        value ??= string.Empty;
+        return new string(' ', Math.Max(0, width - value.Length)) + value;
+    }
+
+    static string ShiftRight (string value, int indent)
+    {
+        value ??= string.Empty;
+        return new string(' ', Math.Max(0, indent)) + value;
+    }
+#>

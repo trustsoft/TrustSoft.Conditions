@@ -8,6 +8,6 @@
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#
-    this.TargetType = "int";
+    this.targetType = "int";
 #>
-<#@ include file="Numbers.Integer.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Integer.ttinclude" #>

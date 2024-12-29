@@ -8,6 +8,6 @@
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#
-    this.TargetType = "long";
+    this.targetType = "long";
 #>
-<#@ include file="Numbers.Integer.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Integer.ttinclude" #>

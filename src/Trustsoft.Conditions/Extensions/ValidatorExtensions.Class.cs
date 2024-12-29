@@ -31,7 +31,7 @@ public static partial class ValidatorExtensions
     ///   of the specified <paramref name="validator" /> is null.
     /// </exception>
     public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
-                                                     string? conditionDescription = null) where T : class
+                                                     string? conditionDescription = null) where T : class?
     {
         if (validator.Argument.Value == null)
         {
@@ -68,7 +68,7 @@ public static partial class ValidatorExtensions
     /// </exception>
     public static IArgumentValidator<T> IsNotOfType<T>(this IArgumentValidator<T> validator,
                                                        Type type,
-                                                       string? conditionDescription = null) where T : class
+                                                       string? conditionDescription = null) where T : class?
     {
         T value = validator.Argument.Value;
 
@@ -106,7 +106,7 @@ public static partial class ValidatorExtensions
     ///   the specified <paramref name="validator" /> is not null.
     /// </exception>
     public static IArgumentValidator<T> IsNull<T>(this IArgumentValidator<T> validator,
-                                                  string? conditionDescription = null) where T : class
+                                                  string? conditionDescription = null) where T : class?
     {
         if (validator.Argument.Value != null)
         {
@@ -143,7 +143,7 @@ public static partial class ValidatorExtensions
     /// </exception>
     public static IArgumentValidator<T> IsOfType<T>(this IArgumentValidator<T> validator,
                                                     Type type,
-                                                    string? conditionDescription = null) where T : class
+                                                    string? conditionDescription = null) where T : class?
     {
         var value = validator.Argument.Value;
 

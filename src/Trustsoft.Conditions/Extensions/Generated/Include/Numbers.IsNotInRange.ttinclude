@@ -1,38 +1,43 @@
-﻿<#+ 
-  void Numbers_IsNotInRange_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsNotInRange_Render(string targetType)
+    {
 #>
 #region " IsNotInRange "
 
 /// <summary>
-///     Checks whether the given value is not between <paramref name="minValue"/> and
-///     <paramref name="maxValue"/> (including those values). An exception is thrown otherwise.
+///   Checks whether the given value is not between <paramref name="minValue" /> and
+///   <paramref name="maxValue" /> (including those values).
 /// </summary>
-/// <param name="validator"> The <see cref="IArgumentValidator{T}"/> that holds the value that has to be checked. </param>
+/// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="minValue"> The lowest invalid value. </param>
 /// <param name="maxValue"> The highest invalid value. </param>
 /// <param name="conditionDescription"> The description of the condition that should hold. </param>
-/// <returns> The specified <paramref name="validator"/> instance. </returns>
+/// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentException">
-///     Thrown when the value of the specified <paramref name="validator"/> is in the specified range.
+///   Throws or collects the error when the value of the specified
+///   <paramref name="validator" /> is in the specified range.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotInRange(this IArgumentValidator<<#= targetType #>> validator,
-                                                   <#= targetType #> minValue,
-                                                   <#= targetType #> maxValue,
-                                                   string conditionDescription = null)
+<#+
+        // align the rest of arguments
+        var left = targetType.Length + 48;
+        var indent = new string(' ', left);
+        this.WriteLine($"{indent}{targetType} minValue,");
+        this.WriteLine($"{indent}{targetType} maxValue,");
+        this.WriteLine($"{indent}string? conditionDescription = null)");
+#>
 {
-    <#= targetType #> value = validator.Argument.Value;
+    var value = validator.Argument.Value;
 
     if (value >= minValue && value <= maxValue)
     {
-        string msg = MessageBuilder.Combine(validator.Argument,
-                                            conditionDescription,
-                                            StringRes.ValueShouldNotBeBetweenXAndY,
-                                            true,
-                                            minValue,
-                                            maxValue);
+        var msg = MessageBuilder.Combine(validator.Argument,
+                                         conditionDescription,
+                                         StringRes.ValueShouldNotBeBetweenXAndY,
+                                         true,
+                                         minValue,
+                                         maxValue);
+
         validator.ErrorHandler.Post(ViolationType.OutOfRange, msg);
     }
 
@@ -41,7 +46,5 @@ public static IArgumentValidator<<#= targetType #>> IsNotInRange(this IArgumentV
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

@@ -8,6 +8,6 @@
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#
-    this.TargetType = "ulong";
+    this.targetType = "ulong";
 #>
-<#@ include file="Numbers.Integer.Unsigned.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Integer.Unsigned.ttinclude" #>

@@ -123,7 +123,7 @@ public static partial class ValidatorExtensions
                                              conditionDescription,
                                              StringRes.ValueShouldBeX,
                                              false,
-                                             expected!);
+                                             expected is true);
 
             validator.ErrorHandler.Post(msg);
         }
