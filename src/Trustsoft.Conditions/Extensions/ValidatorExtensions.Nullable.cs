@@ -18,8 +18,7 @@ public static partial class ValidatorExtensions
     #region " IsNotNull "
 
     /// <summary>
-    ///   Checks whether the given <see cref="System.Nullable{T}" /> is not <c> null </c>.
-    ///   An exception is thrown otherwise.
+    ///   Checks whether the given <see cref="System.Nullable{T}" /> is not <see langword="null" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -27,17 +26,20 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is <c> null </c>.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is <see langword="null" />.
     /// </exception>
     public static IArgumentValidator<T?> IsNotNull<T>(this IArgumentValidator<T?> validator,
-                                                      string? conditionDescription = null) where T : struct
+                                                      string? conditionDescription = null)
+            where T : struct
     {
         if (validator.Argument.Value == null)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldNotBeNull,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldNotBeNull,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -49,8 +51,7 @@ public static partial class ValidatorExtensions
     #region " IsNull "
 
     /// <summary>
-    ///   Checks whether the given <see cref="System.Nullable{T}" /> is <c> null </c>.
-    ///   An exception is thrown otherwise.
+    ///   Checks whether the given <see cref="System.Nullable{T}" /> is <see langword="null" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -58,18 +59,20 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is not <c> null </c>
-    ///   .
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is not <see langword="null" />.
     /// </exception>
     public static IArgumentValidator<T?> IsNull<T>(this IArgumentValidator<T?> validator,
-                                                   string? conditionDescription = null) where T : struct
+                                                   string? conditionDescription = null)
+            where T : struct
     {
         if (validator.Argument.Value != null)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldBeNull,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldBeNull,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 

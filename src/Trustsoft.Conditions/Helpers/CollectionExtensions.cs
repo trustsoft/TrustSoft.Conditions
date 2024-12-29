@@ -18,7 +18,7 @@ internal static class CollectionExtensions
     ///   Determines whether a sequence contains any item.
     /// </summary>
     /// <param name="source"> The sequence of elements. </param>
-    /// <returns> <c> false </c> if source is null or contains no items. </returns>
+    /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
     public static bool HasItems(this IEnumerable source)
     {
         return source != null && source.GetEnumerator().MoveNext();
@@ -29,7 +29,7 @@ internal static class CollectionExtensions
     /// </summary>
     /// <typeparam name="T"> Type of elements in <paramref name="source" /> sequence. </typeparam>
     /// <param name="source"> The sequence of elements. </param>
-    /// <returns> <c> false </c> if source is null or contains no items. </returns>
+    /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
     public static bool HasItems<T>(this IEnumerable<T> source)
     {
         if (source == null)
@@ -52,7 +52,7 @@ internal static class CollectionExtensions
     /// </summary>
     /// <param name="source"> A sequence in which to locate a value. </param>
     /// <returns>
-    ///   <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
+    ///   <see langword="true" /> if specified sequence contains no element; otherwise <see langword="false" />.
     /// </returns>
     public static bool IsEmpty(this IEnumerable source)
     {
@@ -65,7 +65,7 @@ internal static class CollectionExtensions
     /// <typeparam name="TSource"> The type of the elements of source. </typeparam>
     /// <param name="source"> A sequence in which to locate a value. </param>
     /// <returns>
-    ///   <c> true </c> if specified sequence contains no element; otherwise <c> false </c>.
+    ///   <see langword="true" /> if specified sequence contains no element; otherwise <see langword="false" />.
     /// </returns>
     public static bool IsEmpty<TSource>(this IEnumerable<TSource> source)
     {

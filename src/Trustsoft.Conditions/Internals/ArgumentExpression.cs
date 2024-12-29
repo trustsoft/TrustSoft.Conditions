@@ -12,8 +12,6 @@ using System.Linq.Expressions;
 
 internal class ArgumentExpression<T> : IArgument<T>
 {
-    #region " Constructors "
-
     /// <summary>
     ///   Initializes a new instance of the <see cref="ArgumentExpression{T}" /> class.
     /// </summary>
@@ -22,10 +20,6 @@ internal class ArgumentExpression<T> : IArgument<T>
         this.Name = expression.GetName();
         this.Value = expression.GetValue();
     }
-
-    #endregion
-
-    #region " Implementation of IArgument<T> "
 
     /// <summary>
     ///   Gets the name of argument.
@@ -38,6 +32,4 @@ internal class ArgumentExpression<T> : IArgument<T>
     /// </summary>
     /// <value> The value of argument. </value>
     public T Value { get; }
-
-    #endregion
 }

@@ -21,7 +21,6 @@ public partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given <see cref="T:System.Collections.IEnumerable" /> is empty.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -29,17 +28,19 @@ public partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is not empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is not empty.
     /// </exception>
     public static IArgumentValidator<T> IsEmpty<T>(this IArgumentValidator<T> validator,
                                                    string? conditionDescription = null) where T : IEnumerable
     {
         if (!validator.Argument.Value.IsEmpty())
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.CollectionShouldBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.CollectionShouldBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -48,7 +49,6 @@ public partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given <see cref="T:System.Collections.IEnumerable{T}" /> is empty.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -56,18 +56,19 @@ public partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is not empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is not empty.
     /// </exception>
-    public static IArgumentValidator<IEnumerable<T>> IsEmpty<T>(
-            this IArgumentValidator<IEnumerable<T>> validator,
-            string? conditionDescription = null)
+    public static IArgumentValidator<IEnumerable<T>> IsEmpty<T>(this IArgumentValidator<IEnumerable<T>> validator,
+                                                                string? conditionDescription = null)
     {
         if (!validator.Argument.Value.IsEmpty())
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.CollectionShouldBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.CollectionShouldBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -80,7 +81,6 @@ public partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given <see cref="T:System.Collections.IEnumerable" /> is not empty.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -88,7 +88,8 @@ public partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is empty.
     /// </exception>
     public static IArgumentValidator<T> IsNotEmpty<T>(this IArgumentValidator<T> validator,
                                                       string? conditionDescription = null)
@@ -96,10 +97,11 @@ public partial class ValidatorExtensions
     {
         if (!validator.Argument.Value.HasItems())
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.CollectionShouldNotBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.CollectionShouldNotBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -108,7 +110,6 @@ public partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given <see cref="T:System.Collections.IEnumerable{T}" /> is not empty.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -116,18 +117,19 @@ public partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is empty.
     /// </exception>
-    public static IArgumentValidator<IEnumerable<T>> IsNotEmpty<T>(
-            this IArgumentValidator<IEnumerable<T>> validator,
-            string? conditionDescription = null)
+    public static IArgumentValidator<IEnumerable<T>> IsNotEmpty<T>(this IArgumentValidator<IEnumerable<T>> validator,
+                                                                   string? conditionDescription = null)
     {
         if (!validator.Argument.Value.HasItems())
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.CollectionShouldNotBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.CollectionShouldNotBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 

@@ -7,26 +7,20 @@
 
 namespace Trustsoft.Conditions;
 
-#region " Using Directives "
-
 using System;
 using System.Linq.Expressions;
 
 using Trustsoft.Conditions.Internals;
 
-#endregion
-
 /// <summary>
-///   Entry point to methods that returns validator that will collect an exception, when some
-///   condition is not met.
+///   Entry point to methods that returns validator that will collect an exception,
+///   when any of conditions is not met.
 /// </summary>
 internal static class Validate
 {
-    #region " Public Methods "
-
     /// <summary>
-    ///   Creates the validator for specified argument that will collect an exception, when some
-    ///   condition is not met.
+    ///   Creates the validator for specified argument that will collect an exception,
+    ///   when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
     /// <param name="value"> The value. </param>
@@ -39,8 +33,8 @@ internal static class Validate
     }
 
     /// <summary>
-    ///   Creates the validator for specified argument that will collect an exception, when some
-    ///   condition is not met.
+    ///   Creates the validator for specified argument that will collect an exception,
+    ///   when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
     /// <param name="expression"> The argument expression. </param>
@@ -50,6 +44,4 @@ internal static class Validate
         var argument = ArgumentFactory.Create(expression);
         return new CollectOnErrorValidator<T>(argument);
     }
-
-    #endregion
 }

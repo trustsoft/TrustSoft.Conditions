@@ -34,7 +34,7 @@ internal static class StringExtensions
 
         return value.All(char.IsWhiteSpace);
 #else
-            return string.IsNullOrWhiteSpace(value);
+        return string.IsNullOrWhiteSpace(value);
 #endif
     }
 

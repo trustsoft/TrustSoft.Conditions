@@ -8,7 +8,7 @@
 namespace Trustsoft.Conditions;
 
 /// <summary>
-///   Defines the type of exception that validator should throw.
+///   Defines the type of exception that validator should throw or collect.
 /// </summary>
 public enum ViolationType
 {

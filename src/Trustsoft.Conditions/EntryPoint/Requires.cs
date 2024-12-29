@@ -7,26 +7,21 @@
 
 namespace Trustsoft.Conditions;
 
-#region " Using Directives "
-
 using System;
 using System.Linq.Expressions;
 
 using Trustsoft.Conditions.Internals;
 
-#endregion
-
 /// <summary>
-///   Entry point to methods that returns validator that will throw an exception, when some condition
-///   is not met.
+///   Represents methods that return argument validator for further validations.
 /// </summary>
+/// <remars> It will throw an exception, when any of conditions is not met. </remars>
 public static class Requires
 {
-    #region " Public Methods "
-
     /// <summary>
-    ///   Creates the validator for specified argument that will throw an exception, when some condition
-    ///   is not met.
+    ///   Creates the validator for specified <paramref name="value"/>
+    ///   that will throw an exception,
+    ///   when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="value"> The value of the argument. </param>
@@ -34,13 +29,13 @@ public static class Requires
     /// <returns> IArgumentValidator{T}. </returns>
     public static IArgumentValidator<T> That<T>(T value, string? argumentName = null)
     {
-        var argument = ArgumentFactory.Create(value, argumentName ?? "value");
+        var argument = ArgumentFactory.Create(value, argumentName ?? nameof(value));
         return new ThrowOnErrorValidator<T>(argument);
     }
 
     /// <summary>
     ///   Creates the validator for specified argument expression that will throw an exception,
-    ///   when some condition is not met.
+    ///   when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="expression"> The argument expression. </param>
@@ -50,6 +45,4 @@ public static class Requires
         var argument = ArgumentFactory.Create(expression);
         return new ThrowOnErrorValidator<T>(argument);
     }
-
-    #endregion
 }

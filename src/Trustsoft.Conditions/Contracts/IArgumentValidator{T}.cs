@@ -14,13 +14,13 @@ namespace Trustsoft.Conditions;
 public interface IArgumentValidator<T> : IFluentSyntax
 {
     /// <summary>
-    ///   Gets the argument associated wth the current <see cref="IArgumentValidator{T}" /> object.
+    ///   Gets the argument associated with the current <see cref="IArgumentValidator{T}" /> object.
     /// </summary>
-    /// <value> The argument. </value>
+    /// <value> The argument to validate. </value>
     IArgument<T> Argument { get; }
 
     /// <summary>
-    ///   Gets the error handle associated wth the current <see cref="IArgumentValidator{T}" /> object.
+    ///   Gets the error handler associated with the current <see cref="IArgumentValidator{T}" /> object.
     /// </summary>
     /// <value> The error handler. </value>
     IErrorHandler<T> ErrorHandler { get; }

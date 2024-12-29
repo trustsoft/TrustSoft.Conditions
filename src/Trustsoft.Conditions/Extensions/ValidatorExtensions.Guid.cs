@@ -18,8 +18,7 @@ public static partial class ValidatorExtensions
     #region " IsEmpty "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Guid" /> is empty. An exception is thrown
-    ///   otherwise.
+    ///   Checks whether the given <see cref="T:System.Guid" /> is empty.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -27,17 +26,19 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is not empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is not empty.
     /// </exception>
     public static IArgumentValidator<Guid> IsEmpty(this IArgumentValidator<Guid> validator,
                                                    string? conditionDescription = null)
     {
         if (!Guid.Empty.Equals(validator.Argument.Value))
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.GuidShouldBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.GuidShouldBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -49,8 +50,7 @@ public static partial class ValidatorExtensions
     #region " IsNotEmpty "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Guid" /> is not empty. An exception is thrown
-    ///   otherwise.
+    ///   Checks whether the given <see cref="T:System.Guid" /> is not empty.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -58,17 +58,19 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is empty.
+    ///   Throws or collects the error when the given value of
+    ///   the specified <paramref name="validator" /> is empty.
     /// </exception>
     public static IArgumentValidator<Guid> IsNotEmpty(this IArgumentValidator<Guid> validator,
                                                       string? conditionDescription = null)
     {
         if (Guid.Empty.Equals(validator.Argument.Value))
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.GuidShouldNotBeEmpty,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.GuidShouldNotBeEmpty,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 

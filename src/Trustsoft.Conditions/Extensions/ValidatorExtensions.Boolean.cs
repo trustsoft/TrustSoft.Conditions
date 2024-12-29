@@ -16,8 +16,7 @@ public static partial class ValidatorExtensions
     #region " IsFalse "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <c> false </c>. An exception is
-    ///   thrown otherwise.
+    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="false" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -25,7 +24,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is <c> true </c>.
+    ///   Throws or collects the error when the given value of the specified
+    ///   <paramref name="validator" /> is <see langword="true" />.
     /// </exception>
     public static IArgumentValidator<bool> IsFalse(this IArgumentValidator<bool> validator,
                                                    string? conditionDescription = null)
@@ -34,8 +34,7 @@ public static partial class ValidatorExtensions
     }
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <c> false </c>. An exception is
-    ///   thrown otherwise.
+    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="false" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -43,7 +42,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is <c> true </c>.
+    ///   Throws or collects the error when the given value of the specified
+    ///   <paramref name="validator" /> is <see langword="true" />.
     /// </exception>
     public static IArgumentValidator<bool?> IsFalse(this IArgumentValidator<bool?> validator,
                                                     string? conditionDescription = null)
@@ -56,8 +56,7 @@ public static partial class ValidatorExtensions
     #region " IsTrue "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <c> true </c>. An exception is
-    ///   thrown otherwise.
+    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="true" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -65,7 +64,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is <c> false </c>.
+    ///   Throws or collects the error when the given value of the specified
+    ///   <paramref name="validator" /> is <see langword="false" />.
     /// </exception>
     public static IArgumentValidator<bool> IsTrue(this IArgumentValidator<bool> validator,
                                                   string? conditionDescription = null)
@@ -74,8 +74,7 @@ public static partial class ValidatorExtensions
     }
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <c> true </c>. An exception is
-    ///   thrown otherwise.
+    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="true" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -83,7 +82,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the given value of the specified <paramref name="validator" /> is <c> false </c>.
+    ///   Throws or collects the error when the given value of the specified
+    ///   <paramref name="validator" /> is <see langword="false" />.
     /// </exception>
     public static IArgumentValidator<bool?> IsTrue(this IArgumentValidator<bool?> validator,
                                                    string? conditionDescription = null)
@@ -101,11 +101,12 @@ public static partial class ValidatorExtensions
     {
         if (validator.Argument.Value != expected)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldBeX,
-                                                false,
-                                                expected);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldBeX,
+                                             false,
+                                             expected);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -118,11 +119,12 @@ public static partial class ValidatorExtensions
     {
         if (validator.Argument.Value != expected)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldBeX,
-                                                false,
-                                                expected!);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldBeX,
+                                             false,
+                                             expected!);
+
             validator.ErrorHandler.Post(msg);
         }
 

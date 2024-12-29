@@ -12,7 +12,7 @@ using System.ComponentModel;
 
 /// <summary>
 ///   Interface that is used to build fluent interfaces and
-///   hides methods declared by <see cref="object" /> from IntelliSense.
+///   hide methods declared by <see cref="object" /> from IntelliSense.
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 public interface IFluentSyntax

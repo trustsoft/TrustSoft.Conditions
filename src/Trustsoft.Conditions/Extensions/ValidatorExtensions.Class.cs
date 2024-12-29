@@ -27,17 +27,19 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the argument's value of the specified <paramref name="validator" /> is null.
+    ///   Throws or collects the error when the argument's value
+    ///   of the specified <paramref name="validator" /> is null.
     /// </exception>
     public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
-                                                     string? conditionDescription = null) where T : class?
+                                                     string? conditionDescription = null) where T : class
     {
         if (validator.Argument.Value == null)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldNotBeNull,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldNotBeNull,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -49,8 +51,7 @@ public static partial class ValidatorExtensions
     #region " IsNotOfType "
 
     /// <summary>
-    ///   Checks whether the given value is not of specified <paramref name="type" />. An exception is
-    ///   thrown otherwise.
+    ///   Checks whether the given value is not of specified <paramref name="type" />.
     /// </summary>
     /// <typeparam name="T">
     ///   The type of value of the argument contained in the specified <paramref name="validator" />.
@@ -62,22 +63,22 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the argument's value of the <paramref name="validator" /> is of specified
-    ///   <paramref name="type" />.
+    ///   Throws or collects the error when the argument's value of the specified
+    ///   <paramref name="validator" /> is of specified <paramref name="type" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotOfType<T>(this IArgumentValidator<T> validator,
                                                        Type type,
-                                                       string? conditionDescription = null) where T : class?
+                                                       string? conditionDescription = null) where T : class
     {
         T value = validator.Argument.Value;
 
         if (value != null && type.IsInstanceOfType(value))
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldNotBeOfTypeX,
-                                                false,
-                                                type);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldNotBeOfTypeX,
+                                             false,
+                                             type);
 
             validator.ErrorHandler.Post(msg);
         }
@@ -90,7 +91,7 @@ public static partial class ValidatorExtensions
     #region " IsNull "
 
     /// <summary>
-    ///   Checks whether the given value is null. An exception is thrown otherwise.
+    ///   Checks whether the given value is null.
     /// </summary>
     /// <typeparam name="T">
     ///   The type of value of the argument contained in the specified <paramref name="validator" />.
@@ -101,17 +102,19 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the argument's value of the specified <paramref name="validator" /> is not null.
+    ///   Throws or collects the error when the argument's value of
+    ///   the specified <paramref name="validator" /> is not null.
     /// </exception>
     public static IArgumentValidator<T> IsNull<T>(this IArgumentValidator<T> validator,
-                                                  string? conditionDescription = null) where T : class?
+                                                  string? conditionDescription = null) where T : class
     {
         if (validator.Argument.Value != null)
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldBeNull,
-                                                false);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldBeNull,
+                                             false);
+
             validator.ErrorHandler.Post(msg);
         }
 
@@ -123,8 +126,7 @@ public static partial class ValidatorExtensions
     #region " IsOfType "
 
     /// <summary>
-    ///   Checks whether the given value is of specified <paramref name="type" />. An exception is thrown
-    ///   otherwise.
+    ///   Checks whether the given value is of specified <paramref name="type" />.
     /// </summary>
     /// <typeparam name="T">
     ///   The type of value of the argument contained in the specified <paramref name="validator" />.
@@ -132,26 +134,27 @@ public static partial class ValidatorExtensions
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
     /// </param>
-    /// <param name="type"> The type. </param>
+    /// <param name="type"> The type to check for. </param>
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Thrown when the argument's value of the <paramref name="validator" /> is not of specified
-    ///   <paramref name="type" />.
+    ///   Throws or collects the error when the argument's value of the
+    ///   <paramref name="validator" /> is not of specified <paramref name="type" />.
     /// </exception>
     public static IArgumentValidator<T> IsOfType<T>(this IArgumentValidator<T> validator,
                                                     Type type,
-                                                    string? conditionDescription = null) where T : class?
+                                                    string? conditionDescription = null) where T : class
     {
-        T value = validator.Argument.Value;
+        var value = validator.Argument.Value;
 
         if (value != null && !type.IsInstanceOfType(value))
         {
-            string msg = MessageBuilder.Combine(validator.Argument,
-                                                conditionDescription,
-                                                StringRes.ValueShouldBeOfTypeX,
-                                                false,
-                                                type);
+            var msg = MessageBuilder.Combine(validator.Argument,
+                                             conditionDescription,
+                                             StringRes.ValueShouldBeOfTypeX,
+                                             false,
+                                             type);
+
             validator.ErrorHandler.Post(msg);
         }
 

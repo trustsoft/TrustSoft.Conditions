@@ -36,10 +36,13 @@ internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
         switch (violationType)
         {
             case ViolationType.OutOfRange:
+            {
                 return new ArgumentOutOfRangeException(this.Validator.Argument.Name, message);
+            }
 
+            case ViolationType.Default:
             default:
-
+            {
                 // ReSharper disable CompareNonConstrainedGenericWithNull
                 if (this.Validator.Argument.Value == null)
                 {
@@ -48,6 +51,7 @@ internal class ThrowOnErrorHandler<T> : ErrorHandlerBase<T>
 
                 // ReSharper restore CompareNonConstrainedGenericWithNull
                 return new ArgumentException(message, this.Validator.Argument.Name);
+            }
         }
     }
 

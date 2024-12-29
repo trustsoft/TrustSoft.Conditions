@@ -12,7 +12,7 @@ namespace Trustsoft.Conditions.Internals;
 /// </summary>
 /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
 /// <typeparam name="TErrorHandler"> The type of error handler to use on validate. </typeparam>
-internal class ArgumentValidatorBase<T, TErrorHandler> : IArgumentValidator<T>
+internal abstract class ArgumentValidatorBase<T, TErrorHandler> : IArgumentValidator<T>
         where TErrorHandler : class, IErrorHandler<T>
 {
     #region " Public Properties "

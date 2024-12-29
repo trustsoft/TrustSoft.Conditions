@@ -13,8 +13,6 @@ namespace Trustsoft.Conditions.Internals;
 /// <typeparam name="T"> The type of the argument value to validate. </typeparam>
 internal class CollectOnErrorValidator<T> : ArgumentValidatorBase<T, CollectOnErrorHandler<T>>
 {
-    #region " Constructors "
-
     /// <summary>
     ///   Initializes a new instance of the <see cref="CollectOnErrorValidator{T}" /> class.
     /// </summary>
@@ -23,6 +21,4 @@ internal class CollectOnErrorValidator<T> : ArgumentValidatorBase<T, CollectOnEr
             : base(argument, new CollectOnErrorHandler<T>())
     {
     }
-
-    #endregion
 }

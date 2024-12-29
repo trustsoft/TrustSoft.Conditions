@@ -52,7 +52,7 @@ public static partial class ValidatorExtensions
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
     /// </param>
-    /// <returns> <c> true </c> if all conditions was met; otherwise false. </returns>
+    /// <returns> <see langword="true" /> if all conditions was met; otherwise false. </returns>
     public static bool IsValid<T>(this IArgumentValidator<T> validator)
     {
         if (validator is CollectOnErrorValidator<T> val)

@@ -34,7 +34,7 @@ internal static class ExpressionExtensions
         var memberExpression = (MemberExpression)expression.Body;
         object value;
 
-        if (memberExpression.Expression.NodeType == ExpressionType.Constant)
+        if (memberExpression.Expression != null && memberExpression.Expression.NodeType == ExpressionType.Constant)
         {
             var constantExpression = (ConstantExpression)memberExpression.Expression;
             value = memberExpression.Member.MemberType == MemberTypes.Property
