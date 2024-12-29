@@ -32,7 +32,7 @@ namespace Trustsoft.Conditions
         /// <param name="value"> The value of the argument. </param>
         /// <param name="argumentName"> The name of the argument. </param>
         /// <returns> IArgumentValidator{T}. </returns>
-        public static IArgumentValidator<T> That<T>(T value, string argumentName = null)
+        public static IArgumentValidator<T> That<T>(T value, string? argumentName = null)
         {
             var argument = ArgumentFactory.Create(value, argumentName ?? "value");
             return new ThrowOnErrorValidator<T>(argument);

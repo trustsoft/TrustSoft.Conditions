@@ -16,6 +16,8 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
@@ -137,9 +139,6 @@
     <Compile Include="ValidatorExtensions\StringUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Shared\Trustsoft.snk">
-      <Link>Trustsoft.snk</Link>
-    </None>
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude" />
     <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />

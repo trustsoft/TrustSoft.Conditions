@@ -33,7 +33,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsEqualTo<T>(this IArgumentValidator<T> validator,
                                                          T value,
-                                                         string conditionDescription = null)
+                                                         string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (validator.Argument.Value.CompareTo(value) != 0)
@@ -70,7 +70,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsGreaterOrEqual<T>(this IArgumentValidator<T> validator,
                                                                 T minValue,
-                                                                string conditionDescription = null)
+                                                                string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(minValue) >= 0))
@@ -106,7 +106,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsGreaterThan<T>(this IArgumentValidator<T> validator,
                                                              T minValue,
-                                                             string conditionDescription = null)
+                                                             string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(minValue) > 0))
@@ -144,7 +144,7 @@ namespace Trustsoft.Conditions
         public static IArgumentValidator<T> IsInRange<T>(this IArgumentValidator<T> validator,
                                                          T minValue,
                                                          T maxValue,
-                                                         string conditionDescription = null)
+                                                         string? conditionDescription = null)
             where T : IComparable<T>
         {
             T value = validator.Argument.Value;
@@ -184,7 +184,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsLessOrEqual<T>(this IArgumentValidator<T> validator,
                                                              T maxValue,
-                                                             string conditionDescription = null)
+                                                             string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) <= 0))
@@ -220,7 +220,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsLessThan<T>(this IArgumentValidator<T> validator,
                                                           T maxValue,
-                                                          string conditionDescription = null)
+                                                          string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
@@ -256,7 +256,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotEqualTo<T>(this IArgumentValidator<T> validator,
                                                             T value,
-                                                            string conditionDescription = null)
+                                                            string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (validator.Argument.Value.CompareTo(value) == 0)
@@ -293,7 +293,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotGreaterOrEqual<T>(this IArgumentValidator<T> validator,
                                                                    T maxValue,
-                                                                   string conditionDescription = null)
+                                                                   string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
@@ -329,7 +329,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotGreaterThan<T>(this IArgumentValidator<T> validator,
                                                                 T maxValue,
-                                                                string conditionDescription = null)
+                                                                string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (!(validator.Argument.Value.CompareTo(maxValue) < 0))
@@ -366,7 +366,7 @@ namespace Trustsoft.Conditions
         public static IArgumentValidator<T> IsNotInRange<T>(this IArgumentValidator<T> validator,
                                                             T minValue,
                                                             T maxValue,
-                                                            string conditionDescription = null)
+                                                            string? conditionDescription = null)
             where T : IComparable<T>
         {
             T value = validator.Argument.Value;
@@ -406,7 +406,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotLessOrEqual<T>(this IArgumentValidator<T> validator,
                                                                 T minValue,
-                                                                string conditionDescription = null)
+                                                                string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (validator.Argument.Value.CompareTo(minValue) <= 0)
@@ -442,7 +442,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotLessThan<T>(this IArgumentValidator<T> validator,
                                                              T minValue,
-                                                             string conditionDescription = null)
+                                                             string? conditionDescription = null)
             where T : IComparable<T>
         {
             if (validator.Argument.Value.CompareTo(minValue) < 0)

@@ -1,0 +1,44 @@
+﻿<#+ 
+  void Numbers_IsNegative_Render(string targetType)
+  {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
+#>
+#region " IsNegative "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNegative")]
+[Description("Calling IsNegative on negative value should pass.")]
+public void IsNegative_ShouldPass_OnNegativeValue()
+{
+    <#= targetType #> val = -9;
+    Requires.That(val).IsNegative();
+    Requires.That(val, "val").IsNegative();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNegative")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNegative on non-negative value should fail.")]
+public void IsNegative_ShouldFail_OnNonNegativeValue()
+{
+    <#= targetType #> val = 5;
+    Requires.That(val).IsNegative();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNegative")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNegative on zero value should fail.")]
+public void IsNegative_ShouldFail_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsNegative();
+}
+
+#endregion
+<#+
+      this.PopIndent();
+      this.PopIndent();
+  }
+#>

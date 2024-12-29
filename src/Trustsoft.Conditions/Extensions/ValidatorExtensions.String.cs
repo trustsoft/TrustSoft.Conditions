@@ -34,7 +34,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> Contains(this IArgumentValidator<string> validator,
                                                           string part,
-                                                          string conditionDescription = null)
+                                                          string? conditionDescription = null)
         {
             if (!validator.Argument.Value.Contains(part))
             {
@@ -70,7 +70,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> DoesNotContain(this IArgumentValidator<string> validator,
                                                                 string part,
-                                                                string conditionDescription = null)
+                                                                string? conditionDescription = null)
         {
             if (validator.Argument.Value.Contains(part))
             {
@@ -106,7 +106,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> DoesNotEndWith(this IArgumentValidator<string> validator,
                                                                 string part,
-                                                                string conditionDescription = null)
+                                                                string? conditionDescription = null)
         {
             if (validator.Argument.Value.EndsWith(part, StringComparison.Ordinal))
             {
@@ -142,7 +142,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> DoesNotHaveLength(this IArgumentValidator<string> validator,
                                                                    int length,
-                                                                   string conditionDescription = null)
+                                                                   string? conditionDescription = null)
         {
             if (validator.Argument.Value.Length == length)
             {
@@ -178,7 +178,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> DoesNotStartWith(this IArgumentValidator<string> validator,
                                                                   string part,
-                                                                  string conditionDescription = null)
+                                                                  string? conditionDescription = null)
         {
             if (validator.Argument.Value.StartsWith(part, StringComparison.Ordinal))
             {
@@ -213,7 +213,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> EndsWith(this IArgumentValidator<string> validator,
                                                           string part,
-                                                          string conditionDescription = null)
+                                                          string? conditionDescription = null)
         {
             if (!validator.Argument.Value.EndsWith(part, StringComparison.Ordinal))
             {
@@ -249,7 +249,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> HasLength(this IArgumentValidator<string> validator,
                                                            int length,
-                                                           string conditionDescription = null)
+                                                           string? conditionDescription = null)
         {
             if (validator.Argument.Value.Length != length)
             {
@@ -281,7 +281,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is not empty.
         /// </exception>
         public static IArgumentValidator<string> IsEmpty(this IArgumentValidator<string> validator,
-                                                         string conditionDescription = null)
+                                                         string? conditionDescription = null)
         {
             var value = validator.Argument.Value;
             if (!(value != null && value.Length == 0))
@@ -317,7 +317,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsLongerOrEqual(this IArgumentValidator<string> validator,
                                                                  int minLength,
-                                                                 string conditionDescription = null)
+                                                                 string? conditionDescription = null)
         {
             if (validator.Argument.Value.Length < minLength)
             {
@@ -353,7 +353,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsLongerThan(this IArgumentValidator<string> validator,
                                                               int minLength,
-                                                              string conditionDescription = null)
+                                                              string? conditionDescription = null)
         {
             if (!(validator.Argument.Value.Length > minLength))
             {
@@ -388,7 +388,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsMatch(this IArgumentValidator<string> validator,
                                                          string pattern,
-                                                         string conditionDescription = null)
+                                                         string? conditionDescription = null)
         {
             var regex = new Regex(pattern);
             if (!regex.IsMatch(validator.Argument.Value))
@@ -421,7 +421,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is empty.
         /// </exception>
         public static IArgumentValidator<string> IsNotEmpty(this IArgumentValidator<string> validator,
-                                                            string conditionDescription = null)
+                                                            string? conditionDescription = null)
         {
             var value = validator.Argument.Value;
             if (value != null && value.Length == 0)
@@ -456,7 +456,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsNotMatch(this IArgumentValidator<string> validator,
                                                             string pattern,
-                                                            string conditionDescription = null)
+                                                            string? conditionDescription = null)
         {
             var regex = new Regex(pattern);
             if (regex.IsMatch(validator.Argument.Value))
@@ -490,7 +490,7 @@ namespace Trustsoft.Conditions
         ///     empty.
         /// </exception>
         public static IArgumentValidator<string> IsNotNullOrEmpty(this IArgumentValidator<string> validator,
-                                                                  string conditionDescription = null)
+                                                                  string? conditionDescription = null)
         {
             if (string.IsNullOrEmpty(validator.Argument.Value))
             {
@@ -525,7 +525,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsNotNullOrWhiteSpace(
             this IArgumentValidator<string> validator,
-            string conditionDescription = null)
+            string? conditionDescription = null)
         {
             if (validator.Argument.Value.IsNullOrWhiteSpace())
             {
@@ -557,7 +557,7 @@ namespace Trustsoft.Conditions
         ///     or empty.
         /// </exception>
         public static IArgumentValidator<string> IsNullOrEmpty(this IArgumentValidator<string> validator,
-                                                               string conditionDescription = null)
+                                                               string? conditionDescription = null)
         {
             if (!string.IsNullOrEmpty(validator.Argument.Value))
             {
@@ -590,7 +590,7 @@ namespace Trustsoft.Conditions
         ///     is not <c> null </c> or contains only non-whitespace characters.
         /// </exception>
         public static IArgumentValidator<string> IsNullOrWhiteSpace(this IArgumentValidator<string> validator,
-                                                                    string conditionDescription = null)
+                                                                    string? conditionDescription = null)
         {
             if (!validator.Argument.Value.IsNullOrWhiteSpace())
             {
@@ -625,7 +625,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsShorterOrEqual(this IArgumentValidator<string> validator,
                                                                   int maxLength,
-                                                                  string conditionDescription = null)
+                                                                  string? conditionDescription = null)
         {
             if (validator.Argument.Value.Length > maxLength)
             {
@@ -661,7 +661,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> IsShorterThan(this IArgumentValidator<string> validator,
                                                                int maxLength,
-                                                               string conditionDescription = null)
+                                                               string? conditionDescription = null)
         {
             if (!(validator.Argument.Value.Length < maxLength))
             {
@@ -696,7 +696,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<string> StartsWith(this IArgumentValidator<string> validator,
                                                             string part,
-                                                            string conditionDescription = null)
+                                                            string? conditionDescription = null)
         {
             if (!validator.Argument.Value.StartsWith(part, StringComparison.Ordinal))
             {

@@ -17,7 +17,7 @@ namespace Trustsoft.Conditions.Internals
         #region " Static Methods "
 
         internal static string Combine<T>(IArgument<T> argument,
-                                          string conditionDescription,
+                                          string? conditionDescription,
                                           string resourceKey,
                                           bool includeActualValue,
                                           params object[] args)
@@ -32,7 +32,7 @@ namespace Trustsoft.Conditions.Internals
                 }
                 return msg;
             }
-            return InjectValues(argument, conditionDescription, args);
+            return InjectValues(argument, conditionDescription!, args);
         }
 
         private static string GetActualValueMessage<T>(this IArgument<T> argument)
@@ -72,7 +72,7 @@ namespace Trustsoft.Conditions.Internals
         /// </summary>
         /// <param name="value"> The value. </param>
         /// <returns> System.String. </returns>
-        private static string MakeReadableString(this object value)
+        private static string MakeReadableString(this object? value)
         {
             if (value == null)
             {

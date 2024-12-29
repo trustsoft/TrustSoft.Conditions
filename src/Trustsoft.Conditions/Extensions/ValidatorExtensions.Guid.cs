@@ -30,7 +30,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is not empty.
         /// </exception>
         public static IArgumentValidator<Guid> IsEmpty(this IArgumentValidator<Guid> validator,
-                                                       string conditionDescription = null)
+                                                       string? conditionDescription = null)
         {
             if (!Guid.Empty.Equals(validator.Argument.Value))
             {
@@ -61,7 +61,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is empty.
         /// </exception>
         public static IArgumentValidator<Guid> IsNotEmpty(this IArgumentValidator<Guid> validator,
-                                                          string conditionDescription = null)
+                                                          string? conditionDescription = null)
         {
             if (Guid.Empty.Equals(validator.Argument.Value))
             {

@@ -28,7 +28,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is <c> true </c>.
         /// </exception>
         public static IArgumentValidator<bool> IsFalse(this IArgumentValidator<bool> validator,
-                                                       string conditionDescription = null)
+                                                       string? conditionDescription = null)
         {
             return IsValid(validator, false, conditionDescription);
         }
@@ -46,7 +46,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is <c> true </c>.
         /// </exception>
         public static IArgumentValidator<bool?> IsFalse(this IArgumentValidator<bool?> validator,
-                                                        string conditionDescription = null)
+                                                        string? conditionDescription = null)
         {
             return IsValid(validator, false, conditionDescription);
         }
@@ -68,7 +68,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is <c> false </c>.
         /// </exception>
         public static IArgumentValidator<bool> IsTrue(this IArgumentValidator<bool> validator,
-                                                      string conditionDescription = null)
+                                                      string? conditionDescription = null)
         {
             return IsValid(validator, true, conditionDescription);
         }
@@ -86,7 +86,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is <c> false </c>.
         /// </exception>
         public static IArgumentValidator<bool?> IsTrue(this IArgumentValidator<bool?> validator,
-                                                       string conditionDescription = null)
+                                                       string? conditionDescription = null)
         {
             return IsValid(validator, true, conditionDescription);
         }
@@ -97,7 +97,7 @@ namespace Trustsoft.Conditions
 
         private static IArgumentValidator<bool> IsValid(IArgumentValidator<bool> validator,
                                                         bool expected,
-                                                        string conditionDescription)
+                                                        string? conditionDescription)
         {
             if (validator.Argument.Value != expected)
             {
@@ -114,7 +114,7 @@ namespace Trustsoft.Conditions
 
         private static IArgumentValidator<bool?> IsValid(IArgumentValidator<bool?> validator,
                                                          bool? expected,
-                                                         string conditionDescription)
+                                                         string? conditionDescription)
         {
             if (validator.Argument.Value != expected)
             {
@@ -122,7 +122,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.ValueShouldBeX,
                                                     false,
-                                                    expected);
+                                                    expected!);
                 validator.ErrorHandler.Post(msg);
             }
 

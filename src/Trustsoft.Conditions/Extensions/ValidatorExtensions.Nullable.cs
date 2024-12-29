@@ -30,7 +30,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is <c> null </c>.
         /// </exception>
         public static IArgumentValidator<T?> IsNotNull<T>(this IArgumentValidator<T?> validator,
-                                                          string conditionDescription = null) where T : struct
+                                                          string? conditionDescription = null) where T : struct
         {
             if (validator.Argument.Value == null)
             {
@@ -62,7 +62,7 @@ namespace Trustsoft.Conditions
         ///     .
         /// </exception>
         public static IArgumentValidator<T?> IsNull<T>(this IArgumentValidator<T?> validator,
-                                                       string conditionDescription = null) where T : struct
+                                                       string? conditionDescription = null) where T : struct
         {
             if (validator.Argument.Value != null)
             {

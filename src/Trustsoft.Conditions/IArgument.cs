@@ -11,7 +11,7 @@ namespace Trustsoft.Conditions
     ///     Represents an argument.
     /// </summary>
     /// <typeparam name="T"> The type of value of argument. </typeparam>
-    public interface IArgument<T> : IFluentSyntax
+    public interface IArgument<out T> : IFluentSyntax
     {
         /// <summary>
         ///     Gets the name of the current <see cref="IArgument{T}" /> object.

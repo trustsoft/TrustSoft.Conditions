@@ -30,7 +30,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the argument's value of the specified <paramref name="validator" /> is null.
         /// </exception>
         public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
-                                                         string conditionDescription = null) where T : class
+                                                         string? conditionDescription = null) where T : class?
         {
             if (validator.Argument.Value == null)
             {
@@ -67,7 +67,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsNotOfType<T>(this IArgumentValidator<T> validator,
                                                            Type type,
-                                                           string conditionDescription = null) where T : class
+                                                           string? conditionDescription = null) where T : class?
         {
             T value = validator.Argument.Value;
 
@@ -78,6 +78,7 @@ namespace Trustsoft.Conditions
                                                     StringRes.ValueShouldNotBeOfTypeX,
                                                     false,
                                                     type);
+
                 validator.ErrorHandler.Post(msg);
             }
 
@@ -103,7 +104,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the argument's value of the specified <paramref name="validator" /> is not null.
         /// </exception>
         public static IArgumentValidator<T> IsNull<T>(this IArgumentValidator<T> validator,
-                                                      string conditionDescription = null) where T : class
+                                                      string? conditionDescription = null) where T : class?
         {
             if (validator.Argument.Value != null)
             {
@@ -140,7 +141,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<T> IsOfType<T>(this IArgumentValidator<T> validator,
                                                         Type type,
-                                                        string conditionDescription = null) where T : class
+                                                        string? conditionDescription = null) where T : class?
         {
             T value = validator.Argument.Value;
 

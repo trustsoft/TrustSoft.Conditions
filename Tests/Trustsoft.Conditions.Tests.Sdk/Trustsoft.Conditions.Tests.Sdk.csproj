@@ -1,0 +1,317 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net47;net48</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>Trustsoft.Conditions.UnitTests</RootNamespace>
+    <UserSecretsId>70a2bb62-e65e-4a26-948d-1eb2a25f1981</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ValidatorExtensions\Generated\Byte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Decimal.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Decimal.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Double.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\SByte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Single.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt16.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt32.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
+    </None>
+    <Compile Update="Helpers\Model.cs">
+      <Link>Helpers\Model.cs</Link>
+    </Compile>
+    <Compile Update="CollectionExtensionsUnitTest.cs">
+      <Link>CollectionExtensionsUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ExpressionExtensionsUnitTest.cs">
+      <Link>ExpressionExtensionsUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="RequiresUnitTest.cs">
+      <Link>RequiresUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="StringExtensionsUnitTest.cs">
+      <Link>StringExtensionsUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="StringResourcesUnitTest.cs">
+      <Link>StringResourcesUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidateUnitTest.cs">
+      <Link>ValidateUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensionsUnitTest.cs">
+      <Link>ValidatorExtensionsUnitTest.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ValidatorExtensions\Generated\Byte.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Decimal.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Decimal.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Double.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Double.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Int16.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Int16.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Int32.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Int32.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Int64.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Int64.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\SByte.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SByte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\Single.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Single.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\UInt16.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UInt16.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\UInt32.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UInt32.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="ValidatorExtensions\Generated\UInt64.UnitTest.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UInt64.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Helpers\ModelBase.cs">
+      <Link>Helpers\ModelBase.cs</Link>
+    </Compile>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsGreaterThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsGreaterThan.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsInRange.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsInRange.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude">
+      <Link>ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Byte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Byte.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Decimal.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Decimal.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Decimal.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Double.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Double.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Int16.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Int32.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Int64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Int64.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Numbers.Fractional.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Fractional.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Numbers.Integer.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Integer.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude">
+      <Link>ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\SByte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\SByte.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\Single.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\Single.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt16.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\UInt16.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt32.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\UInt32.UnitTest.tt</Link>
+    </None>
+    <None Update="ValidatorExtensions\Generated\UInt64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
+      <Link>ValidatorExtensions\Generated\UInt64.UnitTest.tt</Link>
+    </None>
+    <Compile Update="ValidatorExtensions\BooleanUnitTest.cs">
+      <Link>ValidatorExtensions\BooleanUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\ClassUnitTest.cs">
+      <Link>ValidatorExtensions\ClassUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\EvaluateUnitTest.cs">
+      <Link>ValidatorExtensions\EvaluateUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\GuidUnitTest.cs">
+      <Link>ValidatorExtensions\GuidUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\IComparable{T}.UnitTest.cs">
+      <Link>ValidatorExtensions\IComparable{T}.UnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\IEnumerable.UnitTest.cs">
+      <Link>ValidatorExtensions\IEnumerable.UnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\NullableUnitTest.cs">
+      <Link>ValidatorExtensions\NullableUnitTest.cs</Link>
+    </Compile>
+    <Compile Update="ValidatorExtensions\StringUnitTest.cs">
+      <Link>ValidatorExtensions\StringUnitTest.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+</Project>

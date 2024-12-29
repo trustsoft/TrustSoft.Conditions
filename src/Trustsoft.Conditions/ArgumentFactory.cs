@@ -26,7 +26,7 @@ namespace Trustsoft.Conditions
         /// <param name="argumentValue"> The value of the argument. </param>
         /// <param name="argumentName"> The name of the argument. </param>
         /// <returns> IArgument{T} object. </returns>
-        public static IArgument<T> Create<T>(T argumentValue, string argumentName = null)
+        public static IArgument<T> Create<T>(T argumentValue, string argumentName)
         {
             return new Argument<T>(argumentValue, argumentName);
         }

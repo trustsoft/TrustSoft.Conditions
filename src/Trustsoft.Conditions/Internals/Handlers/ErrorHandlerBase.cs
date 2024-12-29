@@ -11,7 +11,7 @@ namespace Trustsoft.Conditions.Internals
     {
         #region " Implementation of IErrorHandler<T> "
 
-        public IArgumentValidator<T> Validator { get; set; }
+        public IArgumentValidator<T> Validator { get; set; } = null!;
 
         public abstract void Post(ViolationType violationType, string message);
 

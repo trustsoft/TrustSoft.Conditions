@@ -42,7 +42,7 @@ namespace Trustsoft.Conditions
         /// <returns> The specified <paramref name="validator" /> instance. </returns>
         public static IArgumentValidator<T> Evaluate<T>(this IArgumentValidator<T> validator,
                                                         Expression<Func<T, bool>> expression,
-                                                        string conditionDescription = null)
+                                                        string? conditionDescription = null)
         {
             bool valueIsValid = false;
 
@@ -60,7 +60,7 @@ namespace Trustsoft.Conditions
                                                     conditionDescription,
                                                     StringRes.LambdaXShouldHoldForValue,
                                                     false,
-                                                    expression);
+                                                    expression!);
                 validator.ErrorHandler.Post(msg);
             }
 

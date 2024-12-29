@@ -1,0 +1,47 @@
+﻿<#+ 
+  void Numbers_IsLessOrEqual_Render(string targetType)
+  {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
+#>
+#region " IsLessOrEqual "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsLessOrEqual")]
+[Description("Calling IsLessOrEqual on higher value should pass.")]
+public void IsLessOrEqual_ShouldPass_OnHigherValue()
+{
+    <#= targetType #> val = 3;
+    <#= targetType #> min = 10;
+    Requires.That(val).IsLessOrEqual(min);
+    Requires.That(val, "val").IsLessOrEqual(min);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsLessOrEqual")]
+[Description("Calling IsLessOrEqual on same value should pass.")]
+public void IsLessOrEqual_ShouldPass_OnSameValue()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 7;
+    Requires.That(val).IsLessOrEqual(min);
+    Requires.That(val, "val").IsLessOrEqual(min);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsLessOrEqual")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsLessOrEqual on lower value should fail.")]
+public void IsLessOrEqual_ShouldFail_OnLowerValue()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 1;
+    Requires.That(val).IsLessOrEqual(min);
+}
+
+#endregion
+<#+
+      this.PopIndent();
+      this.PopIndent();
+  }
+#>

@@ -1,0 +1,47 @@
+﻿<#+ 
+  void Numbers_IsGreaterThan_Render(string targetType)
+  {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
+#>
+#region " IsGreaterThan "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsGreaterThan")]
+[Description("Calling IsGreaterThan on lower value should pass.")]
+public void IsGreaterThan_ShouldPass_OnLowerValue()
+{
+    <#= targetType #> val = 3;
+    <#= targetType #> min = 1;
+    Requires.That(val).IsGreaterThan(min);
+    Requires.That(val, "val").IsGreaterThan(min);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsGreaterThan")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsGreaterThan on higher value should fail.")]
+public void IsGreaterThan_ShouldFail_OnHigherValue()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 10;
+    Requires.That(val).IsGreaterThan(min);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsGreaterThan")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsGreaterThan on same value should fail.")]
+public void IsGreaterThan_ShouldFail_OnSameValue()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 7;
+    Requires.That(val).IsGreaterThan(min);
+}
+
+#endregion
+<#+
+      this.PopIndent();
+      this.PopIndent();
+  }
+#>

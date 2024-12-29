@@ -1,0 +1,44 @@
+﻿<#+ 
+  void Numbers_IsOdd_Render(string targetType)
+  {
+       this.PushIndent("    ");
+       this.PushIndent("    ");
+#>
+#region " IsOdd "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[Description("Calling IsOdd on odd value should pass.")]
+public void IsOdd_ShouldPass_OnOddValue()
+{
+    <#= targetType #> val = 7;
+    Requires.That(val).IsOdd();
+    Requires.That(val, "val").IsOdd();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsOdd on non-odd value should fail.")]
+public void IsOdd_ShouldFail_OnNonOddValue()
+{
+    <#= targetType #> val = 4;
+    Requires.That(val).IsOdd();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsOdd on zero value should fail.")]
+public void IsOdd_ShouldFail_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsOdd();
+}
+
+#endregion
+<#+
+      this.PopIndent();
+      this.PopIndent();
+  }
+#>

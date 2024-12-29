@@ -32,7 +32,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is not empty.
         /// </exception>
         public static IArgumentValidator<T> IsEmpty<T>(this IArgumentValidator<T> validator,
-                                                       string conditionDescription = null) where T : IEnumerable
+                                                       string? conditionDescription = null) where T : IEnumerable
         {
             if (!validator.Argument.Value.IsEmpty())
             {
@@ -60,7 +60,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<IEnumerable<T>> IsEmpty<T>(
             this IArgumentValidator<IEnumerable<T>> validator,
-            string conditionDescription = null)
+            string? conditionDescription = null)
         {
             if (!validator.Argument.Value.IsEmpty())
             {
@@ -91,7 +91,7 @@ namespace Trustsoft.Conditions
         ///     Thrown when the given value of the specified <paramref name="validator" /> is empty.
         /// </exception>
         public static IArgumentValidator<T> IsNotEmpty<T>(this IArgumentValidator<T> validator,
-                                                          string conditionDescription = null)
+                                                          string? conditionDescription = null)
             where T : IEnumerable
         {
             if (!validator.Argument.Value.HasItems())
@@ -120,7 +120,7 @@ namespace Trustsoft.Conditions
         /// </exception>
         public static IArgumentValidator<IEnumerable<T>> IsNotEmpty<T>(
             this IArgumentValidator<IEnumerable<T>> validator,
-            string conditionDescription = null)
+            string? conditionDescription = null)
         {
             if (!validator.Argument.Value.HasItems())
             {
