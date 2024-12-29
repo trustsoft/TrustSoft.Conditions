@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="StringExtensionsUnitTest.cs" company="Trustsoft Ltd.">
+// <copyright file="StringExtensionsTests.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>20.11.2013</date>
@@ -15,7 +15,7 @@ namespace Trustsoft.Conditions.UnitTests
     // ReSharper disable InconsistentNaming
 
     [TestClass]
-    public class StringExtensionsUnitTest
+    public class StringExtensionsTests
     {
         #region " IsNullOrWhiteSpace "
 

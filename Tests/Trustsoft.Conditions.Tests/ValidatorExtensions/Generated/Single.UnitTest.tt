@@ -10,4 +10,4 @@
 <#
     this.TargetType = "Single";
 #>
-<#@ include file="Numbers.Fractional.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Fractional.ttinclude" #>

@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="CollectionHelpersUnitTest.cs" company="Trustsoft Ltd.">
+// <copyright file="CollectionExtensionsTests.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>14.01.2014</date>
@@ -16,7 +16,7 @@ namespace Trustsoft.Conditions.UnitTests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class CollectionExtensionsUnitTest
+    public class CollectionExtensionsTests
     {
         #region " IsEmpty "
 

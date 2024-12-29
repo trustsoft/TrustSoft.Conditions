@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="ExpressionExtensionsUnitTest.cs" company="Trustsoft Ltd.">
+// <copyright file="ExpressionExtensionsTests.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>21.02.2016</date>
@@ -17,7 +17,7 @@ namespace Trustsoft.Conditions.UnitTests
     // ReSharper disable InconsistentNaming
 
     [TestClass]
-    public class ExpressionExtensionsUnitTest
+    public class ExpressionExtensionsTests
     {
         #region " GetValue "
 

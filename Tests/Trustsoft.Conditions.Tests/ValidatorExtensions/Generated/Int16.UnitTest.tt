@@ -10,4 +10,4 @@
 <#
     this.TargetType = "Int16";
 #>
-<#@ include file="Numbers.Integer.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Integer.ttinclude" #>

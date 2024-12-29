@@ -1,0 +1,11 @@
+<#
+// --------------------------------------------------------------------------------------------------------
+//  Template: Defines file header and a few helper methods
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+// --------------------------------------------------------------------------------------------------------
+#>
+<#@ include file="FileHeader.ttinclude" #>
+<#@ include file="Features.ttinclude" #>

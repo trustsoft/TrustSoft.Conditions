@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="ValidateUnitTest.cs" company="Trustsoft Ltd.">
+// <copyright file="ValidateTests.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>22.11.2013</date>
@@ -12,7 +12,7 @@ namespace Trustsoft.Conditions.UnitTests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class ValidateUnitTest
+    public class ValidateTests
     {
         #region " Validate.That "
 

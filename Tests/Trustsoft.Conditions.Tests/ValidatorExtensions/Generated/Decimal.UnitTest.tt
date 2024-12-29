@@ -10,4 +10,4 @@
 <#
     this.TargetType = "Decimal";
 #>
-<#@ include file="Numbers.Fractional.ttinclude" #>
+<#@ include file=".\TypeGroups\Numbers.Fractional.ttinclude" #>

@@ -61,21 +61,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ExpressionExtensionsUnitTest.cs" />
+    <Compile Include="ExpressionExtensionsTests.cs" />
     <Compile Include="Helpers\Model.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequiresUnitTest.cs" />
-    <Compile Include="StringExtensionsUnitTest.cs" />
-    <Compile Include="StringResourcesUnitTest.cs">
+    <Compile Include="RequiresTests.cs" />
+    <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="StringResourcesTests.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CollectionExtensionsUnitTest.cs" />
-    <Compile Include="ValidateUnitTest.cs" />
-    <Compile Include="ValidatorExtensionsUnitTest.cs">
+    <Compile Include="CollectionExtensionsTests.cs" />
+    <Compile Include="ValidateTests.cs" />
+    <Compile Include="ValidatorExtensionsTests.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ValidatorExtensions\BooleanUnitTest.cs" />
+    <Compile Include="ValidatorExtensions\BooleanTests.cs" />
     <Compile Include="ValidatorExtensions\Generated\Byte.UnitTest.cs">
       <DependentUpon>Byte.UnitTest.tt</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -131,37 +131,40 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="ValidatorExtensions\IComparable{T}.UnitTest.cs" />
-    <Compile Include="ValidatorExtensions\ClassUnitTest.cs" />
-    <Compile Include="ValidatorExtensions\EvaluateUnitTest.cs" />
-    <Compile Include="ValidatorExtensions\GuidUnitTest.cs" />
-    <Compile Include="ValidatorExtensions\NullableUnitTest.cs" />
-    <Compile Include="ValidatorExtensions\StringUnitTest.cs" />
+    <Compile Include="ValidatorExtensions\ComparableTests.cs" />
+    <Compile Include="ValidatorExtensions\ClassTests.cs" />
+    <Compile Include="ValidatorExtensions\EvaluateTests.cs" />
+    <Compile Include="ValidatorExtensions\GuidTests.cs" />
+    <Compile Include="ValidatorExtensions\NullableTests.cs" />
+    <Compile Include="ValidatorExtensions\StringTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEqualTo.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsEven.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsGreaterThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsInRange.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsLessThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNegative.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotEqualTo.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotGreaterThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotInRange.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotLessOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotLessThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotNegative.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsNotPositive.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsOdd.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsOddEven.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Include\Numbers.IsPositive.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Numbers.Fractional.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Numbers.Integer.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Numbers.Integer.Unsigned.ttinclude" />
-    <Compile Include="ValidatorExtensions\IEnumerable.UnitTest.cs" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotPositive.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOdd.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOddEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsPositive.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\Base.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\Features.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\FileHeader.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Fractional.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.Unsigned.ttinclude" />
+    <Compile Include="ValidatorExtensions\EnumerableTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj">
@@ -218,6 +221,7 @@
       <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

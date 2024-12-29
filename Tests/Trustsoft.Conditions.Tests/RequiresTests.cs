@@ -1,5 +1,5 @@
 ﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="ValidateUnitTest.cs" company="Trustsoft Ltd.">
+// <copyright file="RequiresTests.cs" company="Trustsoft Ltd.">
 //     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
 // </copyright>
 // <date>21.02.2016</date>
@@ -14,7 +14,7 @@ namespace Trustsoft.Conditions.UnitTests
     // ReSharper disable InconsistentNaming
 
     [TestClass]
-    public class RequiresUnitTest
+    public class RequiresTests
     {
         #region " Requires.That "
 

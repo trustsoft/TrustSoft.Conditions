@@ -20,22 +20,24 @@
 <#@ import namespace="System.Diagnostics" #>
 <#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ include file=".\Include\Numbers.IsEqualTo.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotEqualTo.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsGreaterOrEqual.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotGreaterOrEqual.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsGreaterThan.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotGreaterThan.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsInRange.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotInRange.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsLessOrEqual.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotLessOrEqual.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsLessThan.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotLessThan.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsPositive.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotPositive.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNegative.ttinclude" #>
-<#@ include file=".\Include\Numbers.IsNotNegative.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsEqualTo.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotEqualTo.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsGreaterOrEqual.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsGreaterThan.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotGreaterThan.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsInRange.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotInRange.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsLessOrEqual.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotLessOrEqual.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsLessThan.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotLessThan.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsPositive.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotPositive.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNegative.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsNotNegative.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsEven.ttinclude" #>
+<#@ include file=".\Methods\Numbers.IsOdd.ttinclude" #>
 <#
     var namespaceName = "Trustsoft.Conditions.Tests.ValidatorExtensions";
     IServiceProvider serviceProvider = (IServiceProvider)this.Host;
@@ -62,7 +64,6 @@ namespace <#= namespaceName #>
 
     #endregion
 
-    // ReSharper disable BuiltInTypeReferenceStyle
     // ReSharper disable InconsistentNaming
     // ReSharper disable ExpressionIsAlwaysNull
     // ReSharper disable ConditionIsAlwaysTrueOrFalse
@@ -102,13 +103,16 @@ namespace <#= namespaceName #>
         <# this.Numbers_IsNegative_Render(this.TargetType); #>
 
         <# this.Numbers_IsNotNegative_Render(this.TargetType); #>
+
+        <# this.Numbers_IsEven_Render(this.TargetType); #>
+
+        <# this.Numbers_IsOdd_Render(this.TargetType); #>
     }
 
     // ReSharper restore ConvertToConstant.Local
     // ReSharper restore ConditionIsAlwaysTrueOrFalse
     // ReSharper restore ExpressionIsAlwaysNull
     // ReSharper restore InconsistentNaming
-    // ReSharper restore BuiltInTypeReferenceStyle
 }
 <#+
   string TargetType = "Int32";
