@@ -8,17 +8,17 @@
 namespace Trustsoft.Conditions;
 
 /// <summary>
-///     Defines the type of exception that validator should throw.
+///   Defines the type of exception that validator should throw.
 /// </summary>
 public enum ViolationType
 {
     /// <summary>
-    ///     Validator should throw the default exception.
+    ///   Validator should throw the default exception.
     /// </summary>
     Default = 0,
 
     /// <summary>
-    ///     Validator should throw an exception type appropriate for values that are out of range.
+    ///   Validator should throw an exception type appropriate for values that are out of range.
     /// </summary>
     OutOfRange = 1
 }

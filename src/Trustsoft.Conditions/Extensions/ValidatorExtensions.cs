@@ -14,7 +14,7 @@ using System.Linq;
 using Trustsoft.Conditions.Internals;
 
 /// <summary>
-///     Contains extension methods for <see cref="IArgumentValidator{T}" />.
+///   Contains extension methods for <see cref="IArgumentValidator{T}" />.
 /// </summary>
 [Browsable(false)]
 [EditorBrowsable(EditorBrowsableState.Never)]
@@ -23,11 +23,11 @@ public static partial class ValidatorExtensions
     #region " GetErrors "
 
     /// <summary>
-    ///     Gets all errors if any.
+    ///   Gets all errors if any.
     /// </summary>
     /// <typeparam name="T"> The type of the given value of the specified <paramref name="validator" />. </typeparam>
     /// <param name="validator">
-    ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
+    ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
     /// </param>
     /// <returns> The list of errors. </returns>
     public static IEnumerable<KeyValuePair<ViolationType, string>> GetErrors<T>(
@@ -46,11 +46,11 @@ public static partial class ValidatorExtensions
     #region " IsValid "
 
     /// <summary>
-    ///     Checks whether all conditions are met.
+    ///   Checks whether all conditions are met.
     /// </summary>
     /// <typeparam name="T"> The type of the given value of the specified <paramref name="validator" />. </typeparam>
     /// <param name="validator">
-    ///     The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
+    ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
     /// </param>
     /// <returns> <c> true </c> if all conditions was met; otherwise false. </returns>
     public static bool IsValid<T>(this IArgumentValidator<T> validator)

@@ -17,8 +17,8 @@ internal abstract class ErrorHandlerBase<T> : IErrorHandler<T>
 
     public void Post(string message)
     {
-            this.Post(ViolationType.Default, message);
-        }
+        this.Post(ViolationType.Default, message);
+    }
 
     #endregion
 }

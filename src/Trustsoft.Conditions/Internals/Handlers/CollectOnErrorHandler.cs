@@ -21,7 +21,7 @@ internal class CollectOnErrorHandler<T> : ErrorHandlerBase<T>
     #region " Public Methods "
 
     /// <summary>
-    ///     Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
+    ///   Posts the error of specified <paramref name="violationType"> type </paramref> to handler.
     /// </summary>
     /// <param name="violationType"> The type of violation. </param>
     /// <param name="message"> The error message. </param>

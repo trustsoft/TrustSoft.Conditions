@@ -17,12 +17,13 @@ internal static class ExpressionExtensions
 
     public static string GetName<T>(this Expression<Func<T>> expression)
     {
-            if (expression.Body is MemberExpression memberExpression)
-            {
-                return memberExpression.Member.Name;
-            }
-            throw new InvalidOperationException("Unable to get name from expression");
+        if (expression.Body is MemberExpression memberExpression)
+        {
+            return memberExpression.Member.Name;
         }
+
+        throw new InvalidOperationException("Unable to get name from expression");
+    }
 
     #endregion
 
@@ -30,21 +31,23 @@ internal static class ExpressionExtensions
 
     public static T GetValue<T>(this Expression<Func<T>> expression)
     {
-            var memberExpression = (MemberExpression)expression.Body;
-            object value;
-            if (memberExpression.Expression.NodeType == ExpressionType.Constant)
-            {
-                var constantExpression = (ConstantExpression)memberExpression.Expression;
-                value = memberExpression.Member.MemberType == MemberTypes.Property
-                            ? ((PropertyInfo)memberExpression.Member).GetValue(constantExpression.Value, null)
-                            : ((FieldInfo)memberExpression.Member).GetValue(constantExpression.Value);
-            }
-            else
-            {
-                value = expression.Compile().DynamicInvoke();
-            }
-            return (T)value;
+        var memberExpression = (MemberExpression)expression.Body;
+        object value;
+
+        if (memberExpression.Expression.NodeType == ExpressionType.Constant)
+        {
+            var constantExpression = (ConstantExpression)memberExpression.Expression;
+            value = memberExpression.Member.MemberType == MemberTypes.Property
+                    ? ((PropertyInfo)memberExpression.Member).GetValue(constantExpression.Value, null)
+                    : ((FieldInfo)memberExpression.Member).GetValue(constantExpression.Value);
         }
+        else
+        {
+            value = expression.Compile().DynamicInvoke();
+        }
+
+        return (T)value;
+    }
 
     #endregion
 }

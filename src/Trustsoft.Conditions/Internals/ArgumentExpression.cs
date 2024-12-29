@@ -15,26 +15,26 @@ internal class ArgumentExpression<T> : IArgument<T>
     #region " Constructors "
 
     /// <summary>
-    ///     Initializes a new instance of the <see cref="ArgumentExpression{T}" /> class.
+    ///   Initializes a new instance of the <see cref="ArgumentExpression{T}" /> class.
     /// </summary>
     public ArgumentExpression(Expression<Func<T>> expression)
     {
-            this.Name = expression.GetName();
-            this.Value = expression.GetValue();
-        }
+        this.Name = expression.GetName();
+        this.Value = expression.GetValue();
+    }
 
     #endregion
 
     #region " Implementation of IArgument<T> "
 
     /// <summary>
-    ///     Gets the name of argument.
+    ///   Gets the name of argument.
     /// </summary>
     /// <value> The name of argument. </value>
     public string Name { get; }
 
     /// <summary>
-    ///     Gets the value of argument.
+    ///   Gets the value of argument.
     /// </summary>
     /// <value> The value of argument. </value>
     public T Value { get; }

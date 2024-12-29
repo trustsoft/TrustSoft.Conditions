@@ -13,14 +13,14 @@ using System.Linq.Expressions;
 using Trustsoft.Conditions.Internals;
 
 /// <summary>
-///     Provides ability to create <see cref="IArgument{T}" /> objects.
+///   Provides ability to create <see cref="IArgument{T}" /> objects.
 /// </summary>
 public static class ArgumentFactory
 {
     #region " Public Methods "
 
     /// <summary>
-    ///     Creates <see cref="IArgument{T}" /> object from specified value and name.
+    ///   Creates <see cref="IArgument{T}" /> object from specified value and name.
     /// </summary>
     /// <typeparam name="T"> The type of argument's value. </typeparam>
     /// <param name="argumentValue"> The value of the argument. </param>
@@ -32,7 +32,7 @@ public static class ArgumentFactory
     }
 
     /// <summary>
-    ///     Creates <see cref="IArgument{T}" /> object from the specified expression.
+    ///   Creates <see cref="IArgument{T}" /> object from the specified expression.
     /// </summary>
     /// <typeparam name="T"> The type of argument's value. </typeparam>
     /// <param name="expression"> The argument expression. </param>

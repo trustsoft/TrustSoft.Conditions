@@ -8,19 +8,19 @@
 namespace Trustsoft.Conditions;
 
 /// <summary>
-///     Represents an argument.
+///   Represents an argument.
 /// </summary>
 /// <typeparam name="T"> The type of value of argument. </typeparam>
 public interface IArgument<out T> : IFluentSyntax
 {
     /// <summary>
-    ///     Gets the name of the current <see cref="IArgument{T}" /> object.
+    ///   Gets the name of the current <see cref="IArgument{T}" /> object.
     /// </summary>
     /// <value> The name of argument. </value>
     string Name { get; }
 
     /// <summary>
-    ///     Gets the value of the current <see cref="IArgument{T}" /> object.
+    ///   Gets the value of the current <see cref="IArgument{T}" /> object.
     /// </summary>
     /// <value> The value of argument. </value>
     T Value { get; }

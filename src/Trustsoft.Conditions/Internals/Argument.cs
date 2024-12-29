@@ -12,7 +12,7 @@ internal class Argument<T> : IArgument<T>
     #region " Constructors "
 
     /// <summary>
-    ///     Initializes a new instance of the <see cref="Argument{T}" /> class.
+    ///   Initializes a new instance of the <see cref="Argument{T}" /> class.
     /// </summary>
     public Argument(T value, string name)
     {
@@ -25,13 +25,13 @@ internal class Argument<T> : IArgument<T>
     #region " Implementation of IArgument<T> "
 
     /// <summary>
-    ///     Gets the name of argument.
+    ///   Gets the name of argument.
     /// </summary>
     /// <value> The name of argument. </value>
     public string Name { get; }
 
     /// <summary>
-    ///     Gets the value of argument.
+    ///   Gets the value of argument.
     /// </summary>
     /// <value> The value of argument. </value>
     public T Value { get; }
