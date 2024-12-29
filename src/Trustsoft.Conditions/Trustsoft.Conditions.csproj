@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests"/>
-    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.Sdk"/>
-    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.TestProject"/>
+    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests" />
+    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.Sdk" />
+    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.TestProject" />
   </ItemGroup>
   
   <ItemGroup>
