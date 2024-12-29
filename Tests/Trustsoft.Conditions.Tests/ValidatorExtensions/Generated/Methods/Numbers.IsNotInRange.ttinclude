@@ -1,8 +1,6 @@
-﻿<#+ 
-  void Numbers_IsNotInRange_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsNotInRange_Render(string targetType)
+    {
 #>
 #region " IsNotInRange "
 
@@ -32,7 +30,5 @@ public void IsNotInRange_ShouldFail_OnValueInRange()
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

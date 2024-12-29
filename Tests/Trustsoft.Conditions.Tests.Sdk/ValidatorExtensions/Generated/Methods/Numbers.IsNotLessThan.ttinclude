@@ -1,8 +1,6 @@
-﻿<#+ 
-  void Numbers_IsNotLessThan_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsNotLessThan_Render(string targetType)
+    {
 #>
 #region " IsNotLessThan "
 
@@ -41,7 +39,5 @@ public void IsNotLessThan_ShouldFail_OnHigherValue()
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

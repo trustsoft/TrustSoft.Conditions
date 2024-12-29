@@ -18,7 +18,9 @@
     <TestProjectType>UnitTest</TestProjectType>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -28,6 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
@@ -36,18 +39,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
+  
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
+  
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
       <ItemGroup>
@@ -60,26 +63,106 @@
       </ItemGroup>
     </Otherwise>
   </Choose>
+
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  
   <ItemGroup>
-    <Compile Include="ExpressionExtensionsTests.cs" />
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj">
+      <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
+      <Name>Trustsoft.Conditions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Compile Include="Helpers\Model.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotPositive.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOdd.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOddEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsPositive.ttinclude" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\T4\Base.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\Features.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\FileHeader.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Fractional.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.Unsigned.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CollectionExtensionsTests.cs" />
+    <Compile Include="ExpressionExtensionsTests.cs" />
     <Compile Include="RequiresTests.cs" />
     <Compile Include="StringExtensionsTests.cs" />
-    <Compile Include="StringResourcesTests.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CollectionExtensionsTests.cs" />
+    <Compile Include="StringResourcesTests.cs" />
     <Compile Include="ValidateTests.cs" />
-    <Compile Include="ValidatorExtensionsTests.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="ValidatorExtensionsTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Include="ValidatorExtensions\BooleanTests.cs" />
+    <Compile Include="ValidatorExtensions\ClassTests.cs" />
+    <Compile Include="ValidatorExtensions\ComparableTests.cs" />
+    <Compile Include="ValidatorExtensions\EnumerableTests.cs" />
+    <Compile Include="ValidatorExtensions\EvaluateTests.cs" />
+    <Compile Include="ValidatorExtensions\GuidTests.cs" />
+    <Compile Include="ValidatorExtensions\NullableTests.cs" />
+    <Compile Include="ValidatorExtensions\StringTests.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Compile Include="ValidatorExtensions\Generated\Byte.UnitTest.cs">
-      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
     </Compile>
     <Compile Include="ValidatorExtensions\Generated\Decimal.UnitTest.cs">
       <DependentUpon>Decimal.UnitTest.tt</DependentUpon>
@@ -131,115 +214,56 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="ValidatorExtensions\ComparableTests.cs" />
-    <Compile Include="ValidatorExtensions\ClassTests.cs" />
-    <Compile Include="ValidatorExtensions\EvaluateTests.cs" />
-    <Compile Include="ValidatorExtensions\GuidTests.cs" />
-    <Compile Include="ValidatorExtensions\NullableTests.cs" />
-    <Compile Include="ValidatorExtensions\StringTests.cs" />
   </ItemGroup>
+  
   <ItemGroup>
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEqualTo.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEven.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsInRange.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNegative.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotEqualTo.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotInRange.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessOrEqual.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessThan.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotNegative.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotPositive.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOdd.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOddEven.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsPositive.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\T4\Base.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\T4\Features.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\T4\FileHeader.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Fractional.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.ttinclude" />
-    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.Unsigned.ttinclude" />
-    <Compile Include="ValidatorExtensions\EnumerableTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj">
-      <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
-      <Name>Trustsoft.Conditions</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ValidatorExtensions\Generated\Byte.UnitTest.tt">
+    <None Include="ValidatorExtensions\Generated\Byte.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Decimal.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Decimal.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Decimal.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Double.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Double.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Int16.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int16.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Int32.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int32.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Int64.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int64.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\SByte.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\SByte.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\Single.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\Single.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\UInt16.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt16.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UInt16.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\UInt32.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt32.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UInt32.UnitTest.cs</LastGenOutput>
-    </Content>
-    <Content Include="ValidatorExtensions\Generated\UInt64.UnitTest.tt">
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt64.UnitTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup />
-  <Choose>
-    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
+  
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

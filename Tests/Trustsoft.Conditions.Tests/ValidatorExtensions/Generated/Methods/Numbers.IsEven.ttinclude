@@ -1,8 +1,6 @@
-﻿<#+ 
-  void Numbers_IsEven_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsEven_Render(string targetType)
+    {
 #>
 #region " IsEven "
 
@@ -37,7 +35,5 @@ public void IsEven_ShouldFail_OnNonEvenValue()
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

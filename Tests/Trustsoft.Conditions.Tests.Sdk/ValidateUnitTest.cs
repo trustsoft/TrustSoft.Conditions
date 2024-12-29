@@ -5,7 +5,7 @@
 // <date>22.11.2013</date>
 //------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
 
-namespace Trustsoft.Conditions.UnitTests
+namespace Trustsoft.Conditions.Tests
 {
     using System.Linq;
 

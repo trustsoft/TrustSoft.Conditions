@@ -1,10 +1,10 @@
 ﻿<#
 //  -------------------------------------------------------------------------------------------------------
 //  Template: Generates C# code for extension methods for IArgumentValidator<byte>
-//  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
 //  Links: 
-//          MSDN about developing T4 files: http://msdn.microsoft.com/en-us/library/bb126445.aspx
-//                                          http://msdn.microsoft.com/en-us/library/dd820620.aspx 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
 //  -------------------------------------------------------------------------------------------------------
 #>
 <#

@@ -1,8 +1,6 @@
-﻿<#+ 
-  void Numbers_IsOdd_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsOdd_Render(string targetType)
+    {
 #>
 #region " IsOdd "
 
@@ -38,7 +36,5 @@ public void IsOdd_ShouldFail_OnZeroValue()
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>

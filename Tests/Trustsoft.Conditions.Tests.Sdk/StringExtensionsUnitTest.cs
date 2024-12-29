@@ -8,7 +8,7 @@
 #pragma warning disable CS8604 // Possible null reference argument.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
-namespace Trustsoft.Conditions.UnitTests
+namespace Trustsoft.Conditions.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,8 +1,6 @@
-﻿<#+ 
-  void Numbers_IsNegative_Render(string targetType)
-  {
-       this.PushIndent("    ");
-       this.PushIndent("    ");
+﻿<#+
+    void Numbers_IsNegative_Render(string targetType)
+    {
 #>
 #region " IsNegative "
 
@@ -38,7 +36,5 @@ public void IsNegative_ShouldFail_OnZeroValue()
 
 #endregion
 <#+
-      this.PopIndent();
-      this.PopIndent();
-  }
+    }
 #>
