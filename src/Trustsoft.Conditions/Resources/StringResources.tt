@@ -1,0 +1,98 @@
+﻿<#
+// --------------------------------------------------------------------------------------------------------
+//  Template: Generates C# code to provide strongly-typed access to resx files
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+// --------------------------------------------------------------------------------------------------------
+#>
+<#@ include file="..\T4\Base.ttinclude" #>
+<#@ assembly name="System.Windows.Forms" #>
+<#@ import namespace="System.Resources" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+    string Namespace = "Trustsoft.Conditions";
+#>
+namespace <#= Namespace #>;
+
+using System.Diagnostics;
+using System.Globalization;
+using System.Resources;
+
+internal static class <#= ClassName #>
+{
+    #region " String Resource Keys "
+
+    <# this.GenerateResourceKeys(this.GetResourceNames()); #>
+
+    #endregion
+        
+    private static readonly ResourceManager ResManager;
+
+    static <#= ClassName #>()
+    {
+        var type = typeof(<#= ClassName #>);
+        ResManager = new ResourceManager($"{type.Namespace}.Resources.MessageStrings", type.Assembly);
+    }
+
+    /// <summary>
+    ///   Returns resource string by specified <paramref name="key" />.
+    /// </summary>
+    /// <param name="key"> The resource key. </param>
+    /// <returns> The resource value with specified <paramref name="key" />. </returns>
+    internal static string GetResourceByKey(string key)
+    {
+        return ResManager.GetString(key);
+    }
+
+    /// <summary>
+    ///   Returns formatted string resource value with specified <paramref name="args" /> in a culture-specific way.
+    /// </summary>
+    /// <param name="resourceKey"> The resource key. </param>
+    /// <param name="args"> The arguments. </param>
+    /// <returns> The formatted string value. </returns>
+    internal static string GetFormattedString(string resourceKey, params object[] args)
+    {
+        string format = GetResourceByKey(resourceKey);
+
+        Debug.Assert(format != null, $"StringRes.GetFormattedString() returned null for resourceKey={resourceKey}");
+
+        if (args == null)
+        {
+            return format;
+        }
+
+        return string.Format(CultureInfo.CurrentCulture, format, args);
+    }
+}
+<#+
+    //private const string Namespace = "Trustsoft.Conditions";
+    private const string ClassName = "StringRes";
+    private const string ResourceFileName = "MessageStrings.resx";
+    
+    private IEnumerable<string> GetResourceNames()
+    {
+        var templateFilePath = Path.GetDirectoryName(this.Host.TemplateFile);
+        var resxFile = Path.Combine(templateFilePath!, ResourceFileName);
+        using var resxReader = new ResXResourceReader(resxFile);
+        return from DictionaryEntry entry in resxReader
+               select entry.Key.ToString();
+    }
+
+    private void GenerateResourceKeyConstant(string key)
+    {
+        this.WriteLine($"internal const string {key} = \"{key}\";");
+    }
+
+    private void GenerateResourceKeys(IEnumerable<string> keys)
+    {
+        this.PushIndent("\t");
+        foreach (var key in keys)
+        {
+            this.GenerateResourceKeyConstant(key);
+        }
+        this.PopIndent();
+    }
+#>

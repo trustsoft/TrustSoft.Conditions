@@ -1,0 +1,13 @@
+﻿<#
+//  -------------------------------------------------------------------------------------------------------
+//  Template: Generates C# code for extension methods for IArgumentValidator<decimal>
+//  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
+//  Links: 
+//          MSDN about developing T4 files: https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//                                          http://msdn.microsoft.com/en-us/library/dd820620.aspx 
+//  -------------------------------------------------------------------------------------------------------
+#>
+<#
+    this.targetType = "decimal";
+#>
+<#@ include file=".\TypeGroups\Numbers.Fractional.ttinclude" #>

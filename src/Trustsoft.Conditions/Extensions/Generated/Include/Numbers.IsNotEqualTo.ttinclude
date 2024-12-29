@@ -1,0 +1,52 @@
+﻿<#+ 
+  void Numbers_IsNotEqualTo_Render(string targetType)
+  {
+#>
+#region " IsNotEqualTo "
+
+/// <summary>
+///   Checks whether the given value is unequal to the specified <paramref name="value" />.
+/// </summary>
+/// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
+/// <param name="value"> The invalid value to compare with. </param>
+/// <param name="conditionDescription"> The description of the condition that should hold. </param>
+/// <returns> The specified <paramref name="validator" /> instance. </returns>
+/// <exception cref="ArgumentException">
+///   Throws or collects the error when the value of the specified
+///   <paramref name="validator" /> is equal to <paramref name="value" />.
+/// </exception>
+public static IArgumentValidator<<#= targetType #>> IsNotEqualTo(this IArgumentValidator<<#= targetType #>> validator,
+<#+
+        // align the rest of arguments
+        var left = targetType.Length + 48;
+        var indent = new string(' ', left);
+        this.WriteLine($"{indent}{targetType} value,");
+        this.WriteLine($"{indent}string? conditionDescription = null)");
+#>
+{
+<#+
+    if (targetType is "float" or "double" or "decimal")
+    {
+        this.PushIndent("\t");
+        this.WriteLine("// ReSharper disable once CompareOfFloatsByEqualityOperator");
+        this.PopIndent();
+    }
+#>
+    if (validator.Argument.Value == value)
+    {
+        var msg = MessageBuilder.Combine(validator.Argument,
+                                         conditionDescription,
+                                         StringRes.ValueShouldBeUnequalToX,
+                                         true,
+                                         value);
+
+        validator.ErrorHandler.Post(msg);
+    }
+
+    return validator;
+}
+
+#endregion
+<#+
+  }
+#>

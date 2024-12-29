@@ -1,0 +1,13 @@
+﻿<#
+//  -------------------------------------------------------------------------------------------------------
+//  Template: Generates C# code for extension methods for IArgumentValidator<double>
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+//  -------------------------------------------------------------------------------------------------------
+#>
+<#
+    this.TargetType = "Double";
+#>
+<#@ include file=".\TypeGroups\Numbers.Fractional.ttinclude" #>

@@ -1,0 +1,75 @@
+﻿<#
+//  -------------------------------------------------------------------------------------------------------
+//  Template: Generates C# code for extension methods for IArgumentValidator<numeric unsigned integer type>
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+//  -------------------------------------------------------------------------------------------------------
+#>
+<#@ include file="..\T4\Base.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsEqualTo.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotEqualTo.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsGreaterOrEqual.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsGreaterThan.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotGreaterThan.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsInRange.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotInRange.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsLessOrEqual.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotLessOrEqual.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsLessThan.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotLessThan.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsPositive.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotPositive.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNegative.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsNotNegative.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsEven.ttinclude" #>
+<#@ include file="..\Methods\Numbers.IsOdd.ttinclude" #>
+<#
+    const string namespaceName = "Trustsoft.Conditions.Tests.ValidatorExtensions";
+#>
+namespace <#= namespaceName #>;
+
+using System;
+
+using Trustsoft.Conditions;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+[TestClass]
+public class <#= this.TargetType #>ValidatorExtensions
+{
+<# this.PushIndent("\t"); #>
+<# this.Numbers_IsInRange_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotInRange_Render(this.TargetType); #>
+
+<# this.Numbers_IsGreaterThan_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotGreaterThan_Render(this.TargetType); #>
+
+<# this.Numbers_IsGreaterOrEqual_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotGreaterOrEqual_Render(this.TargetType); #>
+
+<# this.Numbers_IsLessThan_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotLessThan_Render(this.TargetType); #>
+
+<# this.Numbers_IsLessOrEqual_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotLessOrEqual_Render(this.TargetType); #>
+
+<# this.Numbers_IsEqualTo_Render(this.TargetType); #>
+
+<# this.Numbers_IsNotEqualTo_Render(this.TargetType); #>
+
+<# this.Numbers_IsEven_Render(this.TargetType); #>
+
+<# this.Numbers_IsOdd_Render(this.TargetType); #>
+<# this.PopIndent(); #>
+}
+<#+
+    string TargetType = "Int32";
+#>
