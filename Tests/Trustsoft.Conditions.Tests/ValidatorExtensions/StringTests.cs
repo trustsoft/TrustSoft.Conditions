@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="String.UnitTest.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>19.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="StringTests.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>19.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 #pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.

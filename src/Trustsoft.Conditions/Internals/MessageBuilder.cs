@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="MessageBuilder.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>18.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="MessageBuilder.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>18.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 namespace Trustsoft.Conditions.Internals;
 
@@ -35,7 +35,7 @@ internal static class MessageBuilder
             return msg;
         }
 
-        return InjectValues(argument, conditionDescription!, args);
+        return InjectValues(argument, conditionDescription, args);
     }
 
     private static string GetActualValueMessage<T>(this IArgument<T> argument)

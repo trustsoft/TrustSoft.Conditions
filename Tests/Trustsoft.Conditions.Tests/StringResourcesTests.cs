@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="StringResourcesTests.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>10.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="StringResourcesTests.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>10.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 

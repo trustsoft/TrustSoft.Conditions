@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="CollectionExtensionsTests.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>14.01.2014</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="CollectionExtensionsTests.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>14.01.2014</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 // ReSharper disable UseCollectionExpression
 #pragma warning disable CS8604 // Possible null reference argument.

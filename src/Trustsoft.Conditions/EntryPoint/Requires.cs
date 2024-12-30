@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="Requires.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>18.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="Requires.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>18.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 namespace Trustsoft.Conditions;
 
@@ -20,8 +20,7 @@ public static class Requires
 {
     /// <summary>
     ///   Creates the validator for specified <paramref name="value"/>
-    ///   that will throw an exception,
-    ///   when any of conditions is not met.
+    ///   that will throw an exception, when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="value"> The value of the argument. </param>
@@ -34,8 +33,8 @@ public static class Requires
     }
 
     /// <summary>
-    ///   Creates the validator for specified argument expression that will throw an exception,
-    ///   when any of conditions is not met.
+    ///   Creates the validator for specified argument expression
+    ///   that will throw an exception, when any of conditions is not met.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="expression"> The argument expression. </param>

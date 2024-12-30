@@ -1,12 +1,13 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="CollectionHelpers.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>21.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="CollectionExtensions.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>21.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 namespace Trustsoft.Conditions;
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +22,18 @@ internal static class CollectionExtensions
     /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
     public static bool HasItems(this IEnumerable source)
     {
-        return source != null && source.GetEnumerator().MoveNext();
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+        if (source == null)
+        {
+            return false;
+        }
+
+        var enumerator = source.GetEnumerator();
+
+        using (enumerator as IDisposable)
+        {
+            return enumerator.MoveNext();
+        }
     }
 
     /// <summary>
@@ -32,6 +44,7 @@ internal static class CollectionExtensions
     /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
     public static bool HasItems<T>(this IEnumerable<T> source)
     {
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
         if (source == null)
         {
             return false;

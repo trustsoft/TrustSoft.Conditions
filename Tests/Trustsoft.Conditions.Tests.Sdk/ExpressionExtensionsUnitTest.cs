@@ -1,16 +1,13 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="ExpressionExtensionsUnitTest.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>21.02.2016</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="ExpressionExtensionsUnitTest.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>21.02.2016</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 namespace Trustsoft.Conditions.UnitTests;
 
-using System;
 using System.Linq.Expressions;
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Trustsoft.Conditions.UnitTests.Helpers;
 

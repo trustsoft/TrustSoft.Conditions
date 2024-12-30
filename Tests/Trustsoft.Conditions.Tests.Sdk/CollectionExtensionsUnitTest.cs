@@ -1,19 +1,18 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="CollectionHelpersUnitTest.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>14.01.2014</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="CollectionExtensionsUnitTest.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>14.01.2014</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 // ReSharper disable UseCollectionExpression
+
 #pragma warning disable CS8604 // Possible null reference argument.
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
 namespace Trustsoft.Conditions.UnitTests;
 
 using System.Collections;
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [TestClass]
 public class CollectionExtensionsUnitTest
@@ -26,7 +25,9 @@ public class CollectionExtensionsUnitTest
     public void IsEmpty_ShouldReturnTrue_OnEmptySequence()
     {
         // Arrange
-        string[] arg1 = { };
+        string[] arg1 =
+        {
+        };
         IEnumerable arg2 = arg1;
 
         // Act/Assert
@@ -54,7 +55,10 @@ public class CollectionExtensionsUnitTest
     public void IsEmpty_ShouldReturnFalse_OnNonEmptySequence()
     {
         // Arrange
-        int[] arg1 = { 5 };
+        int[] arg1 =
+        {
+            5
+        };
         IEnumerable arg2 = arg1;
 
         // Act/Assert
@@ -72,7 +76,10 @@ public class CollectionExtensionsUnitTest
     public void HasItems_ShouldReturnTrue_OnNonEmptySequence()
     {
         // Arrange
-        int[] arg1 = { 5 };
+        int[] arg1 =
+        {
+            5
+        };
         IEnumerable arg2 = arg1;
 
         // Act/Assert
@@ -86,7 +93,9 @@ public class CollectionExtensionsUnitTest
     public void HasItems_ShouldReturnFalse_OnEmptySequence()
     {
         // Arrange
-        int[] arg1 = { };
+        int[] arg1 =
+        {
+        };
         IEnumerable arg2 = arg1;
 
         // Act/Assert

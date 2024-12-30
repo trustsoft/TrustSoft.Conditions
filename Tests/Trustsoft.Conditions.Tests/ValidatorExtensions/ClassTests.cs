@@ -1,9 +1,9 @@
-﻿//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
-// <copyright file="ClassTests.cs" company="Trustsoft Ltd.">
-//     Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.
-// </copyright>
-// <date>18.11.2013</date>
-//------------------------Copyright © 2012-2018 Trustsoft Ltd. All rights reserved.------------------------
+﻿// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
+//  <copyright file="ClassTests.cs" author="M.Sukhanov">
+//      Copyright © 2024 M.Sukhanov. All rights reserved.
+//  </copyright>
+//  <date>18.11.2013</date>
+// -------------------------Copyright © 2024 M.Sukhanov. All rights reserved.-------------------------
 
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
 
@@ -13,8 +13,7 @@ using System;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Trustsoft.Conditions.UnitTests.Helpers;
-
+using Trustsoft.Conditions.Tests.Helpers;
 
 [TestClass]
 public class ClassTests

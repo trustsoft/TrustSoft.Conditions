@@ -25,7 +25,7 @@
 <#@ include file="..\Methods\Numbers.IsNegative.ttinclude" #>
 <#@ include file="..\Methods\Numbers.IsNotNegative.ttinclude" #>
 <#
-    const string namespaceName = "Trustsoft.Conditions.Tests.ValidatorExtensions";
+    const string namespaceName = "Trustsoft.Conditions.UnitTests.ValidatorExtensions";
 #>
 namespace <#= namespaceName #>;
 
