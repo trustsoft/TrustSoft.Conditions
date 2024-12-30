@@ -7,79 +7,78 @@
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
-namespace Trustsoft.Conditions.Tests
+namespace Trustsoft.Conditions.UnitTests;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+[TestClass]
+public class StringResourcesUnitTest
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
+    private static Type srType;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    [TestClass]
-    public class StringResourcesUnitTest
+    private static IEnumerable<FieldInfo> GetStringFields()
     {
-        private static Type srType;
+        Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
 
-        private static IEnumerable<FieldInfo> GetStringFields()
+        const BindingFlags fieldFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+
+        var resourceFields = from field in srType.GetFields(fieldFlags)
+                             where field.FieldType == typeof(string)
+                             select field;
+
+        // ReSharper disable PossibleMultipleEnumeration
+        Assert.AreNotEqual(0, resourceFields.Count(), "The fields of StringRes could not be retrieved.");
+
+        return resourceFields;
+        // ReSharper restore PossibleMultipleEnumeration
+    }
+
+    [ClassInitialize]
+    public static void Initialize(TestContext context)
+    {
+        var query = from conditionType in typeof(ArgumentFactory).Assembly.GetTypes()
+                    where conditionType.Name == "StringRes"
+                    select conditionType;
+
+        srType = query.Single();
+
+        Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
+    }
+
+    [TestMethod]
+    [TestCategory("Resources")]
+    [Description("Validates whether the defined string constants in StringRes class have a value that equals it's name.")]
+    public void Validate_StringResources_Method1()
+    {
+        foreach (var field in GetStringFields())
         {
-            Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
+            string resourceKey = (string)field.GetValue(null);
 
-            const BindingFlags fieldFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+            // The value should be equal to its name.
+            string message = $"Name of StringRes.{field.Name} should match it's value";
 
-            var resourceFields = from field in srType.GetFields(fieldFlags)
-                                 where field.FieldType == typeof(string)
-                                 select field;
-
-            // ReSharper disable PossibleMultipleEnumeration
-            Assert.AreNotEqual(0, resourceFields.Count(), "The fields of StringRes could not be retrieved.");
-
-            return resourceFields;
-            // ReSharper restore PossibleMultipleEnumeration
+            Assert.AreEqual(field.Name, resourceKey, message);
         }
+    }
 
-        [ClassInitialize]
-        public static void Initialize(TestContext context)
+    [TestMethod]
+    [TestCategory("Resources")]
+    [Description("Validates whether the defined string constants in StringRes class reference an existing string resource.")]
+    public void Validate_StringResources_Method2()
+    {
+        foreach (var field in GetStringFields())
         {
-            var query = from conditionType in typeof(ArgumentFactory).Assembly.GetTypes()
-                        where conditionType.Name == "StringRes"
-                        select conditionType;
+            string resourceKey = (string)field.GetValue(null);
+            string resourceValue = StringRes.GetResourceByKey(resourceKey);
 
-            srType = query.SingleOrDefault();
+            string assertExplanation = $"The resource with key '{resourceKey}' could not be found.";
 
-            Assert.IsNotNull(srType, "The type StringRes could not be found in the Trustsoft.Conditions assembly.");
-        }
-
-        [TestMethod]
-        [TestCategory("Resources")]
-        [Description("Validates whether the defined string consts in StringRes class have a value that equals it's name.")]
-        public void Validate_StringResources_Method1()
-        {
-            foreach (var field in GetStringFields())
-            {
-                string resourceKey = (string)field.GetValue(null);
-
-                // The value should be equal to it's name.
-                string message = $"Name of StringRes.{field.Name} should match it's value";
-
-                Assert.AreEqual(field.Name, resourceKey, message);
-            }
-        }
-
-        [TestMethod]
-        [TestCategory("Resources")]
-        [Description("Validates whether the defined string consts in StringRes class reference an existing string resource.")]
-        public void Validate_StringResources_Method2()
-        {
-            foreach (var field in GetStringFields())
-            {
-                string resourceKey = (string)field.GetValue(null);
-                string resourceValue = StringRes.GetResourceByKey(resourceKey);
-
-                string assertExplanation = $"The resource with key '{resourceKey}' could not be found.";
-
-                Assert.IsTrue(!string.IsNullOrEmpty(resourceValue), assertExplanation);
-            }
+            Assert.IsTrue(!string.IsNullOrEmpty(resourceValue), assertExplanation);
         }
     }
 }

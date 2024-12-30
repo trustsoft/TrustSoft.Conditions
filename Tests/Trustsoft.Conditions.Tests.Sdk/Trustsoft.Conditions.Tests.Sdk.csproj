@@ -8,7 +8,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <RootNamespace>Trustsoft.Conditions.Tests</RootNamespace>
+    <RootNamespace>Trustsoft.Conditions.UnitTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

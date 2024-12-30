@@ -15,10 +15,6 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
     using Trustsoft.Conditions.UnitTests.Helpers;
 
-    // ReSharper disable InconsistentNaming
-    // ReSharper disable ExpressionIsAlwaysNull
-    // ReSharper disable ConditionIsAlwaysTrueOrFalse
-
     [TestClass]
     public class ClassUnitTest
     {
@@ -338,8 +334,4 @@ namespace Trustsoft.Conditions.UnitTests.ValidatorExtensions
 
         #endregion
     }
-
-    // ReSharper restore ConditionIsAlwaysTrueOrFalse
-    // ReSharper restore ExpressionIsAlwaysNull
-    // ReSharper restore InconsistentNaming
 }
