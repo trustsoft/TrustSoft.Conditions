@@ -266,7 +266,7 @@ public static partial class ValidatorExtensions
         {
             var msg = MessageBuilder.Combine(validator.Argument,
                                              conditionDescription,
-                                             StringRes.ValueShouldBeUnequalToX,
+                                             StringRes.ValueShouldNotBeEqualToX,
                                              true,
                                              value);
 

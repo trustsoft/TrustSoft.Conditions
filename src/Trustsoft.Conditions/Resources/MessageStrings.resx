@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="GuidShouldBeEmpty" xml:space="preserve">
     <value>{name} should be Guid.Empty</value>
@@ -126,20 +126,11 @@
   <data name="LambdaXShouldHoldForValue" xml:space="preserve">
     <value>'{param1}' should hold for {value}</value>
   </data>
-  <data name="StringShouldBe1CharacterLong" xml:space="preserve">
-    <value>{name} should be 1 character long</value>
-  </data>
   <data name="StringShouldBeEmpty" xml:space="preserve">
     <value>{name} should be an empty string</value>
   </data>
-  <data name="StringShouldBeLongerOrEqualTo1Character" xml:space="preserve">
-    <value>{name} should be longer or equal to 1 character</value>
-  </data>
   <data name="StringShouldBeLongerOrEqualToXCharacters" xml:space="preserve">
     <value>{name} should be longer or equal to {param1} characters</value>
-  </data>
-  <data name="StringShouldBeLongerThan1Character" xml:space="preserve">
-    <value>{name} should be longer than 1 character</value>
   </data>
   <data name="StringShouldBeLongerThanXCharacters" xml:space="preserve">
     <value>{name} should be longer than {param1} characters</value>
@@ -150,14 +141,8 @@
   <data name="StringShouldBeNullOrWhiteSpace" xml:space="preserve">
     <value>{name} should be null, empty or consists only of white-space characters.</value>
   </data>
-  <data name="StringShouldBeShorterOrEqualTo1Character" xml:space="preserve">
-    <value>{name} should be shorter or equal to 1 character</value>
-  </data>
   <data name="StringShouldBeShorterOrEqualToXCharacters" xml:space="preserve">
     <value>{name} should be shorter or equal to {param1} characters</value>
-  </data>
-  <data name="StringShouldBeShorterThan1Character" xml:space="preserve">
-    <value>{name} should be shorter than 1 character</value>
   </data>
   <data name="StringShouldBeShorterThanXCharacters" xml:space="preserve">
     <value>{name} should be shorter than {param1} characters</value>
@@ -173,9 +158,6 @@
   </data>
   <data name="StringShouldMatchPattern" xml:space="preserve">
     <value>{name} should match {param1} pattern</value>
-  </data>
-  <data name="StringShouldNotBe1CharacterLong" xml:space="preserve">
-    <value>{name} should not be 1 character long</value>
   </data>
   <data name="StringShouldNotBeEmpty" xml:space="preserve">
     <value>{name} should not be an empty string</value>
@@ -213,9 +195,6 @@
   <data name="ValueShouldBeAnOddNumber" xml:space="preserve">
     <value>{name} should be an odd number</value>
   </data>
-  <data name="ValueShouldBeANumber" xml:space="preserve">
-    <value>{name} should be a number</value>
-  </data>
   <data name="ValueShouldBeBetweenXAndY" xml:space="preserve">
     <value>{name} should be between {param1} and {param2}</value>
   </data>
@@ -228,20 +207,11 @@
   <data name="ValueShouldBeGreaterThanX" xml:space="preserve">
     <value>{name} should be greater than {param1}</value>
   </data>
-  <data name="ValueShouldBeInfinity" xml:space="preserve">
-    <value>{name} should be infinity</value>
-  </data>
-  <data name="ValueShouldBeNegativeInfinity" xml:space="preserve">
-    <value>{name} should be negative infinity</value>
-  </data>
   <data name="ValueShouldBeNull" xml:space="preserve">
     <value>{name} should be null</value>
   </data>
   <data name="ValueShouldBeOfTypeX" xml:space="preserve">
     <value>{name} should be of type {param1}</value>
-  </data>
-  <data name="ValueShouldBePositiveInfinity" xml:space="preserve">
-    <value>{name} should be positive infinity</value>
   </data>
   <data name="ValueShouldBeSmallerThanOrEqualToX" xml:space="preserve">
     <value>{name} should be smaller than or equal to {param1}</value>
@@ -249,20 +219,11 @@
   <data name="ValueShouldBeSmallerThanX" xml:space="preserve">
     <value>{name} should be smaller than {param1}</value>
   </data>
-  <data name="ValueShouldBeTrue" xml:space="preserve">
-    <value>{name} should be true</value>
-  </data>
-  <data name="ValueShouldBeUnequalToX" xml:space="preserve">
+  <data name="ValueShouldNotBeEqualToX" xml:space="preserve">
     <value>{name} should be unequal to {param1}</value>
-  </data>
-  <data name="ValueShouldBeValid" xml:space="preserve">
-    <value>{name} should be valid</value>
   </data>
   <data name="ValueShouldBeX" xml:space="preserve">
     <value>{name} should be {param1}</value>
-  </data>
-  <data name="ValueShouldNotBeANumber" xml:space="preserve">
-    <value>{name} should not be a number</value>
   </data>
   <data name="ValueShouldNotBeBetweenXAndY" xml:space="preserve">
     <value>{name} should not be between {param1} and {param2}</value>
@@ -273,20 +234,11 @@
   <data name="ValueShouldNotBeGreaterThanX" xml:space="preserve">
     <value>{name} should not be greater than {param1}</value>
   </data>
-  <data name="ValueShouldNotBeInfinity" xml:space="preserve">
-    <value>{name} should not be infinity</value>
-  </data>
-  <data name="ValueShouldNotBeNegativeInfinity" xml:space="preserve">
-    <value>{name} should not be negative infinity</value>
-  </data>
   <data name="ValueShouldNotBeNull" xml:space="preserve">
     <value>{name} should not be null</value>
   </data>
   <data name="ValueShouldNotBeOfTypeX" xml:space="preserve">
     <value>{name} should not be of type {param1}</value>
-  </data>
-  <data name="ValueShouldNotBePositiveInfinity" xml:space="preserve">
-    <value>{name} should not be positive infinity</value>
   </data>
   <data name="ValueShouldNotBeSmallerThanOrEqualToX" xml:space="preserve">
     <value>{name} should not be smaller than or equal to {param1}</value>
