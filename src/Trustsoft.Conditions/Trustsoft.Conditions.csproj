@@ -1,17 +1,76 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90</TargetFrameworks>
-    <LangVersion>default</LangVersion>
+    <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90;netstandard2.0</TargetFrameworks>
+    <Product>Trustsoft Conditions Class Library</Product>
     <Nullable>enable</Nullable>
-    <NeutralLanguage>en</NeutralLanguage>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <VersionSuffix>rc1</VersionSuffix>
+    <LangVersion>latest</LangVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <NeutralLanguage>en-US</NeutralLanguage>
     <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Project Kind Detection -->
+  <PropertyGroup>
+    <IsTestProject>$(MSBuildProjectName.Contains('Test'))</IsTestProject>
+    <IsDemoProject>$(MSBuildProjectName.Contains('Demo'))</IsDemoProject>
+    <IsSampleProject>$(MSBuildProjectName.Contains('Sample'))</IsSampleProject>
+  </PropertyGroup>
+
+  <!-- NuGet Packaging -->
+  <PropertyGroup Condition="$(Configuration)=='Release'">
+    <Title>Fluent arguments validation methods by conditions.</Title>
+    <Description>Fluent methods for validating method arguments by conditions for .NET 3.5-9.0.</Description>
+    <Description>
+      Extensible method arguments validation library for .NET 3.5-9.0.
+      Validate method arguments with ease.
+    </Description>
+    <Authors>Trustsoft</Authors>
+    <IsPackable>true</IsPackable>
+    <IsPackable Condition="$(IsTestProject) Or $(IsDemoProject) Or $(IsSampleProject)">false</IsPackable>
+    <GeneratePackageOnBuild>$(IsPackable)</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageOutputPath>..\..\packages\</PackageOutputPath>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/trustsoft/Trustsoft.Conditions.git</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageTags>method;argument;validation;condition</PackageTags>
+    <PackageDescription>
+      <![CDATA[
+Extensible method arguments validation library for .NET 3.5-9.0.
+Validate method arguments with ease.
+            ]]>
+    </PackageDescription>
+    <PackageReleaseNotes>
+        ChangeLog
+        ---------
+        2.0.0-rc1 Add more targets.
+        1.0.1 Update string validations.
+    </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\logo.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Trustsoft.Conditions.csproj.DotSettings" />
     <InternalsVisibleTo Include="Trustsoft.Conditions.Tests" />
     <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.Sdk" />
-    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.TestProject" />
   </ItemGroup>
   
   <ItemGroup>
@@ -63,7 +122,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ValidatorExtensions.UInt64.cs</LastGenOutput>
     </None>
-    <None Remove="Trustsoft.Conditions.csproj.DotSettings" />
     <None Update="Resources\StringResources.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>StringResources.cs</LastGenOutput>
