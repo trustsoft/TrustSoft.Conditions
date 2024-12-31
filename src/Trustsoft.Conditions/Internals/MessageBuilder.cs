@@ -73,10 +73,9 @@ internal static class MessageBuilder
     }
 
     /// <summary>
-    ///   Makes the string readable.
+    ///   Makes the readable string.
     /// </summary>
     /// <param name="value"> The value. </param>
-    /// <returns> System.String. </returns>
     private static string MakeReadableString(this object? value)
     {
         if (value == null)

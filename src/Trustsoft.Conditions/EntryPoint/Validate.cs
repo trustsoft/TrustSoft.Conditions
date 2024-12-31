@@ -13,19 +13,19 @@ using System.Linq.Expressions;
 using Trustsoft.Conditions.Internals;
 
 /// <summary>
-///   Entry point to methods that returns validator that will collect an exception,
-///   when any of conditions is not met.
+///   Provides methods for creating validator that will collect an exception,
+///   when any of conditions is not held.
 /// </summary>
-internal static class Validate
+public static class Validate
 {
     /// <summary>
     ///   Creates the validator for specified argument that will collect an exception,
-    ///   when any of conditions is not met.
+    ///   when any of conditions is not held.
     /// </summary>
     /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
     /// <param name="value"> The value. </param>
     /// <param name="argumentName"> Name of the argument. </param>
-    /// <returns> IArgumentValidator{T}. </returns>
+    /// <returns> The argument validator that will collect exception on condition failing. </returns>
     public static IArgumentValidator<T> That<T>(T value, string argumentName)
     {
         var argument = ArgumentFactory.Create(value, argumentName);
@@ -34,11 +34,11 @@ internal static class Validate
 
     /// <summary>
     ///   Creates the validator for specified argument that will collect an exception,
-    ///   when any of conditions is not met.
+    ///   when any of conditions is not held.
     /// </summary>
     /// <typeparam name="T"> The type of argument argumentValue. </typeparam>
     /// <param name="expression"> The argument expression. </param>
-    /// <returns> IArgumentValidator{T}. </returns>
+    /// <returns> The argument validator that will collect exception on condition failing. </returns>
     public static IArgumentValidator<T> That<T>(Expression<Func<T>> expression)
     {
         var argument = ArgumentFactory.Create(expression);

@@ -13,19 +13,19 @@ using System.Linq.Expressions;
 using Trustsoft.Conditions.Internals;
 
 /// <summary>
-///   Represents methods that return argument validator for further validations.
+///   Provides methods for creating validator that will throw an exception,
+///   when any of conditions is not held.
 /// </summary>
-/// <remars> It will throw an exception, when any of conditions is not met. </remars>
 public static class Requires
 {
     /// <summary>
     ///   Creates the validator for specified <paramref name="value"/>
-    ///   that will throw an exception, when any of conditions is not met.
+    ///   that will throw an exception, when any of conditions is not held.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="value"> The value of the argument. </param>
     /// <param name="argumentName"> The name of the argument. </param>
-    /// <returns> IArgumentValidator{T}. </returns>
+    /// <returns> The argument validator that will throw exception on condition failing. </returns>
     public static IArgumentValidator<T> That<T>(T value, string? argumentName = null)
     {
         var argument = ArgumentFactory.Create(value, argumentName ?? nameof(value));
@@ -34,11 +34,11 @@ public static class Requires
 
     /// <summary>
     ///   Creates the validator for specified argument expression
-    ///   that will throw an exception, when any of conditions is not met.
+    ///   that will throw an exception, when any of conditions is not held.
     /// </summary>
     /// <typeparam name="T"> The type of argument value. </typeparam>
     /// <param name="expression"> The argument expression. </param>
-    /// <returns> IArgumentValidator{T}. </returns>
+    /// <returns> The argument validator that will throw exception on condition failing. </returns>
     public static IArgumentValidator<T> That<T>(Expression<Func<T>> expression)
     {
         var argument = ArgumentFactory.Create(expression);

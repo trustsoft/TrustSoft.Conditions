@@ -50,13 +50,13 @@ internal abstract class ArgumentValidatorBase<T, TErrorHandler> : IArgumentValid
     #region " Implementation of IArgumentValidator<T> "
 
     /// <summary>
-    ///   Gets the argument associated wth the current <see cref="IArgumentValidator{T}" /> object.
+    ///   Gets the argument associated with this <see cref="IArgumentValidator{T}" /> object.
     /// </summary>
     /// <value> The argument. </value>
     IArgument<T> IArgumentValidator<T>.Argument => this.Argument;
 
     /// <summary>
-    ///   Gets the error handle associated wth the current <see cref="IArgumentValidator{T}" /> object.
+    ///   Gets the error handle associated with this <see cref="IArgumentValidator{T}" /> object.
     /// </summary>
     /// <value> The error handler. </value>
     IErrorHandler<T> IArgumentValidator<T>.ErrorHandler => this.ErrorHandler;

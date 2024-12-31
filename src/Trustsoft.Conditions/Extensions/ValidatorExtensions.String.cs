@@ -89,7 +89,7 @@ public static partial class ValidatorExtensions
     #region " DoesNotEndWith "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.String" /> does not ends with <paramref name="part" />.
+    ///   Checks whether the given <see cref="T:System.String" /> does not end with <paramref name="part" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -159,7 +159,7 @@ public static partial class ValidatorExtensions
     #region " DoesNotStartWith "
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.String" /> does not starts with <paramref name="part" />.
+    ///   Checks whether the given <see cref="T:System.String" /> does not start with <paramref name="part" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.

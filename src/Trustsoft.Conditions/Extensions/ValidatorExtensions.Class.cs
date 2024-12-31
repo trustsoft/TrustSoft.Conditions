@@ -16,7 +16,7 @@ public static partial class ValidatorExtensions
     #region " IsNotNull "
 
     /// <summary>
-    ///   Checks whether the given value is not null. An exception is thrown otherwise.
+    ///   Checks whether the given value is not is <see langword="null" />.
     /// </summary>
     /// <typeparam name="T">
     ///   The type of value of the argument contained in the specified <paramref name="validator" />.
@@ -28,7 +28,7 @@ public static partial class ValidatorExtensions
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
     ///   Throws or collects the error when the argument's value
-    ///   of the specified <paramref name="validator" /> is null.
+    ///   of the specified <paramref name="validator" /> is <see langword="null" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotNull<T>(this IArgumentValidator<T> validator,
                                                      string? conditionDescription = null) where T : class?
@@ -91,7 +91,7 @@ public static partial class ValidatorExtensions
     #region " IsNull "
 
     /// <summary>
-    ///   Checks whether the given value is null.
+    ///   Checks whether the given value is <see langword="null" />.
     /// </summary>
     /// <typeparam name="T">
     ///   The type of value of the argument contained in the specified <paramref name="validator" />.
@@ -103,7 +103,7 @@ public static partial class ValidatorExtensions
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
     ///   Throws or collects the error when the argument's value of
-    ///   the specified <paramref name="validator" /> is not null.
+    ///   the specified <paramref name="validator" /> is not <see langword="null" />.
     /// </exception>
     public static IArgumentValidator<T> IsNull<T>(this IArgumentValidator<T> validator,
                                                   string? conditionDescription = null) where T : class?

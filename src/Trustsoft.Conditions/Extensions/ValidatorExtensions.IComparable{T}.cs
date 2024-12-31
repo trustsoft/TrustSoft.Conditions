@@ -91,7 +91,6 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is greater than the specified <paramref name="minValue" />.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -100,8 +99,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is smaller or equal to
-    ///   <paramref name="minValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is smaller or equal to <paramref name="minValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsGreaterThan<T>(this IArgumentValidator<T> validator,
                                                          T minValue,
@@ -127,8 +126,8 @@ public static partial class ValidatorExtensions
     #region " IsInRange "
 
     /// <summary>
-    ///   Checks whether the given value is between <paramref name="minValue" /> and
-    ///   <paramref name="maxValue" /> (including those values). An exception is thrown otherwise.
+    ///   Checks whether the given value is between <paramref name="minValue" />
+    ///   and <paramref name="maxValue" /> (including those values).
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -138,8 +137,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is not in the specified
-    ///   range.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is not in the specified range.
     /// </exception>
     public static IArgumentValidator<T> IsInRange<T>(this IArgumentValidator<T> validator,
                                                      T minValue,
@@ -169,9 +168,7 @@ public static partial class ValidatorExtensions
     #region " IsLessOrEqual "
 
     /// <summary>
-    ///   Checks whether the given value is smaller or equal to the specified
-    ///   <paramref name="maxValue" />.
-    ///   An exception is thrown otherwise.
+    ///   Checks whether the given value is smaller or equal to the specified <paramref name="maxValue" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -180,8 +177,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is greater than
-    ///   <paramref name="maxValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is greater than <paramref name="maxValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsLessOrEqual<T>(this IArgumentValidator<T> validator,
                                                          T maxValue,
@@ -208,7 +205,6 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is less than the specified <paramref name="maxValue" />.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -217,8 +213,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" />
-    ///   is greater or equal to <paramref name="maxValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is greater or equal to <paramref name="maxValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsLessThan<T>(this IArgumentValidator<T> validator,
                                                       T maxValue,
@@ -245,7 +241,6 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is unequal to the specified <paramref name="value" />.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -254,8 +249,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is equal to
-    ///   <paramref name="value" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is equal to <paramref name="value" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotEqualTo<T>(this IArgumentValidator<T> validator,
                                                         T value,
@@ -281,9 +276,7 @@ public static partial class ValidatorExtensions
     #region " IsNotGreaterOrEqual "
 
     /// <summary>
-    ///   Checks whether the given value is not greater or equal to the specified
-    ///   <paramref name="maxValue" />.
-    ///   An exception is thrown otherwise.
+    ///   Checks whether the given value is not greater or equal to the specified <paramref name="maxValue" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -320,7 +313,6 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is not greater than the specified <paramref name="maxValue" />.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -329,8 +321,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is greater than
-    ///   <paramref name="maxValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is greater than <paramref name="maxValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotGreaterThan<T>(this IArgumentValidator<T> validator,
                                                             T maxValue,
@@ -357,7 +349,7 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is not between <paramref name="minValue" /> and
-    ///   <paramref name="maxValue" /> (including those values). An exception is thrown otherwise.
+    ///   <paramref name="maxValue" /> (including those values).
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -367,7 +359,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is in the specified range.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is in the specified range.
     /// </exception>
     public static IArgumentValidator<T> IsNotInRange<T>(this IArgumentValidator<T> validator,
                                                         T minValue,
@@ -397,9 +390,7 @@ public static partial class ValidatorExtensions
     #region " IsNotLessOrEqual "
 
     /// <summary>
-    ///   Checks whether the given value is not smaller or equal to the specified
-    ///   <paramref name="minValue" />.
-    ///   An exception is thrown otherwise.
+    ///   Checks whether the given value is not smaller or equal to the specified <paramref name="minValue" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -408,8 +399,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is smaller or equal to
-    ///   <paramref name="minValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is smaller or equal to <paramref name="minValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotLessOrEqual<T>(this IArgumentValidator<T> validator,
                                                             T minValue,
@@ -436,7 +427,6 @@ public static partial class ValidatorExtensions
 
     /// <summary>
     ///   Checks whether the given value is not less than the specified <paramref name="minValue" />.
-    ///   An exception is thrown otherwise.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -445,8 +435,8 @@ public static partial class ValidatorExtensions
     /// <param name="conditionDescription"> The description of the condition that should hold. </param>
     /// <returns> The specified <paramref name="validator" /> instance. </returns>
     /// <exception cref="ArgumentOutOfRangeException">
-    ///   Throws or collects the error when the value of the specified <paramref name="validator" /> is smaller than
-    ///   <paramref name="minValue" />.
+    ///   Throws or collects the error when the value of the specified
+    ///   <paramref name="validator" /> is smaller than <paramref name="minValue" />.
     /// </exception>
     public static IArgumentValidator<T> IsNotLessThan<T>(this IArgumentValidator<T> validator,
                                                          T minValue,

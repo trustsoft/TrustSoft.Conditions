@@ -34,7 +34,7 @@ public static partial class ValidatorExtensions
     }
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="false" />.
+    ///   Checks whether the given <see cref="T:Nullable{bool}" /> is <see langword="false" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.
@@ -74,7 +74,7 @@ public static partial class ValidatorExtensions
     }
 
     /// <summary>
-    ///   Checks whether the given <see cref="T:System.Boolean" /> is <see langword="true" />.
+    ///   Checks whether the given <see cref="bool" /> is <see langword="true" />.
     /// </summary>
     /// <param name="validator">
     ///   The <see cref="IArgumentValidator{T}" /> that holds the value that has to be checked.

@@ -8,7 +8,7 @@
 namespace Trustsoft.Conditions;
 
 /// <summary>
-///   Defines the type of exception that validator should throw or collect.
+///   Defines the type of exception that <see cref="IArgumentValidator{T}"/>> should throw or collect.
 /// </summary>
 public enum ViolationType
 {

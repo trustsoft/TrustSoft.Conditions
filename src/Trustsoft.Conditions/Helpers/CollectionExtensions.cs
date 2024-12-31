@@ -19,7 +19,7 @@ internal static class CollectionExtensions
     ///   Determines whether a sequence contains any item.
     /// </summary>
     /// <param name="source"> The sequence of elements. </param>
-    /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
+    /// <returns> <see langword="false" /> if source is <see langword="null" /> or contains no items. </returns>
     public static bool HasItems(this IEnumerable source)
     {
         // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
@@ -41,7 +41,7 @@ internal static class CollectionExtensions
     /// </summary>
     /// <typeparam name="T"> Type of elements in <paramref name="source" /> sequence. </typeparam>
     /// <param name="source"> The sequence of elements. </param>
-    /// <returns> <see langword="false" /> if source is null or contains no items. </returns>
+    /// <returns> <see langword="false" /> if source is <see langword="null" /> or contains no items. </returns>
     public static bool HasItems<T>(this IEnumerable<T> source)
     {
         // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
@@ -50,6 +50,7 @@ internal static class CollectionExtensions
             return false;
         }
 
+        // ReSharper disable once ConvertToUsingDeclaration
         using (var enumerator = source.GetEnumerator())
         {
             return enumerator.MoveNext();
