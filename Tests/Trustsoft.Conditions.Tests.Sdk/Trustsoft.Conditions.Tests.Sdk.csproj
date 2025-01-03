@@ -9,6 +9,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <RootNamespace>Trustsoft.Conditions.UnitTests</RootNamespace>
+    <BaseOutputPath>..\artifacts\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
