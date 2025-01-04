@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))\</OutputPath>
+    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "").ToLower())\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,14 +34,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))\</OutputPath>
+    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "").ToLower())\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\Shared\Trustsoft.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   
   <ItemGroup>
