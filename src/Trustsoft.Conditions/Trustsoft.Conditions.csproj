@@ -1,25 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90</TargetFrameworks>
-    <Title>Fluent arguments validation methods by conditions.</Title>
+    <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90;netstandard2.0</TargetFrameworks>
     <Product>Trustsoft Conditions Class Library</Product>
-    <Authors>Trustsoft</Authors>
-    <Description>Fluent methods for validating method arguments by conditions for .NET 3.5-9.0.</Description>
+    <LangVersion>Latest</LangVersion>
     <Nullable>enable</Nullable>
-    <SignAssembly>False</SignAssembly>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
-    <LangVersion>latest</LangVersion>
-    <NeutralLanguage>en-US</NeutralLanguage>
     <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\logo.png" Pack="true" PackagePath="\" />
-    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <None Remove="Trustsoft.Conditions.csproj.DotSettings" />

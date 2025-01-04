@@ -5,6 +5,7 @@
         <TargetFramework>net3.5</TargetFramework>
         <Nullable>enable</Nullable>
         <LangVersion>default</LangVersion>
+        <BaseOutputPath>..\artifacts\</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
