@@ -11,12 +11,13 @@
 
     <!-- Common project properties -->
     <PropertyGroup>
-        <Authors>Trustsoft</Authors>
+        <Authors>m.sukhanov</Authors>
         <Owners>M. Sukhanov</Owners>
         <Company>Trustsoft Ltd.</Company>
         <DefaultLanguage>en-US</DefaultLanguage>
         <NeutralLanguage>en-US</NeutralLanguage>
         <SignAssembly>False</SignAssembly>
+        <Copyright>Copyright © $([System.DateTime]::Now.Year) $(Owners). All rights reserved.</Copyright>
     </PropertyGroup>
 
     <!-- Project Kind Detection -->
