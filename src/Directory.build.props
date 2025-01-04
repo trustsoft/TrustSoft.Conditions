@@ -53,6 +53,10 @@ Supports .NET 3.5-9.0 and .NET Standard 2.0.
             ChangeLog
             ---------
             2.0.0-rc1 Add more targets.
+            2.0.0-rc1 Update XML Doc comments.
+            2.0.0-rc1 Update T4 templating.
+            2.0.0-rc1 Switch to SDK-style project.
+            2.0.0-rc1 Moved to VS2022.
             1.0.1 Update string validations.
         </PackageReleaseNotes>
     </PropertyGroup>
