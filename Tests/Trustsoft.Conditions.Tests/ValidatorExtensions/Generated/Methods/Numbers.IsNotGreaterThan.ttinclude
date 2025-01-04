@@ -1,0 +1,32 @@
+﻿<#+
+    void Numbers_IsNotGreaterThan_Render(string targetType)
+    {
+#>
+#region " IsNotGreaterThan "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotGreaterThan")]
+[Description("Calling IsNotGreaterThan on higher value should pass.")]
+public void IsNotGreaterThan_ShouldPass_OnHigherValue()
+{
+    <#= targetType #> val = 3;
+    <#= targetType #> max = 10;
+    Requires.That(val).IsNotGreaterThan(max);
+    Requires.That(val, "val").IsNotGreaterThan(max);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotGreaterThan")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNotGreaterThan on higher value should fail.")]
+public void IsNotGreaterThan_ShouldFail_OnValueInRange()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> max = 3;
+    Requires.That(val).IsNotGreaterThan(max);
+}
+
+#endregion
+<#+
+    }
+#>

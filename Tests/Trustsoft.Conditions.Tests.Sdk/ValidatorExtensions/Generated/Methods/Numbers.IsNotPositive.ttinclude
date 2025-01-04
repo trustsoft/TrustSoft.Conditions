@@ -1,0 +1,39 @@
+﻿<#+
+    void Numbers_IsNotPositive_Render(string targetType)
+    {
+#>
+#region " IsNotPositive "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotPositive")]
+[Description("Calling IsNotPositive on non-positive value should pass.")]
+public void IsNotPositive_ShouldPass_OnNonPositiveValue()
+{
+    <#= targetType #> val = -8;
+    Requires.That(val).IsNotPositive();
+    Requires.That(val, "val").IsNotPositive();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotPositive")]
+[Description("Calling IsNotPositive on zero value should pass.")]
+public void IsNotPositive_ShouldPass_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsNotPositive();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotPositive")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNotPositive on positive value should fail.")]
+public void IsNotPositive_ShouldFail_OnPositiveValue()
+{
+    <#= targetType #> val = 3;
+    Requires.That(val).IsNotPositive();
+}
+
+#endregion
+<#+
+    }
+#>

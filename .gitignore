@@ -265,3 +265,4 @@ $RECYCLE.BIN/
 # IDEs from Jetbrains															#
 #################################################################################
 .idea/
+/src/Trustsoft.Conditions/Resources/StringResources.cs

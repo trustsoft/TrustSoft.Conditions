@@ -1,0 +1,31 @@
+﻿<#+
+    void Numbers_IsNotPositive_Render(string targetType)
+    {
+#>
+#region " IsNotPositive "
+
+/// <summary>
+///   Checks whether the given value is smaller or equal to zero.
+/// </summary>
+/// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
+/// <param name="conditionDescription"> The description of the condition that should hold. </param>
+/// <returns> The specified <paramref name="validator" /> instance. </returns>
+/// <exception cref="ArgumentOutOfRangeException">
+///   Throws or collects the error when the value of the specified
+///   <paramref name="validator" /> is greater than zero.
+/// </exception>
+public static IArgumentValidator<<#= targetType #>> IsNotPositive(this IArgumentValidator<<#= targetType #>> validator,
+<#+
+        // align the rest of arguments
+        var left = targetType.Length + 49;
+        var indent = new string(' ', left);
+        this.WriteLine($"{indent}string? conditionDescription = null)");
+#>
+{
+    return validator.IsLessOrEqual(0, conditionDescription);
+}
+
+#endregion
+<#+
+    }
+#>

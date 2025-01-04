@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{919FAF53-B9E0-4265-95F0-B72A9311E124}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trustsoft.Conditions.Tests</RootNamespace>
+    <AssemblyName>Trustsoft.Conditions.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "").ToLower())\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\artifacts\$(Configuration)\$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "").ToLower())\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj">
+      <Project>{08936268-aee2-4fe7-b880-ceba234f7c3e}</Project>
+      <Name>Trustsoft.Conditions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Helpers\Model.cs" />
+    <Compile Include="Helpers\ModelBase.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotEqualTo.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotGreaterThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotInRange.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessOrEqual.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotLessThan.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotNegative.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsNotPositive.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOdd.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsOddEven.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\Methods\Numbers.IsPositive.ttinclude" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\T4\Base.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\Features.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\T4\FileHeader.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Fractional.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.ttinclude" />
+    <None Include="ValidatorExtensions\Generated\TypeGroups\Numbers.Integer.Unsigned.ttinclude" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CollectionExtensionsTests.cs" />
+    <Compile Include="ExpressionExtensionsTests.cs" />
+    <Compile Include="RequiresTests.cs" />
+    <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="StringResourcesTests.cs" />
+    <Compile Include="ValidateTests.cs" />
+    <Compile Include="ValidatorExtensionsTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ValidatorExtensions\BooleanTests.cs" />
+    <Compile Include="ValidatorExtensions\ClassTests.cs" />
+    <Compile Include="ValidatorExtensions\ComparableTests.cs" />
+    <Compile Include="ValidatorExtensions\EnumerableTests.cs" />
+    <Compile Include="ValidatorExtensions\EvaluateTests.cs" />
+    <Compile Include="ValidatorExtensions\GuidTests.cs" />
+    <Compile Include="ValidatorExtensions\NullableTests.cs" />
+    <Compile Include="ValidatorExtensions\StringTests.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="ValidatorExtensions\Generated\Byte.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Byte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Decimal.UnitTest.cs">
+      <DependentUpon>Decimal.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Double.UnitTest.cs">
+      <DependentUpon>Double.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int16.UnitTest.cs">
+      <DependentUpon>Int16.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int32.UnitTest.cs">
+      <DependentUpon>Int32.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Int64.UnitTest.cs">
+      <DependentUpon>Int64.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\SByte.UnitTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SByte.UnitTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\Single.UnitTest.cs">
+      <DependentUpon>Single.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\UInt16.UnitTest.cs">
+      <DependentUpon>UInt16.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\UInt32.UnitTest.cs">
+      <DependentUpon>UInt32.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ValidatorExtensions\Generated\UInt64.UnitTest.cs">
+      <DependentUpon>UInt64.UnitTest.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="ValidatorExtensions\Generated\Byte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Byte.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Decimal.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Decimal.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Double.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Double.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int16.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int32.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Int64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Int64.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\SByte.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SByte.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\Single.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Single.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt16.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt16.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt32.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt32.UnitTest.cs</LastGenOutput>
+    </None>
+    <None Include="ValidatorExtensions\Generated\UInt64.UnitTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UInt64.UnitTest.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

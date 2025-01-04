@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90;netstandard2.0</TargetFrameworks>
+    <Product>Trustsoft Conditions Class Library</Product>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>..\..\artifacts\</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Trustsoft.Conditions.csproj.DotSettings" />
+    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests" />
+    <InternalsVisibleTo Include="Trustsoft.Conditions.Tests.Sdk" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Extensions\Generated\ValidatorExtensions.Byte.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Byte.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Decimal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Decimal.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Double.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Double.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Int16.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int16.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Int32.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int32.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Int64.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Int64.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.SByte.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.SByte.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.Single.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.Single.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.UInt16.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.UInt16.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.UInt32.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.UInt32.cs</LastGenOutput>
+    </None>
+    <None Update="Extensions\Generated\ValidatorExtensions.UInt64.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValidatorExtensions.UInt64.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\StringResources.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StringResources.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Byte.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Byte.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Decimal.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Decimal.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Double.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Double.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Int16.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Int16.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Int32.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Int32.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Int64.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Int64.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.SByte.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.SByte.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.Single.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.Single.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.UInt16.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.UInt16.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.UInt32.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.UInt32.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Extensions\Generated\ValidatorExtensions.UInt64.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ValidatorExtensions.UInt64.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\StringResources.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StringResources.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

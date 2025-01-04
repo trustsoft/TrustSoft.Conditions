@@ -1,0 +1,39 @@
+﻿<#+
+    void Numbers_IsEven_Render(string targetType)
+    {
+#>
+#region " IsEven "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[Description("Calling IsEven on even value should pass.")]
+public void IsEven_ShouldPass_OnEvenValue()
+{
+    <#= targetType #> val = 6;
+    Requires.That(val).IsEven();
+    Requires.That(val, "val").IsEven();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[Description("Calling IsEven on zero value should pass.")]
+public void IsEven_ShouldPass_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsEven();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsEven on non-even value should fail.")]
+public void IsEven_ShouldFail_OnNonEvenValue()
+{
+    <#= targetType #> val = 9;
+    Requires.That(val).IsEven();
+}
+
+#endregion
+<#+
+    }
+#>

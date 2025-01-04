@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net35;net40;net45;net46;net47;net48;net50;net60;net70;net80;net90</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Trustsoft.Conditions\Trustsoft.Conditions.csproj" />
+    </ItemGroup>
+
+</Project>

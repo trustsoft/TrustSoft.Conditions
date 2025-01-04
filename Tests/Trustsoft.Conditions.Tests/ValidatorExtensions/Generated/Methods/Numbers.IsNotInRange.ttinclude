@@ -1,0 +1,34 @@
+﻿<#+
+    void Numbers_IsNotInRange_Render(string targetType)
+    {
+#>
+#region " IsNotInRange "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotInRange")]
+[Description("Calling IsNotInRange on value out of range should pass.")]
+public void IsNotInRange_ShouldPass_OnValueOtOfRange()
+{
+    <#= targetType #> val = 7;
+    <#= targetType #> min = 1;
+    <#= targetType #> max = 5;
+    Requires.That(val).IsNotInRange(min, max);
+    Requires.That(val, "val").IsNotInRange(min, max);
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsNotInRange")]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+[Description("Calling IsNotInRange on value in range should fail.")]
+public void IsNotInRange_ShouldFail_OnValueInRange()
+{
+    <#= targetType #> val = 3;
+    <#= targetType #> min = 1;
+    <#= targetType #> max = 5;
+    Requires.That(val).IsNotInRange(min, max);
+}
+
+#endregion
+<#+
+    }
+#>

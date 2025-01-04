@@ -1,0 +1,13 @@
+﻿<#
+//  -------------------------------------------------------------------------------------------------------
+//  Template: Generates C# code for extension methods for IArgumentValidator<short>
+//  Author: Sukhanov Maxim (sukhanov.maxim@hotmail.com)
+//  Links: 
+//          MSDN about developing T4 files: http://msdn.microsoft.com/en-us/library/bb126445.aspx
+//                                          http://msdn.microsoft.com/en-us/library/dd820620.aspx 
+//  -------------------------------------------------------------------------------------------------------
+#>
+<#
+    this.targetType = "short";
+#>
+<#@ include file=".\TypeGroups\Numbers.Integer.ttinclude" #>

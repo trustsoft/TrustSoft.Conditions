@@ -1,15 +1,14 @@
 Trustsoft.Conditions
 ====================
 
-### An extremely easy to use library that helps to check method arguments by conditions.
+## An extremely easy to use library that helps to check method arguments by conditions.
 
-If you need more checks?? Just let me know.
 
 Usage:
 -----------------------------------------------------------------------------------
 	
 	// --- Requires.That() ---
-	// Requires.That will throw an exception, when some condition is not met
+	// Requires.That will throw an exception, when some condition is not held
 
 	public void FirstMethod(int arg1, int arg2)
 	{
@@ -103,10 +102,3 @@ For IComparable (Int32, Double, String, Char, DateTime and other classes impleme
 For IEnumerable:
 
 * IsEmpty, IsNotEmpty
-
-#### Not yet implemented: ####
-
-For IEnumerable:
-
-* Length
-* Contains

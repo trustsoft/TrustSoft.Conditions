@@ -1,0 +1,73 @@
+﻿<#+
+    void Numbers_IsOddEven_Render(string targetType)
+    {
+#>
+#region " IsOdd "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[Description("Calling IsOdd on odd value should pass.")]
+public void IsOdd_ShouldPass_OnOddValue()
+{
+    <#= targetType #> val = 7;
+    Requires.That(val).IsOdd();
+    Requires.That(val, "val").IsOdd();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsOdd on non-odd value should fail.")]
+public void IsOdd_ShouldFail_OnNonOddValue()
+{
+    <#= targetType #> val = 4;
+    Requires.That(val).IsOdd();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsOdd")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsOdd on zero value should fail.")]
+public void IsOdd_ShouldFail_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsOdd();
+}
+
+#endregion
+
+#region " IsEven "
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[Description("Calling IsEven on even value should pass.")]
+public void IsEven_ShouldPass_OnEvenValue()
+{
+    <#= targetType #> val = 6;
+    Requires.That(val).IsEven();
+    Requires.That(val, "val").IsEven();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[Description("Calling IsEven on zero value should pass.")]
+public void IsEven_ShouldPass_OnZeroValue()
+{
+    <#= targetType #> val = 0;
+    Requires.That(val).IsEven();
+}
+
+[TestMethod]
+[TestCategory("<#= targetType #> - IsEven")]
+[ExpectedException(typeof(ArgumentException))]
+[Description("Calling IsEven on non-even value should fail.")]
+public void IsEven_ShouldFail_OnNonEvenValue()
+{
+    <#= targetType #> val = 9;
+    Requires.That(val).IsEven();
+}
+
+#endregion
+<#+
+    }
+#>

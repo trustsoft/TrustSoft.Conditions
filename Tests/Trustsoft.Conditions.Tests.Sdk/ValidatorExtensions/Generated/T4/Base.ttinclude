@@ -1,0 +1,20 @@
+<#
+// --------------------------------------------------------------------------------------------------------
+//  Template: Defines file header and a few helper methods
+//  Author: msukhanov (sukhanov.maxim@gmail.com)
+//  Links: 
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates
+//    https://learn.microsoft.com/en-us/visualstudio/modeling/writing-a-t4-text-template 
+// --------------------------------------------------------------------------------------------------------
+#>
+<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ output extension=".cs" encoding = "utf-8" #>
+<#@ include file="FileHeader.ttinclude" #>
+<#@ include file="Features.ttinclude" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Resources" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
