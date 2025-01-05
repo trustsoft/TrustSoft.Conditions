@@ -16,10 +16,10 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotPositive(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 49;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 49;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
     return validator.IsLessOrEqual(0, conditionDescription);

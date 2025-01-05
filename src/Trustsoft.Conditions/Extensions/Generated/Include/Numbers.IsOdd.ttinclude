@@ -16,10 +16,10 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsOdd(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 41;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 41;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
     if ((validator.Argument.Value & 1) != 1)

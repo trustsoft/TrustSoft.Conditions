@@ -19,7 +19,8 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsInRange(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-    var left = targetType.Length + 45; //$"public static IArgumentValidator<{targetType}> IsInRange(".Length;
+    // align the rest of arguments
+    var left = targetType.Length + 45;
     this.WriteLine($@"{new string(' ', left)}{targetType} minValue,");
     this.WriteLine($@"{new string(' ', left)}{targetType} maxValue,");
     this.WriteLine($@"{new string(' ', left)}string? conditionDescription = null)");

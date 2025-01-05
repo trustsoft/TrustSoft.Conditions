@@ -17,11 +17,11 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotGreaterOrEqual(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 55;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}{targetType} maxValue,");
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 55;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}{targetType} maxValue,");
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
     if (validator.Argument.Value >= maxValue)

@@ -19,12 +19,12 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotInRange(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 48;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}{targetType} minValue,");
-        this.WriteLine($"{indent}{targetType} maxValue,");
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 48;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}{targetType} minValue,");
+    this.WriteLine($"{indent}{targetType} maxValue,");
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
     var value = validator.Argument.Value;

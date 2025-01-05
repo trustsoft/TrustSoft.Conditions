@@ -40,5 +40,5 @@ public static IArgumentValidator<<#= targetType #>> IsLessThan(this IArgumentVal
 
 #endregion
 <#+
-  }
+    }
 #>

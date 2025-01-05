@@ -17,11 +17,11 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsEqualTo(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 45;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}{targetType} value,");
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 45;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}{targetType} value,");
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
 <#+

@@ -1,6 +1,6 @@
 ﻿<#+ 
-  void Numbers_IsEven_Render(string targetType)
-  {
+    void Numbers_IsEven_Render(string targetType)
+    {
 #>
 #region " IsEven "
 
@@ -16,10 +16,10 @@
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsEven(this IArgumentValidator<<#= targetType #>> validator,
 <#+
-        // align the rest of arguments
-        var left = targetType.Length + 42;
-        var indent = new string(' ', left);
-        this.WriteLine($"{indent}string? conditionDescription = null)");
+    // align the rest of arguments
+    var left = targetType.Length + 42;
+    var indent = new string(' ', left);
+    this.WriteLine($"{indent}string? conditionDescription = null)");
 #>
 {
     if ((validator.Argument.Value & 1) != 0)
@@ -37,5 +37,5 @@ public static IArgumentValidator<<#= targetType #>> IsEven(this IArgumentValidat
 
 #endregion
 <#+
-  }
+    }
 #>
