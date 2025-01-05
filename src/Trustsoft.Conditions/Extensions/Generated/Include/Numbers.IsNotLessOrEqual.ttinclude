@@ -7,7 +7,7 @@
 #region " IsNotLessOrEqual "
 
 /// <summary>
-///   Checks whether the given value is not smaller or equal to the specified <paramref name="minValue" />.
+///   Checks whether the given argument value is not less or equal to the specified <paramref name="minValue" />.
 /// </summary>
 /// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="minValue"> The highest invalid value. </param>
@@ -15,7 +15,7 @@
 /// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentOutOfRangeException">
 ///   Throws or collects the error when the value of the specified
-///   <paramref name="validator" /> is smaller or equal to <paramref name="minValue" />.
+///   <paramref name="validator" /> is less or equal to the specified <paramref name="minValue" />.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotLessOrEqual(this IArgumentValidator<<#= targetType #>> validator,
 <#+

@@ -5,7 +5,7 @@
 #region " IsOdd "
 
 /// <summary>
-///   Checks whether the given value is an odd number.
+///   Checks whether the given argument value is an odd number.
 /// </summary>
 /// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="conditionDescription"> The description of the condition that should hold. </param>

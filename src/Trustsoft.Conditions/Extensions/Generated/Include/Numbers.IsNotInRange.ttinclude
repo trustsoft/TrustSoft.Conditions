@@ -5,17 +5,17 @@
 #region " IsNotInRange "
 
 /// <summary>
-///   Checks whether the given value is not between <paramref name="minValue" /> and
-///   <paramref name="maxValue" /> (including those values).
+///   Checks whether the given argument value is not in specified
+///   range[<paramref name="minValue" />,<paramref name="maxValue" />], including limits.
 /// </summary>
 /// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
-/// <param name="minValue"> The lowest invalid value. </param>
-/// <param name="maxValue"> The highest invalid value. </param>
+/// <param name="minValue"> The low-limit of the range. </param>
+/// <param name="maxValue"> The high-limit of the range. </param>
 /// <param name="conditionDescription"> The description of the condition that should hold. </param>
 /// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentException">
-///   Throws or collects the error when the value of the specified
-///   <paramref name="validator" /> is in the specified range.
+///   Throws or collects the error when the value of the specified <paramref name="validator" />
+///   is in specified range[<paramref name="minValue" />,<paramref name="maxValue" />], including limits.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsNotInRange(this IArgumentValidator<<#= targetType #>> validator,
 <#+

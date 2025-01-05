@@ -5,7 +5,7 @@
 #region " IsLessOrEqual "
 
 /// <summary>
-///   Checks whether the given value is smaller or equal to the specified <paramref name="maxValue" />.
+///   Checks whether the given argument value is less or equal to the specified <paramref name="maxValue" />.
 /// </summary>
 /// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="maxValue"> The highest valid value. </param>
@@ -13,7 +13,7 @@
 /// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentOutOfRangeException">
 ///   Throws or collects the error when the value of the specified
-///   <paramref name="validator" /> is greater than <paramref name="maxValue" />.
+///   <paramref name="validator" /> is greater than the specified <paramref name="maxValue" />.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsLessOrEqual(this IArgumentValidator<<#= targetType #>> validator,
 <#+

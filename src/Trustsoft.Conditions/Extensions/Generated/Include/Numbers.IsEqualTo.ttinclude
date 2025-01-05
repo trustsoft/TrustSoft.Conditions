@@ -5,7 +5,7 @@
 #region " IsEqualTo "
 
 /// <summary>
-///   Checks whether the given value is equal to the specified <paramref name="value" />.
+///   Checks whether the given argument value is equal to the specified <paramref name="value" />.
 /// </summary>
 /// <param name="validator"> The <see cref="IArgumentValidator{T}" /> that holds the value to be checked. </param>
 /// <param name="value"> The value to compare with. </param>
@@ -13,7 +13,7 @@
 /// <returns> The specified <paramref name="validator" /> instance. </returns>
 /// <exception cref="ArgumentException">
 ///   Throws or collects the error when the value of the specified
-///   <paramref name="validator" /> is not equal to <paramref name="value" />.
+///   <paramref name="validator" /> is not equal to the specified <paramref name="value" />.
 /// </exception>
 public static IArgumentValidator<<#= targetType #>> IsEqualTo(this IArgumentValidator<<#= targetType #>> validator,
 <#+
