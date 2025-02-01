@@ -1,4 +1,4 @@
-# ![Logo](docs/logo32.png) Trustsoft.Conditions
+![Logo](./docs/README_Banner.png)
 
 An extremely easy to use library that helps to check method arguments by conditions.
 
